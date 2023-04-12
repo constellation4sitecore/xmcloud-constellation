@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "newLine": "LF",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2017", "dom"],
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "strict": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "target": "es6",
+    "module": "commonjs",
+    "jsx": "react",
+    "skipLibCheck": true,
+    "outDir": "dist/cjs",
+    "typeRoots": ["node_modules/@types"],
+    "declarationDir": "./types",
+    "baseUrl": ".",
+    "paths": {
+      "@/data/*": ["src/data/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "types",
+    "typings",
+    "dist",
+    "middleware.d.ts",
+    "editing.d.ts",
+    "monitoring.d.ts",
+    "src/tests/*",
+    "src/test-data/*",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
+}
