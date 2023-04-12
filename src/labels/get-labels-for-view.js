@@ -12,8 +12,8 @@ export async function getLabelsForView(labelId) {
   });
 
   const query = gql`
-    query GetLabels($labelId: String!) {
-      labels: item(path: $labelId, language: "en-US") {
+    query GetLabels($labelId: String!, $language: String!) {
+      labels: item(path: $labelId, language: $language) {
         id
         fields {
           name
@@ -26,6 +26,7 @@ export async function getLabelsForView(labelId) {
 
   const result = await graphQLClient.request(query, {
     labelId: labelId,
+    language: config.language,
   });
 
   const objArray = result.labels.fields.map((field) => {
