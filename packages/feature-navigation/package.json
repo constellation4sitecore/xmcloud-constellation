@@ -1,5 +1,5 @@
 {
-  "name": "@constellation4sitecore/constellation-jss-nextjs",
+  "name": "@constellation4sitecore/feature-navigation",
   "version": "0.1.0",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
@@ -13,19 +13,11 @@
     "node": ">=12",
     "npm": ">=6"
   },
-  "repository": "git+https://github.com/constellation4sitecore/xmcloud-constellation.git",
-  "keywords": [
-    "sitecore",
-    "xmcloud",
-    "sxa",
-    "constellation"
-  ],
   "author": "Richard J. Cabral, Roberto Armas",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
   },
-  "homepage": "https://github.com/constellation4sitecore/xmcloud-constellation#readme",
   "devDependencies": {
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",

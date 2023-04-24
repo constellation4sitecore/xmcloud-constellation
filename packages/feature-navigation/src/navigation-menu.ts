@@ -1,4 +1,4 @@
-import { BaseItem } from '@/data/base-item';
+import { BaseItem } from '@constellation4sitecore/foundation-data';
 import { LinkFields } from './link-fields';
 
 export interface NavigationMenu {

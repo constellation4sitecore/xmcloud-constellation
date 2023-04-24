@@ -14,7 +14,11 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "prettier", "jsdoc"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "jsdoc"
+  ],
   "env": {
     "browser": true,
     "node": true,
@@ -31,9 +35,18 @@
     "no-use-before-define": "off",
     "no-useless-escape": "off",
     "spaced-comment": "error",
-    "curly": ["error", "multi-line"],
-    "eol-last": ["error", "always"],
-    "linebreak-style": ["error", "windows"],
+    "curly": [
+      "error",
+      "multi-line"
+    ],
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "linebreak-style": [
+      "error",
+      "windows"
+    ],
     "guard-for-in": "error",
     "no-unused-labels": "error",
     "no-caller": "error",
@@ -51,10 +64,16 @@
       }
     ],
     "brace-style": "error",
-    "quotes": ["error", "single"],
+    "quotes": [
+      "error",
+      "single"
+    ],
     "radix": "error",
     "default-case": "error",
     "eqeqeq": "error",
-    "jsx-quotes": ["error", "prefer-double"]
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ]
   }
 }
