@@ -26,7 +26,7 @@ export async function getLabelsForView(labelId) {
 
   const result = await graphQLClient.request(query, {
     labelId: labelId,
-    language: config.language,
+    language: config.defaultLanguage,
   });
 
   const objArray = result.labels.fields.map((field) => {
