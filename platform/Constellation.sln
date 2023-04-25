@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{3B1EAC4D-9041-4019-9FA9-73161F4358E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constellation.Foundation.Labels", "Constellation.Foundation.Labels\Constellation.Foundation.Labels.csproj", "{94103B4B-4B6A-4389-961D-34407A1AA6A5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94103B4B-4B6A-4389-961D-34407A1AA6A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94103B4B-4B6A-4389-961D-34407A1AA6A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94103B4B-4B6A-4389-961D-34407A1AA6A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94103B4B-4B6A-4389-961D-34407A1AA6A5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94103B4B-4B6A-4389-961D-34407A1AA6A5} = {3B1EAC4D-9041-4019-9FA9-73161F4358E9}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1542B637-5A58-4F70-B0B5-85DD2244B655}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Sitecore.DevEx.Extensibility.XMCloud</id>
+    <version>1.1.30</version>
+    <authors>Sitecore Corporation A/S.</authors>
+    <license type="file">Sitecore.Artifact.License.Agreement.md</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>icon.png</icon>
+    <description>Package Description</description>
+    <releaseNotes>Build: 1.1.30 GitSHA: e594db2d9be2a1ba4f86c0bc6227f47123f069f7</releaseNotes>
+    <copyright>© 2023 Sitecore Corporation A/S. All rights reserved. Sitecore® is a registered trademark of Sitecore Corporation A/S.</copyright>
+    <tags>Sitecore</tags>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+  </metadata>
+</package>

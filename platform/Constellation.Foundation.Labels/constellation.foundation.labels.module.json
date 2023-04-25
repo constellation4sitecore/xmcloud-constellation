@@ -1,0 +1,19 @@
+{
+    "$schema": "../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "Constellation.Foundation.Labels",
+    "items": {
+      "includes": [
+        {
+          "name": "templates/Constellation/Foundation",
+          "path": "/sitecore/templates/Foundation/Constellation/Labels",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+            "name": "constellationScaffolding",
+            "path": "/sitecore/templates/Branches/Foundation/JSS Experience Accelerator/Scaffolding/JSS Site/$name/Labels",
+            "scope": "singleItem"
+          }
+      ]
+    }
+  }
+  
