@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Constellation.Foundation.Labels")]
+[assembly: AssemblyTitle("Constellation.XMCloud.Foundation.Labels")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Constellation.Foundation.Labels")]
+[assembly: AssemblyProduct("Constellation.XMCloud.Foundation.Labels")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("94103b4b-4b6a-4389-961d-34407a1aa6a5")]
+[assembly: Guid("ed4158c4-6fc4-4ed8-be8d-c7a7cd17a66f")]
 
 // Version information for an assembly consists of the following four values:
 //

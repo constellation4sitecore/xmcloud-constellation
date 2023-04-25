@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{94103B4B-4B6A-4389-961D-34407A1AA6A5}</ProjectGuid>
+    <ProjectGuid>{ED4158C4-6FC4-4ED8-BE8D-C7A7CD17A66F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Constellation.Foundation.Labels</RootNamespace>
-    <AssemblyName>Constellation.Foundation.Labels</AssemblyName>
+    <RootNamespace>Constellation.XMCloud.Foundation.Labels</RootNamespace>
+    <AssemblyName>Constellation.XMCloud.Foundation.Labels</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
