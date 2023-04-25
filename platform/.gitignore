@@ -12,6 +12,8 @@
 *.itempackage
 *.sicpackage
 
+#Ignore thumbnails created by Windows
+Thumbs.db
 
 #folders
 [Aa]rtifacts/
