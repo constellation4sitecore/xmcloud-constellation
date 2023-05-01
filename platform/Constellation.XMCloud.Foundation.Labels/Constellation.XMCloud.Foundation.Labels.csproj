@@ -7,8 +7,8 @@
     <ProjectGuid>{ED4158C4-6FC4-4ED8-BE8D-C7A7CD17A66F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Constellation.XmCloud.Foundation.Labels</RootNamespace>
-    <AssemblyName>Constellation.XmCloud.Foundation.Labels</AssemblyName>
+    <RootNamespace>Constellation.XMCloud.Foundation.Labels</RootNamespace>
+    <AssemblyName>Constellation.XMCloud.Foundation.Labels</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -45,7 +45,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="App_Data\items\master\items.master.ConstellationFoundationLabels.dat" />
+    <Content Include="App_Data\items\master\items.master.ConstellationFoundationLabels.dat" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
