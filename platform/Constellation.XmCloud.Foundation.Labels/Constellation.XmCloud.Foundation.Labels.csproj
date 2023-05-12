@@ -11,7 +11,7 @@
     <AssemblyName>Constellation.XmCloud.Foundation.Labels</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
+    <Deterministic>false</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Constellation.XmCloud.Foundation.Labels.nuspec" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\items\master\items.master.ConstellationFoundationLabels.dat" />
   </ItemGroup>
