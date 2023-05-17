@@ -1,10 +1,3 @@
-# Ephemeral index caches used by serialization, do not commit
-.scindex
-
-# Don't commit packages
-*.itempackage
-*.sicpackage
-
 #Ignore thumbnails created by Windows
 Thumbs.db
 

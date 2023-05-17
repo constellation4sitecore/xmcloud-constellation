@@ -5,6 +5,14 @@
 # NuGet cache for Sitecore CLI
 .sitecore/package-cache/
 
+# Ephemeral index caches used by serialization, do not commit
+.scindex
+
+# Don't commit packages
+*.itempackage
+*.sicpackage
+
+
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -36,3 +44,5 @@ samples/
 
 types/
 .vs/
+
+.scindex
