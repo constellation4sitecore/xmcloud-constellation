@@ -8,7 +8,8 @@
     "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json && npm run copy-dts",
     "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" types",
     "clean": "del-cli dist types",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "npm run build"
   },
   "engines": {
     "node": ">=12",
