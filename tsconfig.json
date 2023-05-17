@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "allowJs": true,
     "newLine": "LF",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
