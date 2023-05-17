@@ -4,7 +4,7 @@
     "items": {
       "includes": [
         {
-          "name": "templates/Constellation",
+          "name": "templates/ConstellationFolder",
           "path": "/sitecore/templates/Foundation/Constellation",
           "allowedPushOperations": "CreateOnly",
           "scope": "singleItem"
