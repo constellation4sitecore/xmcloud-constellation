@@ -13,17 +13,17 @@
 	<iconUrl>https://constellation4sitecore.com/wp-content/uploads/2019/04/Constellation.png</iconUrl>
 	<summary>Sitecore Helix-style library for managing "static" bits of on page text that need translation.</summary>
 	<description>
-Requires XM Cloud
-Requires the equivalent NPM package on the Rendering Host to take advantage of the information architecture in this package.
+  Requires XM Cloud
+  Requires the equivalent NPM package on the Rendering Host to take advantage of the information architecture in this package.
 
-After installing this NuGet package into your "Platform" project in your Sitecore XM Cloud solution, use the Sitecore CLI to deploy the included
-items to your Sitecore CM environment.
+  After installing this NuGet package into your "Platform" project in your Sitecore XM Cloud solution, use the Sitecore CLI to deploy the included
+  items to your Sitecore CM environment.
 
-```powershell
-dotnet sitecore itemres create -o Constellation.XmCloud.Foundation.Labels/App_Data/items/master/ConstellationFoundationLabels -i Constellation.Foundation.Labels
-```
+  ```powershell
+  dotnet sitecore itemres create -o Constellation.XmCloud.Foundation.Labels/App_Data/items/master/ConstellationFoundationLabels -i Constellation.Foundation.Labels
+  ```
 
-More documentation will follow in the near future.
+  More documentation will follow in the near future.
 	</description>
 	<releaseNotes>First release for XM Cloud</releaseNotes>
 	<copyright>Copyright 2017</copyright>

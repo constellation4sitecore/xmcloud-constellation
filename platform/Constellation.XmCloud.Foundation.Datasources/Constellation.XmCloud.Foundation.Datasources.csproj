@@ -4,16 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1BCC3A89-4D10-407B-8CC3-9444C3AC1ACB}</ProjectGuid>
+    <ProjectGuid>{76A9813E-1C2F-4B38-876D-96724744F651}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Constellation.XmCloud.Feature.UrlFriendlyPageNames</RootNamespace>
-    <AssemblyName>Constellation.XmCloud.Feature.UrlFriendlyPageNames</AssemblyName>
+    <RootNamespace>Constellation.XmCloud.Foundation.Datasources</RootNamespace>
+    <AssemblyName>Constellation.XmCloud.Foundation.Datasources</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>false</Deterministic>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -43,21 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ItemNameManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rules\Actions\SetUrlFriendlyName.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Constellation.XmCloud.Feature.UrlFriendlyPageNames.nuspec" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Constellation.XmCloud.Foundation.Contexts\Constellation.XmCloud.Foundation.Contexts.csproj">
-      <Project>{dc67c81c-90ad-4e68-b2e9-ca161a113920}</Project>
-      <Name>Constellation.XmCloud.Foundation.Contexts</Name>
-    </ProjectReference>
+    <Compile Include="Rules\Conditions\ItemIsContextDatasource.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Sitecore.XmCloud.Kernel" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Constellation.XmCloud.Foundation.Data\Constellation.XmCloud.Foundation.Data.csproj">
+      <Project>{2342B353-1A8C-4487-A4E1-5C723DD76C3D}</Project>
+      <Name>Constellation.XmCloud.Foundation.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Constellation.XmCloud.Foundation.Datasources.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
