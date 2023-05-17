@@ -5,7 +5,8 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
-    "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json",
+    "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json && npm run copy-dts",
+    "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" types",
     "clean": "del-cli dist types",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "copyfiles": "^2.4.1",
     "del-cli": "^5.0.0",
     "eslint": "^8.32.0",
     "eslint-plugin-react": "^7.32.1",
