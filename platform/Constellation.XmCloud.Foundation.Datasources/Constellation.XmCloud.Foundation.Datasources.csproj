@@ -46,12 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Sitecore.XmCloud.Kernel" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Constellation.XmCloud.Foundation.Data\Constellation.XmCloud.Foundation.Data.csproj">
-      <Project>{2342B353-1A8C-4487-A4E1-5C723DD76C3D}</Project>
-      <Name>Constellation.XmCloud.Foundation.Data</Name>
-    </ProjectReference>
+    <PackageReference Include="Constellation.XmCloud.Foundation.Data">
+      <Version>1.0.8537.18422</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Constellation.XmCloud.Foundation.Datasources.nuspec" />

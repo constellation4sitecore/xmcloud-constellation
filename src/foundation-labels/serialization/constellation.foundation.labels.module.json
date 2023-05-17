@@ -4,12 +4,18 @@
     "items": {
       "includes": [
         {
-          "name": "templates/Constellation/Foundation",
+          "name": "templates/Constellation",
+          "path": "/sitecore/templates/Foundation/Constellation",
+          "allowedPushOperations": "CreateOnly",
+          "scope": "singleItem"
+        },
+        {
+          "name": "templates/Constellation/Foundation/Labels",
           "path": "/sitecore/templates/Foundation/Constellation/Labels",
           "allowedPushOperations": "CreateUpdateAndDelete"
         },
         {
-            "name": "constellationScaffolding",
+            "name": "constellationLabelsScaffolding",
             "path": "/sitecore/templates/Branches/Foundation/JSS Experience Accelerator/Scaffolding/JSS Site/$name/Labels",
             "scope": "singleItem"
           }

@@ -28,6 +28,7 @@
   <files>
     <!-- the sitecore.json and modules and items must be copied to the package -->
     <file src="..\sitecore.json" target="" />
-    <file src="items\**" target="sitecore" />
+    <file src="items\**" target="sitecore/items" />
+	<file src="*.module.json" target="sitecore" />
   </files>
 </package>

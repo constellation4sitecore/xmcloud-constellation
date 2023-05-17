@@ -51,13 +51,8 @@
     <None Include="Constellation.XmCloud.Feature.UrlFriendlyPageNames.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Constellation.XmCloud.Foundation.Contexts\Constellation.XmCloud.Foundation.Contexts.csproj">
-      <Project>{dc67c81c-90ad-4e68-b2e9-ca161a113920}</Project>
-      <Name>Constellation.XmCloud.Foundation.Contexts</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Sitecore.XmCloud.Kernel" />
+    <PackageReference Include="Constellation.XmCloud.Foundation.Contexts"/>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
