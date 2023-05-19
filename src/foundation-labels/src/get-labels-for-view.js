@@ -1,5 +1,5 @@
 import { constants, GraphQLRequestClient } from '@sitecore-jss/sitecore-jss-nextjs';
-import config from 'temp/config';
+import config from '../../../../../src/temp/config';
 import { gql } from 'graphql-request';
 
 export async function getLabelsForView(labelId) {
