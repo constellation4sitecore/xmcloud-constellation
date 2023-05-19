@@ -46,6 +46,7 @@
   "files": [
     "dist",
     "types",
+    "sitecore.json",
     "/*.js",
     "/*.d.ts"
   ]
