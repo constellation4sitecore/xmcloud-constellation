@@ -46,6 +46,7 @@
   "files": [
     "dist",
     "types",
+    "serialization",
     "sitecore.json",
     "/*.js",
     "/*.d.ts"
