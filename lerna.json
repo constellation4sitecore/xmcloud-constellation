@@ -1,0 +1,10 @@
+{
+    "lerna": "3.22.1",
+    "useWorkspaces": true,
+    "version": "0.1.0",
+    "npmClient": "yarn",
+    "packages": [
+      "src/foundation-labels"
+    ]
+  }
+  
