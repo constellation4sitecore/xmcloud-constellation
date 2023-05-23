@@ -8,6 +8,12 @@ npm install @constellation4sitecore/foundation-data --save
 
 ## Usage
 
+### Get Item
+
+```ts
+await getItem(itemId);
+```
+
 ### Derived From
 
 ```ts
