@@ -37,7 +37,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@constellation4sitecore/foundation-data": "^0.1.1-beta.12",
+    "@constellation4sitecore/foundation-data": "^0.1.1-beta.14",
     "@sitecore-jss/sitecore-jss-nextjs": "^21.1.0"
   },
   "types": "types/index.d.ts",
