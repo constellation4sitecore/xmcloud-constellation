@@ -11,7 +11,8 @@
     },
     "workspaces": [
         "src/foundation-labels",
-        "src/foundation-mapper"
+        "src/foundation-mapper",
+        "src/foundation-enhancers"
     ],
     "devDependencies": {
         "lerna": "^6.6.2"
