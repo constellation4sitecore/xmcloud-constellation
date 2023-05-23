@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-npm run @constellation4sitecore/foundation-mapper --save
+npm install @constellation4sitecore/foundation-mapper --save
 ```
 
 ## Usage
