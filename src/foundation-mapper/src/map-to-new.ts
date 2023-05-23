@@ -1,9 +1,9 @@
-interface IItem {
-  fields: any[];
-}
+type IItem = {
+  fields: [{ name: string; jsonValue: any }];
+};
 
-export function mapToNew<T>(item: IItem): T | null {
-  const objArray = item.fields.map((field: any) => {
+export function mapToNew<T>(item: unknown): T | null {
+  const objArray = (item as IItem).fields.map((field: any) => {
     const obj = {} as any;
     obj[field.name] = field.jsonValue;
     return obj;
