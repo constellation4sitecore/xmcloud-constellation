@@ -4,15 +4,15 @@
     "items": {
       "includes": [
         {
-          "name": "templates/Foundation/ConstellationFolder",
-          "path": "/sitecore/templates/Foundation/Constellation",
-          "allowedPushOperations": "CreateOnly",
-          "scope": "singleItem"
+            "name": "templates/Foundation/ConstellationFolder",
+            "path": "/sitecore/templates/Foundation/Constellation",
+            "allowedPushOperations": "CreateOnly",
+            "scope": "singleItem"
         },
         {
-          "name": "templates/Foundation/Constellation/Navigation",
-          "path": "/sitecore/templates/Foundation/Constellation/Navigation",
-          "allowedPushOperations": "CreateUpdateAndDelete"
+            "name": "templates/Foundation/Constellation/Navigation",
+            "path": "/sitecore/templates/Foundation/Constellation/Navigation",
+            "allowedPushOperations": "CreateUpdateAndDelete"
         },
         {
             "name": "constellationNavigationScaffolding",
