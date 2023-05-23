@@ -1,0 +1,25 @@
+{
+    "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "Constellation.Foundation.Navigation",
+    "items": {
+      "includes": [
+        {
+          "name": "templates/Foundation/ConstellationFolder",
+          "path": "/sitecore/templates/Foundation/Constellation",
+          "allowedPushOperations": "CreateOnly",
+          "scope": "singleItem"
+        },
+        {
+          "name": "templates/Foundation/Constellation/Navigation",
+          "path": "/sitecore/templates/Foundation/Constellation/Navigation",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        },
+        {
+            "name": "constellationNavigationScaffolding",
+            "path": "/sitecore/templates/Branches/Foundation/JSS Experience Accelerator/Scaffolding/JSS Site/$name/Navigation",
+            "scope": "singleItem"
+          }
+      ]
+    }
+  }
+  

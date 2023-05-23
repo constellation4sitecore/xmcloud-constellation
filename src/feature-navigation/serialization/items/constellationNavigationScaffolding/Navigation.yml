@@ -1,0 +1,31 @@
+﻿---
+ID: "a1989023-b87a-4302-b679-933ccd217bac"
+Parent: "a0eecf65-09ad-4a10-ae46-7df70106cfe6"
+Template: "25ccd301-4685-406a-b3b4-4e3a7d133d51"
+Path: /sitecore/templates/Branches/Foundation/JSS Experience Accelerator/Scaffolding/JSS Site/$name/Navigation
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230523T042204Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\roberto.armas@verndale.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\roberto.armas@verndale.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "8b73755a-c1ab-43a8-92dd-77fdd0adcdc4"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\roberto.armas@verndale.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230523T042204Z
