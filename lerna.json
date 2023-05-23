@@ -4,6 +4,7 @@
   "version": "0.1.1-beta.3",
   "npmClient": "yarn",
   "packages": [
-    "src/foundation-labels"
+    "src/foundation-labels",
+    "src/foundation-mapper"
   ]
 }
