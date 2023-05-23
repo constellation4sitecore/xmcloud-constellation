@@ -1,10 +1,11 @@
 {
   "lerna": "3.22.1",
   "useWorkspaces": true,
-  "version": "0.1.1-beta.9",
+  "version": "0.1.1-beta.10",
   "npmClient": "yarn",
   "packages": [
     "src/foundation-labels",
-    "src/foundation-mapper"
+    "src/foundation-mapper",
+    "src/foundation-enhancers"
   ]
 }
