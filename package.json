@@ -10,7 +10,8 @@
         "version": "yarn install && git stage yarn.lock"
     },
     "workspaces": [
-        "src/foundation-labels"
+        "src/foundation-labels",
+        "src/foundation-mapper"
     ],
     "devDependencies": {
         "lerna": "^6.6.2"
