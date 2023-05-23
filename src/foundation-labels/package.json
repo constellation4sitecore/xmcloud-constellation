@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/foundation-labels",
-  "version": "0.1.1-beta.11",
+  "version": "0.1.1-beta.12",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
