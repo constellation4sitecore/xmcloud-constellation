@@ -13,7 +13,7 @@
     "node": ">=12",
     "npm": ">=6"
   },
-  "author": "Richard J. Cabral, Roberto Armas",
+  "author": "Richard J. Cabral, Roberto Armas, Sebastián Aliaga",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"

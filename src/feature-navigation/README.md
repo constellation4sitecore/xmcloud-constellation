@@ -23,3 +23,10 @@ Then you can push the items by
 dotnet sitecore ser push
 ```
 
+## Usage
+
+If you want to get navigation links from Link Group you can do the following:
+
+```ts
+const links = await getNavLinks(group.id);
+```
