@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/foundation-mapper",
-  "version": "0.1.1-beta.8",
+  "version": "0.1.1-beta.9",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
