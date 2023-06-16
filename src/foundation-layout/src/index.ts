@@ -7,3 +7,5 @@ export type ComponentProps = {
   rendering: ComponentRendering;
   params: ComponentParams;
 };
+
+export * from './components/Rendering';
