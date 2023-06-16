@@ -1,54 +1,54 @@
 {
-    "name": "@constellation4sitecore/feature-page-analytics-scripts",
-    "version": "0.1.1-beta.17",
-    "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
-    "main": "dist/cjs/index.js",
-    "module": "dist/esm/index.js",
-    "scripts": {
-        "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json",
-        "clean": "del-cli dist types",
-        "test": "echo \"Error: no test specified\" && exit 1"
-      },
-      "engines": {
-        "node": ">=12",
-        "npm": ">=6"
-      },
-      "author": "Richard J. Cabral, Roberto Armas, Sebastian Aliaga",
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
-      },
-      "devDependencies": {
-        "@types/node": "^20.2.3",
-        "@types/react": "^18.0.27",
-        "@types/react-dom": "^18.0.10",
-        "copyfiles": "^2.4.1",
-        "del-cli": "^5.0.0",
-        "eslint": "^8.32.0",
-        "eslint-plugin-react": "^7.32.1",
-        "jsdom": "^21.1.0",
-        "next": "^13.1.6",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "ts-node": "^10.9.1",
-        "typescript": "~4.9.4"
-      },
-      "peerDependencies": {
-        "next": "^13.1.6",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-      },
-      "dependencies": {
-        "@constellation4sitecore/foundation-mapper": "^0.1.1-beta.17",
-        "@constellation4sitecore/foundation-data": "^0.1.1-beta.17",
-        "@constellation4sitecore/foundation-layout": "^0.1.1-beta.17",
-        "@sitecore-jss/sitecore-jss-nextjs": "^21.1.0"
-      },
-      "types": "types/index.d.ts",
-      "files": [
-        "dist",
-        "types",
-        "/*.js",
-        "/*.d.ts"
-      ]
+  "name": "@constellation4sitecore/feature-page-analytics-scripts",
+  "version": "0.1.2-beta.18",
+  "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json",
+    "clean": "del-cli dist types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
+  "author": "Richard J. Cabral, Roberto Armas, Sebastian Aliaga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.32.0",
+    "eslint-plugin-react": "^7.32.1",
+    "jsdom": "^21.1.0",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~4.9.4"
+  },
+  "peerDependencies": {
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@constellation4sitecore/foundation-data": "^0.1.2-beta.18",
+    "@constellation4sitecore/foundation-layout": "^0.1.2-beta.18",
+    "@constellation4sitecore/foundation-mapper": "^0.1.2-beta.18",
+    "@sitecore-jss/sitecore-jss-nextjs": "^21.1.0"
+  },
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types",
+    "/*.js",
+    "/*.d.ts"
+  ]
 }
