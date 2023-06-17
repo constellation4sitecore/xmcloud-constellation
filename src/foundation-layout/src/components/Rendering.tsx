@@ -1,7 +1,7 @@
 import { ComponentParams } from '@sitecore-jss/sitecore-jss-nextjs';
 import React, { ComponentType } from 'react';
 // @ts-ignore
-import { componentFactory } from '../../../../../../src/temp/componentFactory';
+import { componentFactory } from '../../../../../../../src/temp/componentFactory';
 //import { getDatasource } from './getDatasource';
 
 export type RenderingProps = {
