@@ -8,4 +8,4 @@ export type ComponentProps = {
   params: ComponentParams;
 };
 
-export * from './components/Rendering';
+export * from './components';

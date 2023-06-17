@@ -73,7 +73,7 @@ Rendering.getInitialProps = async (
   return { views: views, componentName: componentName, datasourceID: datasourceID, params: params };
 };
 
-export default function Rendering(props: RenderingProps) {
+export function Rendering(props: RenderingProps) {
   return (
     <>
       {props.views?.map((view) => {
