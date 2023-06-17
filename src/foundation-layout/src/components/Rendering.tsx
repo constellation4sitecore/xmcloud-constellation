@@ -1,5 +1,5 @@
 import { ComponentParams } from '@sitecore-jss/sitecore-jss-nextjs';
-import React from 'react';
+import React, { ComponentType } from 'react';
 // @ts-ignore
 import { componentFactory } from '../../../../../../src/temp/componentFactory';
 //import { getDatasource } from './getDatasource';
@@ -13,7 +13,36 @@ export type RenderingProps = {
 
 type ViewComponent = {
   Component: React.ComponentType<unknown>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   props: any;
+};
+
+Rendering.getInitialPropsFromLibrary = async (
+  Comp: ComponentType<unknown>,
+  getStaticProps: any,
+  datasourceID?: string | null,
+  params?: ComponentParams | null
+) => {
+  let views: ViewComponent[] = [];
+
+  if (!datasourceID) {
+    const compGetStaticProps = getStaticProps;
+    const p = await compGetStaticProps(params);
+    views = [
+      {
+        Component: Comp,
+        props: p,
+      },
+    ];
+  } else {
+    /* const Comp = componentFactory(componentName);
+     var p = await getStaticProps(datasourceID)
+    views = [{
+        Compoent: Comp,
+        props: p,
+    }];*/
+  }
+  return { views: views, componentName: Comp.name, datasourceID: datasourceID, params: params };
 };
 
 Rendering.getInitialProps = async (
