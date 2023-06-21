@@ -39,9 +39,4 @@
 	<copyright>Copyright 2017</copyright>
 	<tags>Sitecore, Sitecore Helix</tags>
   </metadata>
-   <files>
-    <!-- the sitecore.json and modules and items must be copied to the package -->
-    <file src="..\sitecore.json" target="" />
-    <file src="items\**" target="sitecore" />
-  </files>
 </package>
