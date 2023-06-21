@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "Constellation.Foundation.Datasources",
+  "items": {
+    "includes": [
+      {
+        "name": "templates/Foundation/Constellation/Datasources",
+        "path": "/sitecore/templates/Foundation/Constellation/Datasources",
+        "allowedPushOperations": "CreateUpdateAndDelete"
+      },
+      {
+        "name": "system/Settings",
+        "path": "/sitecore/system/Settings/Rules/Definitions/Elements/Item Information/Item is Context Datasource",
+        "allowedPushOperations": "CreateUpdateAndDelete",
+        "scope": "singleItem"
+      }
+    ]
+  }
+}

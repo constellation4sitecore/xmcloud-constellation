@@ -29,15 +29,14 @@
     Note that the Illegal Characters option and the Replace Spaces option can conflict, a "-" will be removed if you use the "\W" regex,
     resulting in behavior similar to "Remove Spaces" We strongly recommend using "\s".
 
-    More documentation will follow in the near future.
+    Installation
+
+    npm install @constellation4sitecore/feature-url-friendly-page-names --save
+
+    And follow instructions for npm package.
   </description>
 	<releaseNotes>First release for XM Cloud</releaseNotes>
 	<copyright>Copyright 2017</copyright>
 	<tags>Sitecore, Sitecore Helix</tags>
   </metadata>
-   <files>
-    <!-- the sitecore.json and modules and items must be copied to the package -->
-    <file src="..\sitecore.json" target="" />
-    <file src="items\**" target="sitecore" />
-  </files>
 </package>

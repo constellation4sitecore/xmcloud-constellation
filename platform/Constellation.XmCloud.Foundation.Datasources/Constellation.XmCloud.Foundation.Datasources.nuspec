@@ -19,16 +19,17 @@
 		You can use the following Rule Conditions to enforce this Information Architecture:
 		* ItemIsContextDatasource
 
+	Installation
+
+    npm install @constellation4sitecore/foundation-datasources --save
+
+    And follow instructions for npm package.
+
 	More documentation will follow in the near future.
+	
 	</description>
 	<releaseNotes>First release for XM Cloud</releaseNotes>
 	<copyright>Copyright 2017</copyright>
 	<tags>Sitecore, Sitecore Helix</tags>
   </metadata>
-  <files>
-    <!-- the sitecore.json and modules and items must be copied to the package -->
-    <file src="..\sitecore.json" target="" />
-    <file src="items\**" target="sitecore/items" />
-	<file src="*.module.json" target="sitecore" />
-  </files>
 </package>
