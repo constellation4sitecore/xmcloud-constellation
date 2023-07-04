@@ -11,10 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constellation.XmCloud.Featu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constellation.XmCloud.Foundation.Contexts", "platform\Constellation.XmCloud.Foundation.Contexts\Constellation.XmCloud.Foundation.Contexts.csproj", "{DC67C81C-90AD-4E68-B2E9-CA161A113920}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constellation.XmCloud.Foundation.Datasources", "platform\Constellation.XmCloud.Foundation.Datasources\Constellation.XmCloud.Foundation.Datasources.csproj", "{76A9813E-1C2F-4B38-876D-96724744F651}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constellation.XmCloud.Foundation.Data", "platform\Constellation.XmCloud.Foundation.Data\Constellation.XmCloud.Foundation.Data.csproj", "{2342B353-1A8C-4487-A4E1-5C723DD76C3D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F0EB8BB-09AC-4CE4-87D5-A33B6A25619B}"
 	ProjectSection(SolutionItems) = preProject
 		nuget.config = nuget.config
@@ -34,14 +30,6 @@ Global
 		{DC67C81C-90AD-4E68-B2E9-CA161A113920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC67C81C-90AD-4E68-B2E9-CA161A113920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC67C81C-90AD-4E68-B2E9-CA161A113920}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76A9813E-1C2F-4B38-876D-96724744F651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76A9813E-1C2F-4B38-876D-96724744F651}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76A9813E-1C2F-4B38-876D-96724744F651}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76A9813E-1C2F-4B38-876D-96724744F651}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2342B353-1A8C-4487-A4E1-5C723DD76C3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2342B353-1A8C-4487-A4E1-5C723DD76C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2342B353-1A8C-4487-A4E1-5C723DD76C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2342B353-1A8C-4487-A4E1-5C723DD76C3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,11 +37,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1BCC3A89-4D10-407B-8CC3-9444C3AC1ACB} = {542476E3-A436-4743-BF14-1B7CD80FC5BA}
 		{DC67C81C-90AD-4E68-B2E9-CA161A113920} = {3B1EAC4D-9041-4019-9FA9-73161F4358E9}
-		{76A9813E-1C2F-4B38-876D-96724744F651} = {3B1EAC4D-9041-4019-9FA9-73161F4358E9}
-		{2342B353-1A8C-4487-A4E1-5C723DD76C3D} = {3B1EAC4D-9041-4019-9FA9-73161F4358E9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 		SolutionGuid = {1542B637-5A58-4F70-B0B5-85DD2244B655}
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.6.0.1304.0\lib\portable-net45+win+wp8;packages\EnterpriseLibrary.TransientFaultHandling.Caching.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Data.6.0.1304.1\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.ServiceBus.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.WindowsAzure.Storage.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.TransientFaultHandling.Configuration.6.0.1304.0\lib\NET45
 	EndGlobalSection
 EndGlobal
