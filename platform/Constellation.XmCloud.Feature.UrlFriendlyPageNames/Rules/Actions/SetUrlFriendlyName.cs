@@ -9,7 +9,7 @@ namespace Constellation.XmCloud.Feature.UrlFriendlyPageNames.Rules.Actions
     /// Parameters are defined by the user in the calling Rule.
     /// </summary>
     /// <typeparam name="T">Instance of Sitecore.Rules.RuleContext.</typeparam>
-    public class SetUrlFriendlyName<T> : Constellation.XmCloud.Foundation.Contexts.Rules.ContextSensitiveRuleAction<T>
+    public class SetUrlFriendlyName<T> : Sitecore.Rules.Actions.RuleAction<T>
         where T : global::Sitecore.Rules.RuleContext
     {
         #region Constructors
@@ -18,7 +18,7 @@ namespace Constellation.XmCloud.Feature.UrlFriendlyPageNames.Rules.Actions
         /// </summary>
         public SetUrlFriendlyName()
         {
-            this.DatabasesToProcess = "master";
+           
         }
         #endregion
 
@@ -56,11 +56,13 @@ namespace Constellation.XmCloud.Feature.UrlFriendlyPageNames.Rules.Actions
         #endregion
 
         #region Methods
+
+
         /// <summary>
         /// Called when Sitecore executes the Action.
         /// </summary>
         /// <param name="ruleContext">An instance of Sitecore.Rules.RuleContext.</param>
-        protected override void Execute(T ruleContext)
+        public override void Apply(T ruleContext)
         {
             if (ItemNameManager.IsTargetForRenaming(ruleContext.Item))
             {

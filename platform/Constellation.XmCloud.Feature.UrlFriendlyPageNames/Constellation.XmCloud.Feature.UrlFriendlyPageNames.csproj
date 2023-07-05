@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Sitecore.XmCloud.Kernel" />
-    <PackageReference Include="Constellation.XmCloud.Foundation.Contexts"/>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
