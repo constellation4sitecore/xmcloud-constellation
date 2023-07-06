@@ -1,0 +1,2 @@
+export { getPageTagging } from './getPageTagging';
+
