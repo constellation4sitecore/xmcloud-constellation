@@ -1,8 +1,9 @@
+import { Field } from '@sitecore-jss/sitecore-jss-nextjs';
 export type PageSearchEngineDirectivesType = {
-  searchEngineIndexesPage: { value: boolean };
-  searchEngineFollowsLinks: { value: boolean };
-  searchEngineIndexesImages: { value: boolean };
-  searchEngineCanCachePage: { value: boolean };
-  searchEngineCanSnippetPage: { value: boolean };
-  allowODPSnippet: { value: boolean };
+  searchEngineIndexesPage: Field<boolean>;
+  searchEngineFollowsLinks: Field<boolean>;
+  searchEngineIndexesImages: Field<boolean>;
+  searchEngineCanCachePage: Field<boolean>;
+  searchEngineCanSnippetPage: Field<boolean>;
+  allowODPSnippet: Field<boolean>;
 };
