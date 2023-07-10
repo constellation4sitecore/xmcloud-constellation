@@ -1,5 +1,6 @@
 import { ComponentParams } from '@sitecore-jss/sitecore-jss-nextjs';
 import React, { ComponentType } from 'react';
+import { SitecoreContextProps } from '../models/SitecoreContextProps';
 //import { getDatasource } from './getDatasource';
 
 export type RenderingProps = {
@@ -44,6 +45,7 @@ Rendering.getInitialPropsFromLibrary = async (
 };
 
 Rendering.getInitialProps = async (
+  sitecoreContext: SitecoreContextProps,
   componentFactory: (componentName: string, exportName?: string) => any,
   componentName: string,
   datasourceID?: string | null,
@@ -54,7 +56,8 @@ Rendering.getInitialProps = async (
   if (!datasourceID) {
     const Comp = componentFactory(componentName);
     const compGetStaticProps = componentFactory(componentName, 'getStaticProps');
-    const p = await compGetStaticProps(params);
+    const layoutData = sitecoreContext.layoutData;
+    const p = await compGetStaticProps(params, layoutData);
     views = [
       {
         Component: Comp,
