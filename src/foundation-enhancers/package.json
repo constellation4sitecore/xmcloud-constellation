@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/foundation-enhancers",
-  "version": "0.1.2-beta.33",
+  "version": "0.1.2-beta.34",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -47,5 +47,6 @@
     "types",
     "/*.js",
     "/*.d.ts"
-  ]
+  ],
+  "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4"
 }
