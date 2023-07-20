@@ -1,0 +1,13 @@
+{
+    "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "Constellation.Feature.PageTagging",
+    "items": {
+        "includes": [
+            {
+                "name": "templates/Feature/Constellation/PageTagging",
+                "path": "/sitecore/templates/Feature/Constellation/Page Tagging",
+                "allowedPushOperations": "CreateUpdateAndDelete"
+            }
+        ]
+    }
+}

@@ -1,0 +1,38 @@
+﻿---
+ID: "9fd06701-7ca8-4b1e-9e78-0e790cc189fb"
+Parent: "ac9b5d2d-42ef-4ecc-87d0-5aac36b25fac"
+Template: "ac9b5d2d-42ef-4ecc-87d0-5aac36b25fac"
+Path: /sitecore/templates/Feature/Constellation/Page Tagging/Page Sitemap Behavior/__Standard Values
+SharedFields:
+- ID: "aeea733f-9cdc-4024-8103-7f57846ae6d9"
+  Hint: Include in Sitemap
+  Value: 1
+- ID: "db057f35-c5ee-4bab-b01a-ef8140127961"
+  Hint: Change Frequency
+  Value: monthly
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171121T152523Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\rcabral
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\rcabral
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "67647f56-5843-4b4e-a4bc-a077d89104a0"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\rcabral
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20171121T173344Z
