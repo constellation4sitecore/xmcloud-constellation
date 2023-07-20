@@ -51,7 +51,9 @@
     <None Include="Constellation.XmCloud.Feature.UrlFriendlyPageNames.nuspec" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Sitecore.XmCloud.Kernel" />
+    <PackageReference Include="Sitecore.XmCloud.Kernel">
+      <Version>0.0.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

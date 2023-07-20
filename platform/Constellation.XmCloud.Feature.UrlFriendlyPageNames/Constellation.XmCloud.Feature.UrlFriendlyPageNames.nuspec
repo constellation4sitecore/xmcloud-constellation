@@ -13,27 +13,29 @@
 	<iconUrl>https://constellation4sitecore.com/wp-content/uploads/2019/04/Constellation.png</iconUrl>
 	<summary>Sitecore Helix-style library for transforming human-entered Item Names into SEO-friendly URL slugs.</summary>
 	<description>
-    Requires XM Cloud
+	Requires XM Cloud
 
-    This small Feature contains a Sitecore Rule Action which must be installed in order to take advantage
-    of this library. The package should self-install once you build and deploy your project.
+	This small Feature contains a Sitecore Rule Action which must be installed in order to take advantage
+	of this library. The package should self-install once you build and deploy your project.
 
-    To use, an Item Saved rule must be created. The rule must have a condition that specifies that an Item is a "page" and therefore
-    needs an SEO-friendly URL. The rule action should be the one included in this kit. Rule options include:
-    - Replace Diacritics
-    - Clear Display Name (recommended so that marketers see the actual Item name and therefore URL slug for pages)
-    - Specify illegal characters to remove (Regex "\s" is a good choice.)
-    - Replace spaces or remove spaces from names
-    - Force lowercase
+	To use, an Item Saved rule must be created. The rule must have a condition that specifies that an Item is a "page" and therefore
+	needs an SEO-friendly URL. The rule action should be the one included in this kit. Rule options include:
+	- Replace Diacritics
+	- Clear Display Name (recommended so that marketers see the actual Item name and therefore URL slug for pages)
+	- Specify illegal characters to remove (Regex "\s" is a good choice.)
+	- Replace spaces or remove spaces from names
+	- Force lowercase
 
-    Note that the Illegal Characters option and the Replace Spaces option can conflict, a "-" will be removed if you use the "\W" regex,
-    resulting in behavior similar to "Remove Spaces" We strongly recommend using "\s".
+	Note that the Illegal Characters option and the Replace Spaces option can conflict, a "-" will be removed if you use the "\W" regex,
+	resulting in behavior similar to "Remove Spaces" We strongly recommend using "\s".
 
-    Installation
+	Rule Items that reference this DLL are available in NPM, which will provide serialized items to be loaded via the Sitecore CLI
 
-    npm install @constellation4sitecore/feature-url-friendly-page-names --save
+	Item installation:
 
-    And follow instructions for npm package.
+	npm install @constellation4sitecore/feature-url-friendly-page-names --save
+
+	And follow instructions for npm package.
   </description>
 	<releaseNotes>First release for XM Cloud</releaseNotes>
 	<copyright>Copyright 2017</copyright>
