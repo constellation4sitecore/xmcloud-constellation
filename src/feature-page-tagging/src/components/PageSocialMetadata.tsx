@@ -54,9 +54,8 @@ const fillAuthorAndPublisher = async (
   const pathItem = layoutData.sitecore.context.itemPath as string;
 
   const path = pathItem.split('?')[0].split('/')[1];
-  const siteName = (layoutData.sitecore.context.site?.name as string).toLowerCase();
 
-  model.siteUrl = `https://${siteName}.com/${path}`;
+  model.siteUrl = `${process.env.PUBLIC_URL}/${path}`;
 
   while (true) {
     const context = await getPageTagging(pageId);

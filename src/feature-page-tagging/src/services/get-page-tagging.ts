@@ -1,8 +1,9 @@
 import { constants, GraphQLRequestClient } from '@sitecore-jss/sitecore-jss-nextjs';
 import { gql } from 'graphql-request';
-import config from 'temp/config';
+// @ts-ignore
+import config from '../../../../../../src/temp/config';
 
-export async function getPageTagging(pageId) {
+export async function getPageTagging(pageId: string) {
   if (process.env.JSS_MODE === constants.JSS_MODE.DISCONNECTED) {
     return null;
   }
@@ -13,7 +14,7 @@ export async function getPageTagging(pageId) {
 
   const query = gql`
     query GetPageTagging($datasourceId: String!, $language: String!) {
-        items: item(path: $datasourceId, language: $language) {
+      items: item(path: $datasourceId, language: $language) {
         parent {
           id
           name
@@ -31,10 +32,10 @@ export async function getPageTagging(pageId) {
     }
   `;
 
-  const result = await graphQLClient.request(query, {
+  const result = (await graphQLClient.request(query, {
     datasourceId: pageId,
     language: 'en',
-  });
+  })) as any;
 
   return result.items;
 }

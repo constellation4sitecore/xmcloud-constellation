@@ -1,2 +1,0 @@
-export { getPageTagging } from './getPageTagging';
-
