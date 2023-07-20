@@ -1,0 +1,48 @@
+
+# may contain OAuth secrets, do not commit
+.sitecore/user.json
+
+# NuGet cache for Sitecore CLI
+.sitecore/package-cache/
+
+# Ephemeral index caches used by serialization, do not commit
+.scindex
+
+# Don't commit packages
+*.itempackage
+*.sicpackage
+
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+scjssconfig.json
+scjssconfig.bak
+
+*.pfx
+*.publishsettings
+node_modules/
+*.log
+npm-debug.log*
+dist
+*.eslintcache
+
+lerna-debug.log
+.nyc_output
+coverage/
+/badges
+src/*/*.tgz
+samples/
+
+.idea
+.next
+
+types/
+.vs/
+
+.scindex

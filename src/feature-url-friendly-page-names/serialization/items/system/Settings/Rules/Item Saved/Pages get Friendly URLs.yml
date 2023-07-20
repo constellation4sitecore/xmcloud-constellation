@@ -1,0 +1,67 @@
+﻿---
+ID: "b0ac9e6a-670e-43e6-bba2-22ce877efc1d"
+Parent: "86e2276a-437f-492f-b1b9-cedbb3b9da88"
+Template: "d9bdf22f-6e17-47f3-ab64-49c717ba92da"
+Path: /sitecore/system/Settings/Rules/Item Saved/Rules/Pages get Friendly URLs
+SharedFields:
+- ID: "908ef45d-4940-4b6a-857d-3739ba4acf8f"
+  Hint: Rule
+  Value: |
+    <ruleset>
+      <rule
+        uid="{A16FB681-0945-4D79-AFF1-98176404C49D}">
+        <conditions>
+          <and
+            uid="2F0C54BC5C1A43AA8C24BAF5BF4E5CBB">
+            <condition
+              id="{4B889F07-94D4-4371-B522-9FFE8AF0BE12}"
+              uid="9886A592356F4466B0DCF5A475AE7E1E"
+              operatorid="{FDD7C6B1-622A-4362-9CFF-DDE9866C68EA}"
+              value="/sitecore/content" />
+            <condition
+              id="{D0810F9D-734C-452D-BBB6-4730368D68F1}"
+              uid="F75C4B043EDC40688D36459C483CB562"
+              templateid="{47151711-26CA-434E-8132-D3E0B7D26683}" />
+          </and>
+        </conditions>
+        <actions>
+          <action
+            id="{73B9AC93-C5C4-4D23-B77D-7BCC86ACB68A}"
+            uid="2501C523B0204A439F15B3CE69163D4B"
+            ReplaceDiacritics="true"
+            ClearDisplayName="true"
+            IllegalCharacterRegEx="&amp;#x2F;s"
+            SpaceHandling="UseDash"
+            ChangeCase="ForceLowercase" />
+        </actions>
+      </rule>
+    </ruleset>
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20201006T175421Z
+    - ID: "45cf9130-802a-41be-b3eb-c02f657dcc2e"
+      Hint: Name
+      Value: Pages get Friendly URLs
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\rcabral
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\rcabral
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "d6b34b72-799a-40b6-84d6-6772ff310382"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\roberto.armas@verndale.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230704T170750Z

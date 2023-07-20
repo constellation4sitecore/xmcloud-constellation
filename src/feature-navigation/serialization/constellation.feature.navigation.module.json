@@ -1,0 +1,20 @@
+{
+    "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+    "namespace": "Constellation.Feature.Navigation",
+    "items": {
+      "includes": [
+        {
+          "name": "templates/Feature/ConstellationFolder",
+          "path": "/sitecore/templates/Feature/Constellation",
+          "allowedPushOperations": "CreateOnly",
+          "scope": "singleItem"
+        },
+        {
+          "name": "templates/Feature/Constellation/Navigation",
+          "path": "/sitecore/templates/Feature/Constellation/Navigation",
+          "allowedPushOperations": "CreateUpdateAndDelete"
+        }
+      ]
+    }
+  }
+  

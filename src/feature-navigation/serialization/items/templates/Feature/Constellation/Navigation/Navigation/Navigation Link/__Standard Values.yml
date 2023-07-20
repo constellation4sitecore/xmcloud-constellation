@@ -1,0 +1,40 @@
+﻿---
+ID: "50a74d31-7484-452b-8bb3-b5cbf3127459"
+Parent: "38212b66-f3c1-46fc-9a32-e04f4337bf8f"
+Template: "38212b66-f3c1-46fc-9a32-e04f4337bf8f"
+Path: /sitecore/templates/Feature/Constellation/Navigation/Navigation Link/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {38212B66-F3C1-46FC-9A32-E04F4337BF8F}
+    {34827329-CEC6-4A46-90F1-1B93FB46DFDE}
+- ID: "894e0985-dc34-4a16-80d6-5739e02a7fb3"
+  Hint: useThisDisplayName
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171121T151623Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\rcabral
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\rcabral
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ab884650-01be-4170-827e-f92479a7ef51"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\rcabral
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20171204T191230Z

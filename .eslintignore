@@ -1,0 +1,4 @@
+/lib
+src/*/node_modules
+src/*/lib
+src/*/dist

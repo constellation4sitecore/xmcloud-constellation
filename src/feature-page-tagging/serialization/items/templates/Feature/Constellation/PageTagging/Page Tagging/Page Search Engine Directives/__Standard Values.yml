@@ -1,0 +1,42 @@
+﻿---
+ID: "7df17c8e-9e57-4675-a7c5-71408b6f5b86"
+Parent: "0d4c93c2-d0f8-46d1-b115-d49cb46d24c8"
+Template: "0d4c93c2-d0f8-46d1-b115-d49cb46d24c8"
+Path: /sitecore/templates/Feature/Constellation/Page Tagging/Page Search Engine Directives/__Standard Values
+SharedFields:
+- ID: "3b9653e9-cf7f-47ff-8ba3-2f38d7577195"
+  Hint: searchEngineCanCachePage
+  Value: 1
+- ID: "724e54af-d355-4946-9bb4-6d4dba14a105"
+  Hint: searchEngineCanSnippetPage
+  Value: 1
+- ID: "7da2649e-2a47-4afe-b5d7-c3d7aaba258e"
+  Hint: searchEngineFollowsLinks
+  Value: 1
+- ID: "876f445a-2967-4b95-8d0c-0b656f668b60"
+  Hint: searchEngineIndexesImages
+  Value: 1
+- ID: "c454d2d8-d2e8-4755-8c64-682f73a44fac"
+  Hint: allowODPSnippet
+  Value: 1
+- ID: "ed14e473-2eff-493e-bfb3-946eb8d170a8"
+  Hint: searchEngineIndexesPage
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20171121T174108Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "f70ccddd-c609-41ee-b795-4926c011f14a"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20180815T141757Z
