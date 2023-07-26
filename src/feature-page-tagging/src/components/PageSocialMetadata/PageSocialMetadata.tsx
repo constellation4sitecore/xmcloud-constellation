@@ -3,9 +3,9 @@ import { mapToNew } from '@constellation4sitecore/foundation-mapper';
 import { ComponentRendering, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 import Head from 'next/head';
 import React from 'react';
-import { ComponentProps } from '../lib/component-props';
-import { PageSocialMetadataType } from '../models/PageSocialMetadata';
-import { getPageTagging } from '../services';
+import { ComponentProps } from '../../lib/component-props';
+import { PageSocialMetadataType } from '../../models/PageSocialMetadata';
+import { getPageTagging } from '../../services';
 
 type PageSocialMetadataProps = ComponentProps & {
   pageSocialMetadata: PageSocialMetadataType;

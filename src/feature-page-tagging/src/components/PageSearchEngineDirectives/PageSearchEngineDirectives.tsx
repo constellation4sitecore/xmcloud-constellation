@@ -3,9 +3,9 @@ import { mapToNew } from '@constellation4sitecore/foundation-mapper';
 import { ComponentRendering, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 import Head from 'next/head';
 import React from 'react';
-import { ComponentProps } from '../lib/component-props';
-import { PageSearchEngineDirectivesType } from '../models/PageSearchEngineDirectives';
-import { getPageTagging } from '../services';
+import { ComponentProps } from '../../lib/component-props';
+import { PageSearchEngineDirectivesType } from '../../models/PageSearchEngineDirectives';
+import { getPageTagging } from '../../services';
 
 type PageSearchEngineDirectiveProps = ComponentProps & {
   pageSearchEngineDirectives: string;
