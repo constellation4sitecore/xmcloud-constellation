@@ -7,20 +7,28 @@ export interface WithDatasourceRenderingProps {
   dataFields?: unknown;
 }
 
-export function withDatasourceRendering(): <ComponentProps extends WithDatasourceRenderingProps>(
-  Component: React.ComponentType<ComponentProps>
-) => (props: ComponentProps) => JSX.Element {
-  return (Component) => {
-    // eslint-disable-next-line react/display-name
-    return (props) => {
-      if (!props.rendering.dataSource) {
-        const { sitecoreContext } = useSitecoreContext();
-        return React.createElement(
-          Component,
-          Object.assign({}, props, { fields: sitecoreContext.route?.fields })
-        );
-      }
-      return React.createElement(Component, Object.assign({}, props, { fields: props.fields }));
-    };
+export function withDatasourceRendering<T extends WithDatasourceRenderingProps>(
+  componentOrMap: React.ComponentType<T> | { [key: string]: React.ComponentType<T> }
+): React.FC<T> {
+  return (props) => {
+    const { sitecoreContext } = useSitecoreContext();
+    const siteName: string = sitecoreContext.site?.name ?? 'default';
+
+    let InjectedComponent: React.ComponentType<T>;
+
+    if (typeof componentOrMap === 'function') {
+      InjectedComponent = componentOrMap;
+    } else {
+      InjectedComponent = componentOrMap[siteName] || componentOrMap['default'];
+    }
+
+    if (!props.rendering.dataSource) {
+      return React.createElement(
+        InjectedComponent,
+        Object.assign({}, props, { fields: sitecoreContext.route?.fields })
+      );
+    }
+
+    return React.createElement(InjectedComponent, props);
   };
 }
