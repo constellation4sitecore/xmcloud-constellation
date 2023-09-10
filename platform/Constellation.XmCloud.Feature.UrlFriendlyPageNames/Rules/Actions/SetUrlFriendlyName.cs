@@ -1,5 +1,8 @@
 ﻿using Sitecore;
 using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
+using System.Collections.Generic;
+using System;
 using System.Diagnostics.CodeAnalysis;
 
 namespace Constellation.XmCloud.Feature.UrlFriendlyPageNames.Rules.Actions
@@ -10,15 +13,23 @@ namespace Constellation.XmCloud.Feature.UrlFriendlyPageNames.Rules.Actions
     /// </summary>
     /// <typeparam name="T">Instance of Sitecore.Rules.RuleContext.</typeparam>
     public class SetUrlFriendlyName<T> : Sitecore.Rules.Actions.RuleAction<T>
-        where T : global::Sitecore.Rules.RuleContext
+         where T : global::Sitecore.Rules.RuleContext
     {
+        #region Locals
+        /// <summary>
+        /// Lists IDs that are still being acted upon. Prevents recursion.
+        /// </summary>
+        // ReSharper disable StaticFieldInGenericType
+        private static readonly List<string> InProgress = new List<string>();
+        // ReSharper restore StaticFieldInGenericType
+        #endregion
         #region Constructors
         /// <summary>
         /// Initializes a new instance of the <see cref="SetUrlFriendlyName{T}"/> class.
         /// </summary>
         public SetUrlFriendlyName()
         {
-           
+
         }
         #endregion
 
@@ -56,13 +67,47 @@ namespace Constellation.XmCloud.Feature.UrlFriendlyPageNames.Rules.Actions
         #endregion
 
         #region Methods
-
-
         /// <summary>
         /// Called when Sitecore executes the Action.
         /// </summary>
         /// <param name="ruleContext">An instance of Sitecore.Rules.RuleContext.</param>
+
+        #endregion
+
+
+        /// <summary>
+        /// The method called by the Rule Engine.
+        /// </summary>
+        /// <param name="ruleContext">The context.</param>
         public override void Apply(T ruleContext)
+        {
+
+            if (InProgress.Contains(ruleContext.Item.ID.ToString()))
+            {
+                Log.Info($"RuleAction not applied because a parent instance of the same rule is executing on {ruleContext.Item.Name}.", this);
+                return;
+            }
+
+            Log.Debug($"RuleAction started for {ruleContext.Item.Name}", this);
+            InProgress.Add(ruleContext.Item.ID.ToString());
+
+            try
+            {
+                this.Execute(ruleContext);
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"RuleAction failed for {ruleContext.Item.Name}", ex, this);
+            }
+            finally
+            {
+                InProgress.Remove(ruleContext.Item.ID.ToString());
+            }
+
+            Log.Debug($"RuleAction ended for {ruleContext.Item.Name}", this);
+        }
+
+        public void Execute(T ruleContext)
         {
             if (ItemNameManager.IsTargetForRenaming(ruleContext.Item))
             {
@@ -81,6 +126,5 @@ namespace Constellation.XmCloud.Feature.UrlFriendlyPageNames.Rules.Actions
                 }
             }
         }
-        #endregion
     }
 }
