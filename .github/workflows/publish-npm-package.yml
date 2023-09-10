@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Build Solution
+        run: yarn build
+
       - name: Bump release version (no git)
         if: inputs.release_type != 'prerelease'
         run: echo "Bump release version!"
