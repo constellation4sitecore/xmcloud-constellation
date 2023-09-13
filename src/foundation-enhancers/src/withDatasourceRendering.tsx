@@ -31,7 +31,7 @@ export function withDatasourceRendering(){
         );
       }
       
-      return React.createElement(InjectedComponent, props);
+      return <InjectedComponent {...props} />;
     }
   }
 }
