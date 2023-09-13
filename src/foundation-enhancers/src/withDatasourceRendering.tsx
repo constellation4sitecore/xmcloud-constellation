@@ -8,20 +8,20 @@ export interface WithDatasourceRenderingProps {
 }
 
 export function withDatasourceRendering(){
-  return function withDatasourceRenderingHoc<ComponentsProps extends WithDatasourceRenderingProps>(
-    componentOrMap: React.ComponentType<ComponentsProps> | { [key: string]: React.ComponentType<ComponentsProps> }
+  return function withDatasourceRenderingHoc<ComponentProps extends WithDatasourceRenderingProps>(
+    componentOrMap: React.ComponentType<ComponentProps> | { [key: string]: React.ComponentType<ComponentProps> }
   ){
-    return function WithDatasourceRendering(props: ComponentsProps)
+    return function WithDatasourceRendering(props: ComponentProps)
     {
       const { sitecoreContext } = useSitecoreContext();
       const siteName: string = sitecoreContext.site?.name ?? 'default';
   
-      let InjectedComponent: React.ComponentType<ComponentsProps>;
+      let InjectedComponent: React.ComponentType<ComponentProps>;
   
       if (typeof componentOrMap === 'function') {
         InjectedComponent = componentOrMap;
       } else {
-        InjectedComponent = componentOrMap[siteName] || componentOrMap['default'];
+        InjectedComponent = componentOrMap[siteName] ?? componentOrMap['default'];
       }
   
       if (!props.rendering.dataSource) {
@@ -30,7 +30,7 @@ export function withDatasourceRendering(){
           Object.assign({}, props, { fields: sitecoreContext.route?.fields })
         );
       }
-      
+
       return <InjectedComponent {...props} />;
     }
   }
