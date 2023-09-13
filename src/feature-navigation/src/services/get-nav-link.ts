@@ -20,6 +20,8 @@ export async function getNavLinks(navigationId: string): Promise<any | null> {
         children {
           results {
             ...navigationLink
+            ...linkGroup
+            ...imageNavigationLink
           }
         }
       }
@@ -39,6 +41,35 @@ export async function getNavLinks(navigationId: string): Promise<any | null> {
         name
         jsonValue
       }
+      __typename
+    }
+
+    fragment linkGroup on C__LinkGroup {
+      id
+      name
+      template {
+        ...templateInfo
+      }
+      fields {
+        name
+        jsonValue
+      }
+      __typename
+      hasChildren
+    }
+
+    fragment imageNavigationLink on ImageNavigationLink {
+      id
+      name
+      template {
+        ...templateInfo
+      }
+      fields {
+        name
+        jsonValue
+      }
+      __typename
+      hasChildren
     }
   `;
 
