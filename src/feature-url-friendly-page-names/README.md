@@ -22,3 +22,11 @@ Then you can push the items by
 ```bash
 dotnet sitecore ser push
 ```
+
+### Sponsors/Developers/Testers
+
+(in no particular order)
+
+- Richard Cabral
+- Roberto Armas
+- Sebastián Aliaga

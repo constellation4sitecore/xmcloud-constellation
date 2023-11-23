@@ -27,3 +27,12 @@ await derivedFrom(itemId, 'BASE TEMPLATE ID');
 ```ts
 await getTemplateInfo(itemId);
 ```
+
+## Credits
+
+### Sponsors/Developers/Testers
+
+(in no particular order)
+
+- Richard Cabral
+- Roberto Armas
