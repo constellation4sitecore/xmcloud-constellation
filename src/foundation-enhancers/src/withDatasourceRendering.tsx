@@ -7,20 +7,32 @@ export interface WithDatasourceRenderingProps {
   dataFields?: unknown;
 }
 
-export function withDatasourceRendering(): <ComponentProps extends WithDatasourceRenderingProps>(
-  Component: React.ComponentType<ComponentProps>
-) => (props: ComponentProps) => JSX.Element {
-  return (Component) => {
-    // eslint-disable-next-line react/display-name
-    return (props) => {
+export function withDatasourceRendering(){
+  return function withDatasourceRenderingHoc<ComponentProps extends WithDatasourceRenderingProps>(
+    componentOrMap: React.ComponentType<ComponentProps> | { [key: string]: React.ComponentType<ComponentProps> }
+  ){
+    return function WithDatasourceRendering(props: ComponentProps)
+    {
+      const { sitecoreContext } = useSitecoreContext();
+      const siteName: string = sitecoreContext.site?.name ?? 'default';
+  
+      let InjectedComponent: React.ComponentType<ComponentProps>;
+  
+      if (typeof componentOrMap === 'function') {
+        InjectedComponent = componentOrMap;
+      } else {
+        InjectedComponent = componentOrMap[siteName] ?? componentOrMap['default'];
+      }
+  
       if (!props.rendering.dataSource) {
-        const { sitecoreContext } = useSitecoreContext();
         return React.createElement(
-          Component,
+          InjectedComponent,
           Object.assign({}, props, { fields: sitecoreContext.route?.fields })
         );
       }
-      return React.createElement(Component, Object.assign({}, props, { fields: props.fields }));
-    };
-  };
+
+      return <InjectedComponent {...props} />;
+    }
+  }
 }
+

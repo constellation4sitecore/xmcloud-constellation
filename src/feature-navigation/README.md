@@ -30,3 +30,11 @@ If you want to get navigation links from Link Group you can do the following:
 ```ts
 const links = await getNavLinks(group.id);
 ```
+
+### Sponsors/Developers/Testers
+
+(in no particular order)
+
+- Richard Cabral
+- Roberto Armas
+- Sebastián Aliaga

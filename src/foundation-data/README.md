@@ -8,6 +8,8 @@ npm install @constellation4sitecore/foundation-data --save
 
 ## Usage
 
+Our data library simplifies the process of retrieving Sitecore items without the need to create a GraphQL endpoint manually. It seamlessly utilizes the GraphQL endpoint in the background, saving you from the hassle of writing complex GraphQL code yourself.
+
 ### Get Item
 
 ```ts
@@ -25,3 +27,12 @@ await derivedFrom(itemId, 'BASE TEMPLATE ID');
 ```ts
 await getTemplateInfo(itemId);
 ```
+
+## Credits
+
+### Sponsors/Developers/Testers
+
+(in no particular order)
+
+- Richard Cabral
+- Roberto Armas
