@@ -2,7 +2,7 @@
 ID: "c6e7b3e8-0bca-4f7e-a7b9-22c0d1b43b63"
 Parent: "2b5702a9-c32f-4f6e-bb58-a890460dc1fb"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Feature/Constellation/Navigation/Image Navigation Link/Navigation Link/Image
+Path: /sitecore/templates/Feature/Constellation/Navigation/Image Navigation Link/Navigation Link/image
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
@@ -15,6 +15,10 @@ SharedFields:
   Value: 100
 Languages:
 - Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Image
   Versions:
   - Version: 1
     Fields:
@@ -31,11 +35,11 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "1b603b1b-3343-4ed6-b745-6229e062c669"
+      Value: "5736a44b-624c-4e13-866b-48fc628bd5a0"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rcabral
+        sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20181019T184256Z
+      Value: 20240128T045115Z
