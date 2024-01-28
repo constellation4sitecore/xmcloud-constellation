@@ -1,14 +1,13 @@
 {
-    "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
-    "namespace": "Constellation.Foundation.PageAnalyticsScripts",
-    "items": {
-      "includes": [
-        {
-            "name": "templates/Foundation/Constellation/PageAnalyticsScripts",
-            "path": "/sitecore/templates/Foundation/Constellation/Page Analytics Scripts",
-            "allowedPushOperations": "CreateUpdateAndDelete"
-        }
-      ]
-    }
-  }
-  
+  "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "Constellation.Foundation.PageAnalyticsScripts",
+  "items": {
+    "includes": [
+      {
+        "name": "templates/Foundation/Constellation/PageAnalyticsScripts",
+        "path": "/sitecore/templates/Foundation/Constellation/Page Analytics Scripts"
+      }
+    ]
+  },
+  "references": ["Constellation"]
+}
