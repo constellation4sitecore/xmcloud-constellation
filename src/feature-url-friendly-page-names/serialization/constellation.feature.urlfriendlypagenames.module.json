@@ -6,15 +6,16 @@
       {
         "name": "system/Settings/Rules/Definitions",
         "path": "/sitecore/system/Settings/Rules/Definitions/Elements/Item Information/Set URL-Friendly Item Name",
-        "allowedPushOperations": "CreateUpdateAndDelete",
         "scope": "singleItem"
       },
       {
         "name": "system/Settings/Rules/Item Saved",
         "path": "/sitecore/system/Settings/Rules/Item Saved/Rules/Pages get Friendly URLs",
-        "allowedPushOperations": "CreateUpdateAndDelete",
         "scope": "singleItem"
       }
     ]
-  }
+  },
+  "references": [
+    "Constellation"
+  ]
 }

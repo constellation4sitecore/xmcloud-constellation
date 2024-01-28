@@ -1,20 +1,17 @@
 {
-    "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
-    "namespace": "Constellation.Feature.Navigation",
-    "items": {
-      "includes": [
-        {
-          "name": "templates/Feature/ConstellationFolder",
-          "path": "/sitecore/templates/Feature/Constellation",
-          "allowedPushOperations": "CreateOnly",
-          "scope": "singleItem"
-        },
-        {
-          "name": "templates/Feature/Constellation/Navigation",
-          "path": "/sitecore/templates/Feature/Constellation/Navigation",
-          "allowedPushOperations": "CreateUpdateAndDelete"
-        }
-      ]
-    }
-  }
-  
+  "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "Constellation.Feature.Navigation",
+  "items": {
+    "includes": [
+      {
+        "name": "templates/Feature/Constellation/Navigation",
+        "path": "/sitecore/templates/Feature/Constellation/Navigation"
+      },
+      {
+        "name": "settings/Feature/Constellation/Navigation",
+        "path": "/sitecore/system/Settings/Feature/Constellation/Navigation"
+      }
+    ]
+  },
+  "references": ["Constellation"]
+}
