@@ -2,19 +2,27 @@ import { Image as JSSImage, ImageProps, ImageField } from '@sitecore-jss/sitecor
 import React, { useEffect, useState } from 'react';
 
 export interface ExtendedImageProps extends ImageProps {
-  isSVG?: boolean;
+  isSvg?: boolean;
 }
 
 export const Image = (props: ExtendedImageProps) => {
   const [svg, setSVG] = useState<string | null>(null);
   useEffect(() => {
-    if (props.isSVG && (props.field?.value as ImageField).value?.src) {
-      const url = (props.field?.value as ImageField).value?.src as string;
+    if (props.isSvg && (props.field as ImageField).value?.src) {
+      const url = (props.field as ImageField).value?.src as string;
       fetch(url)
         .then((response) => response.text())
-        .then((svg) => setSVG(svg));
+        .then((svg) => setSVG(svg))
+        .catch((error) => console.error('Error:', error));
     }
-  }, [props.isSVG]);
-
-  return <>{svg && props.isSVG ? svg : <JSSImage {...props} />}</>;
+  }, [props.field, props.isSvg]);
+  return (
+    <>
+      {svg && props.isSvg ? (
+        <span dangerouslySetInnerHTML={{ __html: svg }}></span>
+      ) : (
+        <JSSImage {...props} />
+      )}
+    </>
+  );
 };
