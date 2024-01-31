@@ -7,9 +7,19 @@
   "bugs": {
     "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
   },
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json && npm run copy-dts",
+    "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" types",
+    "clean": "del-cli dist types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "files": [
     "serialization",
-    "sitecore.json"
+    "sitecore.json",
+    "dist",
+    "types",
+    "/*.js",
+    "/*.d.ts"
   ],
   "devDependencies": {
     "@types/node": "^20.2.3",
