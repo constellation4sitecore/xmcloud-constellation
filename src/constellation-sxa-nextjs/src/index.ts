@@ -1,1 +1,1 @@
-export * from './fields-extensions/Image';
+export * from './fields-extensions';
