@@ -1,9 +1,9 @@
 import { Image as JSSImage, ImageProps, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
 import React, { useEffect, useState } from 'react';
 
-type ExtendedImageProps = ImageProps & {
-  isSVG: boolean;
-};
+export interface ExtendedImageProps extends ImageProps {
+  isSVG?: boolean;
+}
 
 export const Image = (props: ExtendedImageProps) => {
   const [svg, setSVG] = useState<string | null>(null);

@@ -2,6 +2,8 @@
   "name": "@constellation4sitecore/constellation-sxa-nextjs",
   "version": "1.0.4-beta.4",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "author": "Richard J. Cabral, Roberto Armas, Sebastian Aliaga",
   "license": "MIT",
   "bugs": {
@@ -13,6 +15,7 @@
     "clean": "del-cli dist types",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "types": "types/index.d.ts",
   "files": [
     "serialization",
     "sitecore.json",
