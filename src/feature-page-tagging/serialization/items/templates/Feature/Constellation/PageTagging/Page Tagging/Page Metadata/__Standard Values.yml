@@ -8,6 +8,9 @@ Languages:
   Versions:
   - Version: 1
     Fields:
+    - ID: "1a61ece0-2b10-458c-81c7-1e080222da7b"
+      Hint: browserTitle
+      Value: $name
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
       Value: 20171121T152529Z
@@ -21,11 +24,11 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5c05bfdc-bfaf-4a77-a57e-9bfbdef45f20"
+      Value: "2236deaf-5f09-4b1d-9f42-fe6b6ff7b2f3"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rcabral
+        sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20171121T153037Z
+      Value: 20240206T032441Z
