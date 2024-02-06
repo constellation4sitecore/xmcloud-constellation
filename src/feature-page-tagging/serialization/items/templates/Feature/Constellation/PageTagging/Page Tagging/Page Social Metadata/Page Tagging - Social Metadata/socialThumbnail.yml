@@ -15,6 +15,10 @@ SharedFields:
   Value: 80
 Languages:
 - Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Social Thumbnail
   Versions:
   - Version: 1
     Fields:
@@ -31,11 +35,11 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "b8226e78-9a09-4b04-b99c-e92f2e0a87f0"
+      Value: "0eeb6800-9df3-4830-9e5e-47d3de19c9bc"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\F4BycLo8Tb
+        sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230607T174518Z
+      Value: 20240206T030717Z

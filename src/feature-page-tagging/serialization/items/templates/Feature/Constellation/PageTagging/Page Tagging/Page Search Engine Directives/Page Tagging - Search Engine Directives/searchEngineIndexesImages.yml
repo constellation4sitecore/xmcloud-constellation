@@ -15,6 +15,10 @@ SharedFields:
   Value: 1
 Languages:
 - Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Search Engine Indexes Images
   Versions:
   - Version: 1
     Fields:
@@ -31,11 +35,11 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "607c4259-9871-4081-95c0-f607cc25cd33"
+      Value: "18602bd0-6de6-4bf6-a530-ba7a8e7365b9"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\F4BycLo8Tb
+        sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230608T150527Z
+      Value: 20240206T030523Z

@@ -1,8 +1,8 @@
 ﻿---
-ID: "cb4de31a-0baa-456d-8eda-c680b5a39c0f"
-Parent: "82c03f8b-84a4-48fd-b5d4-e412555a37e3"
-Template: "82c03f8b-84a4-48fd-b5d4-e412555a37e3"
-Path: /sitecore/templates/Feature/Constellation/Page Tagging/Page Metadata/__Standard Values
+ID: "67b861aa-7d79-4b55-9feb-9b7c987bae01"
+Parent: "a15d1835-cb19-4236-9f62-32b8f03f474c"
+Template: "a87a00b1-e6db-45ab-8b54-636fec3b5523"
+Path: /sitecore/system/Settings/Feature/Constellation/Page Tagging
 Languages:
 - Language: en
   Versions:
@@ -10,22 +10,22 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20171121T152529Z
+      Value: 20240206T025927Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
-        sitecore\rcabral
+        sitecore\roberto.armas@verndale.com
     - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
       Hint: __Created by
       Value: |
-        sitecore\rcabral
+        sitecore\roberto.armas@verndale.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5c05bfdc-bfaf-4a77-a57e-9bfbdef45f20"
+      Value: "e364dd82-8f3c-4b6d-b774-e8c95a6b43fb"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rcabral
+        sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20171121T153037Z
+      Value: 20240206T025927Z
