@@ -4,13 +4,12 @@
   "items": {
     "includes": [
       {
-        "name": "templates/Constellation/Foundation/Labels",
-        "path": "/sitecore/templates/Foundation/Constellation/Labels"
+        "name": "settings/Foundation/Constellation/Labels",
+        "path": "/sitecore/system/Settings/Foundation/Constellation/Labels"
       },
       {
-        "name": "constellationLabelsScaffolding",
-        "path": "/sitecore/templates/Branches/Foundation/JSS Experience Accelerator/Scaffolding/JSS Site/$name/Labels",
-        "scope": "singleItem"
+        "name": "templates/Constellation/Foundation/Labels",
+        "path": "/sitecore/templates/Foundation/Constellation/Labels"
       }
     ]
   },

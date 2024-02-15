@@ -1,8 +1,18 @@
 ﻿---
-ID: "3607e71d-3b14-4d8f-a86b-e3c8b4cc5732"
-Parent: "a0eecf65-09ad-4a10-ae46-7df70106cfe6"
-Template: "86dabd3c-f970-4155-a3d3-a5c401cc5f06"
-Path: /sitecore/templates/Branches/Foundation/JSS Experience Accelerator/Scaffolding/JSS Site/$name/Labels
+ID: "0be850c2-a3dc-4e4a-b7ae-cd6a4db4fa0f"
+Parent: "d24224c9-2eb5-4585-a1b9-a53e3b35f405"
+Template: "3aea335c-d06d-45b1-841a-cbc8d2d1ce40"
+Path: /sitecore/system/Settings/Foundation/Constellation/Labels/Labels Headless Site Setup/Add Labels Root Folder
+SharedFields:
+- ID: "52c91c75-6698-4701-a8a2-242ace59a8d6"
+  Hint: Location
+  Value: "{4BE9F770-6717-4AF4-932B-039AE6E372C8}"
+- ID: "7868e6bc-525c-4fce-ab8a-77da3e09b171"
+  Hint: Name
+  Value: Labels
+- ID: "e62c28f0-9d3b-46e2-8bec-a5e120542499"
+  Hint: Template
+  Value: "{86DABD3C-F970-4155-A3D3-A5C401CC5F06}"
 Languages:
 - Language: en
   Versions:
@@ -10,7 +20,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20221201T045633Z
+      Value: 20240215T175536Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -21,11 +31,11 @@ Languages:
         sitecore\roberto.armas@verndale.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "4638a4d5-9ddd-48e1-ac30-608ec72ec785"
+      Value: "54d95bd3-4d5b-4126-9991-0228f8108d17"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20221201T045633Z
+      Value: 20240215T175629Z
