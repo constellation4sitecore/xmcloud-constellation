@@ -37,8 +37,8 @@
 
 	And follow instructions for npm package.
   </description>
-	<releaseNotes>First release for XM Cloud</releaseNotes>
-	<copyright>Copyright 2017</copyright>
-	<tags>Sitecore, Sitecore Helix</tags>
+	<releaseNotes>Q1 2024 Sitecore DLL Update</releaseNotes>
+	<copyright>Copyright 2024</copyright>
+	<tags>Sitecore, XM Cloud</tags>
   </metadata>
 </package>
