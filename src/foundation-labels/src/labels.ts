@@ -6,6 +6,7 @@ import {
   config,
 } from '@constellation4sitecore/constellation-sxa-nextjs';
 import { mapToNew } from '@constellation4sitecore/foundation-mapper';
+import { LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 
 // https://stackoverflow.com/questions/56018167/typescript-does-not-copy-d-ts-files-to-build
 // .d.ts workaraound
@@ -30,54 +31,91 @@ export interface GraphQLClient {
 
 type LabelResult = {
   labels: {
-    id: string;
-    fields: {
+    results: {
       name: string;
-      value: string;
-      jsonValue: unknown;
+      path: string;
+      fields: {
+        name: string;
+        jsonValue: unknown;
+      }[];
     }[];
+    }
+    siteRoot?: {
+      ancestors: {
+        name: string;
+        parent: {
+          path: string;
+        };
+      }[];
+      }
   };
 };
 
 export class LabelService {
   private language: string;
+  private contextItem: string | null;
   /**
    *
    */
-  constructor(language?: string) {
-    this.language = language ? language : (config.defaultLanguage as string);
+  constructor(layoutData?: LayoutServiceData) {
+    this.language = layoutData?.sitecore.context.language
+      ? layoutData?.sitecore.context.language
+      : (config.defaultLanguage as string);
+
+    this.contextItem = layoutData?.sitecore.route?.itemId ? layoutData.sitecore.route.itemId : null;
   }
 
-  async getLabelsForView<TLabel extends Obj>(labelId: string): Promise<TLabel | null> {
+  async getLabelsForView<TLabel extends Obj>(templateId: string): Promise<TLabel | null> {
     const graphqlFactory = createGraphQLClientFactory();
     const graphQLClient = graphqlFactory({
       debugger: debuggers.labels,
     }) as GraphQLClient;
 
     const query = gql`
-      query GetLabels($labelId: String!, $language: String!) {
-        labels: item(path: $labelId, language: $language) {
-          id
-          fields {
+      query getLabelsForView($contextItem: String, $labelsTemplate: String!, $language: String!) {
+        labels: search(
+          where: {
+            AND: [
+              { name: "_templates", value: $labelsTemplate }
+              { name: "_name", value: "__Standard Values", operator: NEQ }
+            ]
+          }
+        ) {
+          results {
             name
-            value
-            jsonValue
+            path
+            fields(ownFields: true) {
+              name
+              jsonValue
+            }
+          }
+        }
+        siteRoot: item(path: $contextItem, language: $language) {
+          ancestors(hasLayout: true) {
+            name
+            parent {
+              path
+            }
           }
         }
       }
     `;
 
     const result = await graphQLClient.request<LabelResult>(query, {
-      labelId: labelId,
+      contextItem: this.contextItem,
+      labelsTemplate: templateId,
       language: this.language,
     });
 
-    if (!result.labels) {
-      debuggers.labels(`No labels found for labelId: ${labelId}. Do you forget to publish?`);
+    if (result.labels.results.length == 0) {
+      debuggers.labels(`No labels found for labelId: ${templateId}. Do you forget to publish?`);
       return null;
     }
 
-    const label = mapToNew<TLabel>(result.labels);
+    const home = result.siteRoot?.ancestors.find((ancestor: any) => ancestor.name.toLowerCase() === 'home');
+    const labelItem = home ? result.labels.results.filter((label) => label.path.startsWith(home.parent.path))[0] 
+    : result.labels.results[0];
+    const label = mapToNew<TLabel>(labelItem);
     return label;
   }
 }
