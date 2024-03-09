@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/foundation-labels",
-  "version": "1.0.4-beta.13",
+  "version": "1.0.4-beta.14",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -40,8 +40,8 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@constellation4sitecore/constellation-sxa-nextjs": "1.0.4-beta.13",
-    "@constellation4sitecore/foundation-mapper": "1.0.4-beta.13",
+    "@constellation4sitecore/constellation-sxa-nextjs": "1.0.4-beta.14",
+    "@constellation4sitecore/foundation-mapper": "1.0.4-beta.14",
     "@sitecore-jss/sitecore-jss-nextjs": "~21.6.0"
   },
   "types": "types/index.d.ts",
