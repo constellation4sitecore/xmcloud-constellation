@@ -53,8 +53,10 @@ type LabelResult = {
 export class LabelService {
   private language: string;
   private contextItem: string | null;
+
   /**
-   *
+   * Initialize the label service
+   * @param layoutData : Layout service data
    */
   constructor(layoutData?: LayoutServiceData) {
     this.language = layoutData?.sitecore.context.language
@@ -64,6 +66,11 @@ export class LabelService {
     this.contextItem = layoutData?.sitecore.route?.itemId ? layoutData.sitecore.route.itemId : null;
   }
 
+  /**
+   * Get labels for a given template ID
+   * @param templateId : Template ID of the labels
+   * @returns Labels
+   */
   async getLabelsForView<TLabel extends Obj>(templateId: string): Promise<TLabel | null> {
     const graphqlFactory = createGraphQLClientFactory();
     const graphQLClient = graphqlFactory({
@@ -107,7 +114,7 @@ export class LabelService {
     });
 
     if (result.labels.results.length == 0) {
-      debuggers.labels(`No labels found for labelId: ${templateId}. Do you forget to publish?`);
+      debuggers.labels(`No labels found for labelId: ${templateId}. Did you forget to publish?`);
       return null;
     }
 

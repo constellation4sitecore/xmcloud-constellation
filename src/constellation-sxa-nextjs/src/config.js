@@ -1,4 +1,5 @@
 // Code: workaraound to inject project settings into 
-import config from '../../../../../src/temp/config';
+import jssConfig from '../../../../../src/temp/config';
 
-module.exports = { config: config }
+const config = jssConfig;
+export default config;

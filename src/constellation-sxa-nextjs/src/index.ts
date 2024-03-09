@@ -1,4 +1,5 @@
 export { default as debug, Debugger, enableDebug } from './debug';
-export { JssConfig, config } from './config';
+import config, { JssConfig } from './config';
+export { config, JssConfig };
 export * from './fields-extensions';
 export * from './graphql-client-factory';

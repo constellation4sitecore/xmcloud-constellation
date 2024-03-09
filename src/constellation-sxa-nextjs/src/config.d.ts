@@ -12,4 +12,5 @@ export interface JssConfig extends Record<string, string | undefined> {
   publicUrl?: string;
 }
 
-export const config: JssConfig;
+const config: JssConfig;
+export default config;
