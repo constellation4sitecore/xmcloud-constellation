@@ -84,6 +84,7 @@ export class LabelService {
             AND: [
               { name: "_templates", value: $labelsTemplate }
               { name: "_name", value: "__Standard Values", operator: NEQ }
+              { name: "_language", value: $language }
             ]
           }
         ) {
