@@ -114,7 +114,9 @@ export class LabelService {
     });
 
     if (result.labels.results.length == 0) {
-      debuggers.labels(`No labels found for labelId: ${templateId}. Did you forget to publish?`);
+      debuggers.labels.log(
+        `No labels found for labelId: ${templateId}. Did you forget to publish?`
+      );
       return null;
     }
 
