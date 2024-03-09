@@ -39,15 +39,14 @@ type LabelResult = {
         jsonValue: unknown;
       }[];
     }[];
-    }
-    siteRoot?: {
-      ancestors: {
-        name: string;
-        parent: {
-          path: string;
-        };
-      }[];
-      }
+  };
+  siteRoot?: {
+    ancestors: {
+      name: string;
+      parent: {
+        path: string;
+      };
+    }[];
   };
 };
 
@@ -112,9 +111,12 @@ export class LabelService {
       return null;
     }
 
-    const home = result.siteRoot?.ancestors.find((ancestor: any) => ancestor.name.toLowerCase() === 'home');
-    const labelItem = home ? result.labels.results.filter((label) => label.path.startsWith(home.parent.path))[0] 
-    : result.labels.results[0];
+    const home = result.siteRoot?.ancestors.find(
+      (ancestor: any) => ancestor.name.toLowerCase() === 'home'
+    );
+    const labelItem = home
+      ? result.labels.results.filter((label) => label.path.startsWith(home.parent.path))[0]
+      : result.labels.results[0];
     const label = mapToNew<TLabel>(labelItem);
     return label;
   }
