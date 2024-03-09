@@ -107,24 +107,33 @@ export class LabelService {
       }
     `;
 
-    const result = await graphQLClient.request<LabelResult>(query, {
-      contextItem: this.contextItem,
-      labelsTemplate: templateId,
-      language: this.language,
-    });
+    try {
+      const result = await graphQLClient.request<LabelResult>(query, {
+        contextItem: this.contextItem,
+        labelsTemplate: templateId,
+        language: this.language,
+      });
 
-    if (result.labels.results.length == 0) {
-      debuggers.labels(`No labels found for labelId: ${templateId}. Did you forget to publish?`);
+      if (result.labels.results.length == 0) {
+        debuggers.labels(
+          `No labels found for templateId: ${templateId}. Did you forget to publish?`
+        );
+        return null;
+      }
+
+      const home = result.siteRoot?.ancestors.find(
+        (ancestor: any) => ancestor.name.toLowerCase() === 'home'
+      );
+      const labelItem = home
+        ? result.labels.results.filter((label) => label.path.startsWith(home.parent.path))[0]
+        : result.labels.results[0];
+      const label = mapToNew<TLabel>(labelItem);
+      return label;
+    } catch (error) {
+      debuggers.labels(
+        `Error fetching labels for templateId: ${templateId}. Verify that template exists. Error: ${error}`
+      );
       return null;
     }
-
-    const home = result.siteRoot?.ancestors.find(
-      (ancestor: any) => ancestor.name.toLowerCase() === 'home'
-    );
-    const labelItem = home
-      ? result.labels.results.filter((label) => label.path.startsWith(home.parent.path))[0]
-      : result.labels.results[0];
-    const label = mapToNew<TLabel>(labelItem);
-    return label;
   }
 }
