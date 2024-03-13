@@ -1,6 +1,6 @@
-import { filterPlaceholders } from '@constellation4sitecore/foundation-enhancers';
 import { ComponentPropsReactContext, ComponentRendering } from '@sitecore-jss/sitecore-jss-nextjs';
 import { useContext } from 'react';
+import { filterPlaceholders } from '../helpers';
 /**
  * Use this hook to modify the props of the children components (Placeholder).
  * @param rendering The rendering object of the current component.
