@@ -49,3 +49,25 @@ export const getStaticProps = async (rendering: ComponentRendering) => {
   }
 };
 ```
+
+### Modify Children Properties when using Placeholders
+
+For example you want to send properties to a child component that is inserted into a Placeholder.
+
+```tsx
+const MyComponent = ({ fields, params, rendering }: MyComponentProps) => {
+  useModifyChildrenProps(rendering, {
+    myProp1: fields.myProp1,
+    myProp2: 'hello world!',
+  });
+
+  return (
+    <Placeholder
+      name={`my-chindren-modules-${params.DynamicPlaceholderId}`}
+      rendering={rendering}
+    />
+  );
+};
+```
+
+Note: This serves as a workaround in cases where `modifyComponentProps` prop in the `Placeholder` Component fails to function properly. This issue arises due to the `component-props.ts` plugin overriding the props through the `getStaticProps` method.
