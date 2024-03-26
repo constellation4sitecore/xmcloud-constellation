@@ -1,3 +1,3 @@
 export type PageNavigationTitle = {
-  navigationTitle: string;
+  NavigationTitle: string;
 };

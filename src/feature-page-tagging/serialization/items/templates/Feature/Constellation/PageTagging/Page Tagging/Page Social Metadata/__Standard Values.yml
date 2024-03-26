@@ -3,13 +3,6 @@ ID: "137ea0c5-59a6-49c3-8502-55b4aeb9bdd7"
 Parent: "6997eba6-6972-408f-803c-9ec8a62612a4"
 Template: "6997eba6-6972-408f-803c-9ec8a62612a4"
 Path: /sitecore/templates/Feature/Constellation/Page Tagging/Page Social Metadata/__Standard Values
-SharedFields:
-- ID: "4052e28b-2c06-4478-9ea1-a45a56334041"
-  Hint: twitterInheritValues
-  Value: 1
-- ID: "7d983468-b85e-41f7-8070-98a0c6f23d0b"
-  Hint: twitterCardType
-  Value: summary
 Languages:
 - Language: en
   Versions:

@@ -1,1 +1,1 @@
-export * from './get-labels-for-view';
+export * from './labels';

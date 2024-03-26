@@ -1,15 +1,48 @@
 {
   "name": "@constellation4sitecore/constellation-sxa-nextjs",
-  "version": "1.0.3",
+  "version": "1.0.4-beta.18",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "author": "Richard J. Cabral, Roberto Armas, Sebastian Aliaga",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
   },
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json && npm run copy-dts",
+    "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" types",
+    "clean": "del-cli dist types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "types": "types/index.d.ts",
   "files": [
     "serialization",
-    "sitecore.json"
+    "sitecore.json",
+    "dist",
+    "types",
+    "/*.js",
+    "/*.d.ts"
   ],
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "@types/node": "^20.2.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "copyfiles": "^2.4.1",
+    "del-cli": "^5.0.0",
+    "eslint": "^8.32.0",
+    "eslint-plugin-react": "^7.32.1",
+    "jsdom": "^21.1.0",
+    "next": "^13.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "~4.9.4"
+  },
+  "dependencies": {
+    "@sitecore-jss/sitecore-jss-nextjs": "~21.6.0",
+    "debug": "^4.3.1"
+  },
   "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4"
 }

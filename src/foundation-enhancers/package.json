@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/foundation-enhancers",
-  "version": "1.0.3",
+  "version": "1.0.4-beta.18",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -14,7 +14,7 @@
     "node": ">=12",
     "npm": ">=6"
   },
-  "author": "Richard J. Cabral, Roberto Armas",
+  "author": "Richard J. Cabral, Roberto Armas, Josué Jaramillo",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"

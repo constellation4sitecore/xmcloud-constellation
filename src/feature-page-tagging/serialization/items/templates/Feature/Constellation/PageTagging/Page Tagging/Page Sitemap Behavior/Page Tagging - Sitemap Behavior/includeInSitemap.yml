@@ -2,7 +2,7 @@
 ID: "aeea733f-9cdc-4024-8103-7f57846ae6d9"
 Parent: "620c3bf4-7754-4fc5-8f5d-ec4214490962"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: "/sitecore/templates/Feature/Constellation/Page Tagging/Page Sitemap Behavior/Page Tagging - Sitemap Behavior/Include in Sitemap"
+Path: "/sitecore/templates/Feature/Constellation/Page Tagging/Page Sitemap Behavior/Page Tagging - Sitemap Behavior/includeInSitemap"
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
@@ -15,6 +15,10 @@ SharedFields:
   Value: 1
 Languages:
 - Language: en
+  Fields:
+  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
+    Hint: Title
+    Value: Include In Sitemap
   Versions:
   - Version: 1
     Fields:
@@ -31,11 +35,11 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "afa1324c-0979-4604-ac48-00818cf61fa3"
+      Value: "781d4673-2a11-4a75-9b88-8bd5c3872d10"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\admin
+        sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20180530T194402Z
+      Value: 20240206T030654Z
