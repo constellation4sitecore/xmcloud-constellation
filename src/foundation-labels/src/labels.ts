@@ -91,7 +91,7 @@ export class LabelService {
           results {
             name
             path
-            fields(ownFields: true) {
+            fields {
               name
               jsonValue
             }
