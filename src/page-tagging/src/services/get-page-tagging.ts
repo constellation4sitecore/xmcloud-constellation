@@ -1,4 +1,5 @@
-import { constants, GraphQLRequestClient } from '@sitecore-jss/sitecore-jss-nextjs';
+import { constants } from '@sitecore-jss/sitecore-jss-nextjs';
+import { GraphQLRequestClient } from '@sitecore-jss/sitecore-jss-nextjs/graphql';
 import { gql } from 'graphql-request';
 // @ts-ignore
 import config from '../../../../../../src/temp/config';
