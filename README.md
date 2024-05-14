@@ -9,6 +9,7 @@ Constellation for Sitecore XM Clould is an open-source tools for easily develop 
 - [Labels](src/labels/README.md)
 - [Layout](src/layout/README.md)
 - [Mapper](src/mapper/README.md)
+- [Media](src/media/README.md)
 
 - [Navigation](src/navigation/README.md)
 - [Url Friendly Page Names](src/url-friendly-page-names/README.md)
