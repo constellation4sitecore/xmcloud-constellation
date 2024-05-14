@@ -1,9 +1,9 @@
-# Constellation Foundation Layout
+# Constellation Layout
 
 ## Installation
 
 ```bash
-npm install @constellation4sitecore/foundation-layout --save
+npm install @constellation4sitecore/layout --save
 ```
 
 ## Usage

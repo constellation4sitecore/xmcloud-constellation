@@ -1,9 +1,9 @@
-# Constellation Feature Navigation
+# Constellation Navigation
 
 ## Installation
 
 ```bash
-npm install @constellation4sitecore/feature-navigation --save
+npm install @constellation4sitecore/navigation --save
 ```
 
 ## Setup Serialization
@@ -13,7 +13,7 @@ In your project add in `sitecore.json`
 ```json
   "modules": [
     ....
-    "npm:@constellation4sitecore/feature-navigation"
+    "npm:@constellation4sitecore/navigation"
   ],
 ```
 

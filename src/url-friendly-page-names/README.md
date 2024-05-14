@@ -1,9 +1,9 @@
-# Constellation Feature Url Friendly Page Names
+# Constellation Url Friendly Page Names
 
 ## Installation
 
 ```bash
-npm install @constellation4sitecore/feature-url-friendly-page-names --save
+npm install @constellation4sitecore/url-friendly-page-names --save
 ```
 
 ## Setup Serialization
@@ -13,7 +13,7 @@ In your project add in `sitecore.json`
 ```json
   "modules": [
     ....
-    "npm:@constellation4sitecore/feature-url-friendly-page-names"
+    "npm:@constellation4sitecore/url-friendly-page-names"
   ],
 ```
 

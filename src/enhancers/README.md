@@ -1,9 +1,9 @@
-# Constellation Foundation Mapper
+# Constellation Enhancers
 
 ## Installation
 
 ```bash
-npm install @constellation4sitecore/foundation-enhancers --save
+npm install @constellation4sitecore/enhancers --save
 ```
 
 ## Usage
@@ -13,7 +13,7 @@ npm install @constellation4sitecore/foundation-enhancers --save
 Similarly to `withDatasourceCheck` that comes OOTB to enforce a component to have a Datasource, we created a new High-Order component called `withDatasourceRendering` that is meant to help developers code faster by automatically checking for a Datasource if available, if not the datasource will fallback to the context item.
 
 ```tsx
-import { withDatasourceRendering } from '@constellation4sitecore/foundation-enhancers';
+import { withDatasourceRendering } from '@constellation4sitecore/enhancers';
 
 export default withDatasourceRendering()<HomepageMastheadProps>(HomepageMasthead);
 ```

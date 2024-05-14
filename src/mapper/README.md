@@ -1,9 +1,9 @@
-# Constellation Foundation Mapper
+# Constellation Mapper
 
 ## Installation
 
 ```bash
-npm install @constellation4sitecore/foundation-mapper --save
+npm install @constellation4sitecore/mapper --save
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ query {
 The structure of the current result is kind of array of fields { name, jsonvalue}. Within `mapToNew` you can cast to model object instead of looping an array of fields.
 
 ```ts
-import { mapToNew } from '@constellation4sitecore/foundation-mapper';
+import { mapToNew } from '@constellation4sitecore/mapper';
 
 export type MyExampleType = {
   logo: ImageField;
@@ -44,7 +44,7 @@ var fieldsProps = mapToNew<MyExampleType>(results);
 In some scenarios you have the item reference which has a fields property but you need to type the fields into a type model
 
 ```ts
-import { castItem } from '@constellation4sitecore/foundation-mapper';
+import { castItem } from '@constellation4sitecore/mapper';
 
 // Given item as
 // item {

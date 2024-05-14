@@ -1,9 +1,9 @@
-# Constellation Foundation Data
+# Constellation Data
 
 ## Installation
 
 ```bash
-npm install @constellation4sitecore/foundation-data --save
+npm install @constellation4sitecore/data --save
 ```
 
 ## Usage

@@ -1,4 +1,4 @@
-# Constellation
+# Constellation SXA NextJS
 
 ## Installation
 

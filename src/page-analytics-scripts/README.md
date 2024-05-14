@@ -1,1 +1,1 @@
-# Constellation Foundation Page Anlytics Scripts
+# Constellation Page Anlytics Scripts
