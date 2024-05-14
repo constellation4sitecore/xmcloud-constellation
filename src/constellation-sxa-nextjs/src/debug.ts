@@ -30,4 +30,6 @@ export const enableDebug = (namespaces: string) => debug.enable(namespaces);
 export default {
   common: debug(`${rootNamespace}:common`),
   labels: debug(`${rootNamespace}:labels`),
+  navigation: debug(`${rootNamespace}:navigation`),
+  data: debug(`${rootNamespace}:data`),
 };

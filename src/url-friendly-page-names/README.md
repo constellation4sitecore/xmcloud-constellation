@@ -1,9 +1,9 @@
-# Constellation SXA NextJS
+# Constellation Url Friendly Page Names
 
 ## Installation
 
 ```bash
-npm install @constellation4sitecore/constellation-sxa-nextjs --save
+npm install @constellation4sitecore/url-friendly-page-names --save
 ```
 
 ## Setup Serialization
@@ -13,7 +13,7 @@ In your project add in `sitecore.json`
 ```json
   "modules": [
     ....
-    "npm:@constellation4sitecore/constellation-sxa-nextjs"
+    "npm:@constellation4sitecore/url-friendly-page-names"
   ],
 ```
 
