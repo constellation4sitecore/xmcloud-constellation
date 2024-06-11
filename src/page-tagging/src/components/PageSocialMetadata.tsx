@@ -1,6 +1,6 @@
 import { withDatasourceRendering } from '@constellation4sitecore/enhancers';
-import { mapToNew } from '@constellation4sitecore/mapper';
-import { ComponentRendering, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
+import { castItem, mapToNew } from '@constellation4sitecore/mapper';
+import { ComponentRendering, Item, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 import Head from 'next/head';
 import React from 'react';
 import { ComponentProps } from '../lib/component-props';
@@ -99,7 +99,7 @@ const fillSocialMetadata = async (
 };
 
 export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutServiceData) => {
-  const model = mapToNew<PageSocialMetadataType>(layoutData.sitecore.route);
+  const model = castItem<PageSocialMetadataType>(layoutData.sitecore.route as Item);
   if (!model) return;
   const pathItem = layoutData.sitecore.context.itemPath as string;
   const path = pathItem.split('?')[0].split('/')[1];

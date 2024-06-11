@@ -1,6 +1,6 @@
 import { withDatasourceRendering } from '@constellation4sitecore/enhancers';
-import { mapToNew } from '@constellation4sitecore/mapper';
-import { ComponentRendering, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
+import { castItem } from '@constellation4sitecore/mapper';
+import { ComponentRendering, Item, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 import Head from 'next/head';
 import React from 'react';
 import { ComponentProps } from '../lib/component-props';
@@ -64,7 +64,7 @@ const getContent = (directives: string[]) => {
 };
 
 export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutServiceData) => {
-  const model = mapToNew<PageSearchEngineDirectivesType>(layoutData.sitecore.route);
+  const model = castItem<PageSearchEngineDirectivesType>(layoutData.sitecore.route as Item);
 
   if (model) {
     const directives = getDirectives(model);
