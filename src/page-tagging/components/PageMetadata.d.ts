@@ -1,1 +1,1 @@
-export * from '../types/components/PageMetadata';
+export * from '../types/src/components/PageMetadata';

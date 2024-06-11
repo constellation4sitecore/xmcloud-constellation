@@ -1,7 +1,8 @@
 import { Field, ImageField } from '@sitecore-jss/sitecore-jss-nextjs';
-import { PageMetadataType } from './PageMetadata';
 
-export type PageSocialMetadataType = PageMetadataType & {
+export type PageSocialMetadataType = {
+  browserTitle: Field<string>;
+  metaDescription: Field<string>;
   socialThumbnail: ImageField;
   twitterCardType: Field<string>;
   twitterSite: Field<string>;

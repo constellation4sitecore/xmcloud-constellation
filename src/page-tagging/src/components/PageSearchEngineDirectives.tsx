@@ -5,7 +5,6 @@ import Head from 'next/head';
 import React from 'react';
 import { ComponentProps } from '../lib/component-props';
 import { PageSearchEngineDirectivesType } from '../models/PageSearchEngineDirectives';
-import { getPageTagging } from '../services';
 
 type PageSearchEngineDirectiveProps = ComponentProps & {
   pageSearchEngineDirectives: string;
@@ -65,10 +64,7 @@ const getContent = (directives: string[]) => {
 };
 
 export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutServiceData) => {
-  const pageId = layoutData.sitecore.route?.itemId as string;
-  const pageTagging = await getPageTagging(pageId);
-
-  const model = mapToNew<PageSearchEngineDirectivesType>(pageTagging);
+  const model = mapToNew<PageSearchEngineDirectivesType>(layoutData.sitecore.route);
 
   if (model) {
     const directives = getDirectives(model);

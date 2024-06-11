@@ -1,11 +1,11 @@
 import { withDatasourceRendering } from '@constellation4sitecore/enhancers';
-import { mapToNew } from '@constellation4sitecore/mapper';
-import { ComponentRendering, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
+import { castItem, mapToNew } from '@constellation4sitecore/mapper';
+import { ComponentRendering, Item, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 import Head from 'next/head';
 import React from 'react';
 import { ComponentProps } from '../lib/component-props';
 import { PageMetadataType } from '../models/PageMetadata';
-import { getPageTagging } from '../services';
+import { PageTaggingService } from '../services';
 
 type PageMetadataProps = ComponentProps & {
   pageMetadata: PageMetadataType;
@@ -33,97 +33,93 @@ const PageMetadata = ({ pageMetadata }: PageMetadataProps): JSX.Element => {
 };
 
 export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutServiceData) => {
-  const pageId = layoutData.sitecore.route?.itemId as string;
+  const model = castItem<PageMetadataType>(layoutData.sitecore.route as Item);
+  if (!model) return;
+  let viewModel: PageMetadataType;
+  if (model.inheritAuthorAndPublisher.value) {
+    const fillAuthorAndPublisher = async (pageId: string, model: PageMetadataType) => {
+      while (true) {
+        const context = await new PageTaggingService(layoutData).getPageTagging(pageId);
 
-  const pageTagging = await getPageTagging(pageId);
-
-  const model = mapToNew<PageMetadataType>(pageTagging);
-
-  const fillAuthorAndPublisher = async (pageId: string, model: PageMetadataType) => {
-    while (true) {
-      const context = await getPageTagging(pageId);
-
-      if (model.hasValidAuthorAndPublisher) {
-        return;
-      }
-
-      if (context === null) {
-        return;
-      }
-
-      if (
-        !context?.template?.baseTemplates.some(
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (obj: any) => obj.id === '82C03F8B84A448FDB5D4E412555A37E3'
-        )
-      ) {
-        return;
-      }
-
-      const candidate = mapToNew<PageMetadataType>(context);
-
-      if (candidate) {
-        candidate.hasValidAuthorAndPublisher =
-          !candidate?.inheritAuthorAndPublisher.value ||
-          ((candidate.metaAuthor.value === '' || candidate.metaAuthor == null) &&
-            (candidate.metaPublisher.value === '' || candidate.metaPublisher == null));
-
-        candidate.hasValidAuthor =
-          !candidate.inheritAuthorAndPublisher.value ||
-          candidate.metaAuthor.value === '' ||
-          candidate.metaAuthor == null;
-
-        candidate.hasValidPublisher =
-          !candidate.inheritAuthorAndPublisher ||
-          candidate.metaPublisher.value === '' ||
-          candidate.metaPublisher == null;
-      }
-
-      if (candidate?.hasValidAuthorAndPublisher) {
-        if (!model.hasValidAuthor) {
-          model.metaAuthor.value = candidate.metaAuthor.value;
+        if (model.hasValidAuthorAndPublisher) {
+          return;
         }
-        if (!model.hasValidPublisher) {
+
+        if (context === null) {
+          return;
+        }
+
+        if (
+          !context?.template?.baseTemplates.some(
+            (obj: any) => obj.id === '9ED6640464C9412290E1869CB3CEA566'
+          )
+        ) {
+          return;
+        }
+
+        const candidate = mapToNew<PageMetadataType>(context);
+
+        if (candidate) {
+          candidate.hasValidAuthorAndPublisher =
+            !candidate?.inheritAuthorAndPublisher.value ||
+            ((candidate.metaAuthor.value === '' || candidate.metaAuthor == null) &&
+              (candidate.metaPublisher.value === '' || candidate.metaPublisher == null));
+
+          candidate.hasValidAuthor =
+            !candidate.inheritAuthorAndPublisher.value ||
+            candidate.metaAuthor.value === '' ||
+            candidate.metaAuthor == null;
+
+          candidate.hasValidPublisher =
+            !candidate.inheritAuthorAndPublisher ||
+            candidate.metaPublisher.value === '' ||
+            candidate.metaPublisher == null;
+        }
+
+        if (candidate?.hasValidAuthorAndPublisher) {
+          if (!model.hasValidAuthor) {
+            model.metaAuthor.value = candidate.metaAuthor.value;
+          }
+          if (!model.hasValidPublisher) {
+            model.metaPublisher.value = candidate.metaPublisher.value;
+          }
+
+          return;
+        }
+
+        if (candidate?.hasValidPublisher && !model.hasValidPublisher) {
           model.metaPublisher.value = candidate.metaPublisher.value;
         }
 
-        return;
+        if (candidate?.hasValidAuthor && !model.hasValidAuthor) {
+          model.metaAuthor.value = candidate.metaAuthor.value;
+        }
+
+        pageId = context.parent.id;
       }
-
-      if (candidate?.hasValidPublisher && !model.hasValidPublisher) {
-        model.metaPublisher.value = candidate.metaPublisher.value;
-      }
-
-      if (candidate?.hasValidAuthor && !model.hasValidAuthor) {
-        model.metaAuthor.value = candidate.metaAuthor.value;
-      }
-
-      pageId = context.parent.id;
-    }
-  };
-
-  if (model) {
-    model.hasValidAuthorAndPublisher =
-      !model?.inheritAuthorAndPublisher.value ||
-      ((model.metaAuthor.value === '' || model.metaAuthor == null) &&
-        (model.metaPublisher.value === '' || model.metaPublisher == null));
-
-    model.hasValidAuthor =
-      !model.inheritAuthorAndPublisher.value ||
-      model.metaAuthor.value === '' ||
-      model.metaAuthor == null;
-
-    model.hasValidPublisher =
-      !model.inheritAuthorAndPublisher ||
-      model.metaPublisher.value === '' ||
-      model.metaPublisher == null;
+    };
+    viewModel = {
+      browserTitle: model.browserTitle,
+      keywords: model.keywords,
+      metaDescription: model.metaDescription,
+      metaPublisher: model.metaPublisher,
+      metaAuthor: model.metaAuthor,
+      inheritAuthorAndPublisher: model.inheritAuthorAndPublisher,
+    };
+    fillAuthorAndPublisher(layoutData.sitecore.route?.itemId as string, viewModel);
+  } else {
+    viewModel = {
+      browserTitle: model.browserTitle,
+      keywords: model.keywords,
+      metaDescription: model.metaDescription,
+      metaPublisher: model.metaPublisher,
+      metaAuthor: model.metaAuthor,
+      inheritAuthorAndPublisher: model.inheritAuthorAndPublisher,
+    };
   }
 
-  if (model) {
-    await fillAuthorAndPublisher(pageId, model);
-  }
   return {
-    pageMetadata: model,
+    pageMetadata: viewModel,
   };
 };
 

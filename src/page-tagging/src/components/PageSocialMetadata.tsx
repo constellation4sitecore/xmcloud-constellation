@@ -5,7 +5,7 @@ import Head from 'next/head';
 import React from 'react';
 import { ComponentProps } from '../lib/component-props';
 import { PageSocialMetadataType } from '../models/PageSocialMetadata';
-import { getPageTagging } from '../services';
+import { PageTaggingService } from '../services';
 
 type PageSocialMetadataProps = ComponentProps & {
   pageSocialMetadata: PageSocialMetadataType;
@@ -46,7 +46,7 @@ const PageSocialMetadata = ({ pageSocialMetadata }: PageSocialMetadataProps) => 
   );
 };
 
-const fillAuthorAndPublisher = async (
+const fillSocialMetadata = async (
   pageId: string,
   model: PageSocialMetadataType,
   layoutData: LayoutServiceData
@@ -58,7 +58,7 @@ const fillAuthorAndPublisher = async (
   model.siteUrl = `${process.env.PUBLIC_URL}/${path}`;
 
   while (true) {
-    const context = await getPageTagging(pageId);
+    const context = await new PageTaggingService(layoutData).getPageTagging(pageId);
 
     if (!model.inheritTwitterValues) {
       return;
@@ -74,8 +74,7 @@ const fillAuthorAndPublisher = async (
 
     if (
       !context.template.baseTemplates.some(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (obj: any) => obj.id === '6997EBA66972408F803C9EC8A62612A4'
+        (obj: any) => obj.id === '9ED6640464C9412290E1869CB3CEA566'
       )
     ) {
       return;
@@ -100,17 +99,28 @@ const fillAuthorAndPublisher = async (
 };
 
 export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutServiceData) => {
-  const pageId = layoutData.sitecore.route?.itemId as string;
-
-  const pageTagging = await getPageTagging(pageId);
-
-  const model = mapToNew<PageSocialMetadataType>(pageTagging);
-  if (model) {
-    await fillAuthorAndPublisher(pageId, model, layoutData);
+  const model = mapToNew<PageSocialMetadataType>(layoutData.sitecore.route);
+  if (!model) return;
+  const pathItem = layoutData.sitecore.context.itemPath as string;
+  const path = pathItem.split('?')[0].split('/')[1];
+  model.siteUrl = `${process.env.PUBLIC_URL}/${path}`;
+  let viewModel: PageSocialMetadataType;
+  viewModel = {
+    twitterCardType: model.twitterCardType,
+    twitterCreator: model.twitterCreator,
+    twitterSite: model.twitterSite,
+    siteUrl: model.siteUrl,
+    socialThumbnail: model.socialThumbnail,
+    inheritTwitterValues: model.inheritTwitterValues,
+    browserTitle: model.browserTitle,
+    metaDescription: model.metaDescription,
+  };
+  if (model.inheritTwitterValues.value) {
+    await fillSocialMetadata(model.siteUrl, viewModel, layoutData);
   }
-  console.log(model?.socialThumbnail.value);
+
   return {
-    pageSocialMetadata: model,
+    pageSocialMetadata: viewModel,
   };
 };
 

@@ -19,6 +19,7 @@
       "types",
       "typings",
       "dist",
+      "components/PageMetadata.d.ts",
       "middleware.d.ts",
       "editing.d.ts",
       "monitoring.d.ts",
