@@ -60,7 +60,7 @@ const fillSocialMetadata = async (
   while (true) {
     const context = await new PageTaggingService(layoutData).getPageTagging(pageId);
 
-    if (!model.inheritTwitterValues) {
+    if (!model.twitterInheritValues) {
       return;
     }
 
@@ -111,11 +111,11 @@ export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutSe
     twitterSite: model.twitterSite,
     siteUrl: model.siteUrl,
     socialThumbnail: model.socialThumbnail,
-    inheritTwitterValues: model.inheritTwitterValues,
+    twitterInheritValues: model.twitterInheritValues,
     browserTitle: model.browserTitle,
     metaDescription: model.metaDescription,
   };
-  if (model.inheritTwitterValues.value) {
+  if (model.twitterInheritValues.value) {
     await fillSocialMetadata(model.siteUrl, viewModel, layoutData);
   }
 

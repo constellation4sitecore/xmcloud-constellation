@@ -7,6 +7,6 @@ export type PageSocialMetadataType = {
   twitterCardType: Field<string>;
   twitterSite: Field<string>;
   twitterCreator: Field<string>;
-  inheritTwitterValues: Field<boolean>;
+  twitterInheritValues: Field<boolean>;
   siteUrl: string;
 };
