@@ -1,1 +1,1 @@
-module.exports = require('./dist/cjs/components/PageMetadata');
+module.exports = require('../dist/cjs/components/PageMetadata');
