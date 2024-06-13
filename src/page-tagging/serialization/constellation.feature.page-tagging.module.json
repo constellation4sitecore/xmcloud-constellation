@@ -10,6 +10,10 @@
       {
         "name": "settings/Feature/Constellation/PageTagging",
         "path": "/sitecore/system/Settings/Feature/Constellation/Page Tagging"
+      },
+      {
+        "name": "layout/renderings/Feature/Constellation/PageTagging",
+        "path": "/sitecore/layout/Renderings/Feature/Constellation/Page Tagging"
       }
     ]
   },

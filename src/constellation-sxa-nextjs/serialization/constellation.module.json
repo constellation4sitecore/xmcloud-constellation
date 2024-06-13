@@ -26,6 +26,12 @@
         "path": "/sitecore/system/Settings/Feature/Constellation",
         "allowedPushOperations": "createOnly",
         "scope": "singleItem"
+      },
+      {
+        "name": "renderings",
+        "path": "/sitecore/layout/Renderings/Feature/Constellation",
+        "allowedPushOperations": "createOnly",
+        "scope": "singleItem"
       }
     ]
   }
