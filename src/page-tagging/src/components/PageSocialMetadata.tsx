@@ -115,7 +115,7 @@ export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutSe
     browserTitle: model.browserTitle,
     metaDescription: model.metaDescription,
   };
-  if (model.twitterInheritValues.value) {
+  if (model.twitterInheritValues?.value) {
     await fillSocialMetadata(model.siteUrl, viewModel, layoutData);
   }
 
