@@ -1,18 +1,18 @@
 ﻿---
-ID: "6997eba6-6972-408f-803c-9ec8a62612a4"
-Parent: "70a6b9ef-fc10-4479-8256-aedaa4d1c993"
-Template: "ab86861a-6030-46c5-b394-e8f99e8b87db"
-Path: /sitecore/templates/Feature/Constellation/Page Tagging/Page Social Metadata
+ID: "8fe667e3-df2b-4e50-b8f9-c0f581ddc6d4"
+Parent: "ec676aaa-8f66-4daa-ab3e-7a3c6754659d"
+Template: "1930bbeb-7805-471a-a3be-4858ac7cf696"
+Path: /sitecore/system/Modules/Constellation/Page Tagging/Twitter Card Type/app
 SharedFields:
 - ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
   Hint: __Icon
-  Value: office/32x32/html_tag2.png
-- ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
-  Hint: __Base template
-  Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
-- ID: "f7d48a55-2158-4f02-9356-756654404f73"
-  Hint: __Standard values
-  Value: "{137EA0C5-59A6-49C3-8502-55B4AEB9BDD7}"
+  Value: office/32x32/tag.png
+- ID: "9c6106ea-7a5a-48e2-8cad-f0f693b1e2d4"
+  Hint: __Read Only
+  Value: 1
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 3
 Languages:
 - Language: en
   Versions:
@@ -20,7 +20,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20171121T152006Z
+      Value: 20171121T174522Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -31,11 +31,11 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "6865eadd-02fe-4689-9170-0c6c088f2aa5"
+      Value: "26302412-9942-48b2-8f93-967597eb333f"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\roberto.armas@verndale.com
+        sitecore\admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240626T232527Z
+      Value: 20180815T141458Z

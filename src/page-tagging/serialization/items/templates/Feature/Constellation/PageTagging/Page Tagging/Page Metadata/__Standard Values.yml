@@ -24,11 +24,14 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "2236deaf-5f09-4b1d-9f42-fe6b6ff7b2f3"
+      Value: "81b7f299-421b-40c4-bea5-90a81e9b8bf9"
+    - ID: "aadca14b-9b41-4311-a4bc-7d8c395fcf19"
+      Hint: inheritAuthorAndPublisher
+      Value: 1
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240206T032441Z
+      Value: 20240626T233236Z

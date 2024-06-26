@@ -18,7 +18,10 @@ const PageSocialMetadata = ({ pageSocialMetadata }: PageSocialMetadataProps) => 
         {((pageSocialMetadata.twitterCreator && pageSocialMetadata.twitterCreator.value !== '') ||
           (pageSocialMetadata.twitterSite && pageSocialMetadata.twitterSite.value !== '')) && (
           <>
-            <meta name="twitter:card" content={pageSocialMetadata.twitterCardType.value} />
+            {pageSocialMetadata.twitterCardType &&
+              pageSocialMetadata.twitterCardType.value !== '' && (
+                <meta name="twitter:card" content={pageSocialMetadata.twitterCardType.value} />
+              )}
             {pageSocialMetadata.twitterCreator &&
               pageSocialMetadata.twitterCreator.value !== '' && (
                 <meta name="twitter:creator" content={pageSocialMetadata.twitterCreator.value} />
@@ -104,8 +107,7 @@ export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutSe
   const pathItem = layoutData.sitecore.context.itemPath as string;
   const path = pathItem.split('?')[0].split('/')[1];
   model.siteUrl = `${process.env.PUBLIC_URL}/${path}`;
-  let viewModel: PageSocialMetadataType;
-  viewModel = {
+  const viewModel: PageSocialMetadataType = {
     twitterCardType: model.twitterCardType,
     twitterCreator: model.twitterCreator,
     twitterSite: model.twitterSite,

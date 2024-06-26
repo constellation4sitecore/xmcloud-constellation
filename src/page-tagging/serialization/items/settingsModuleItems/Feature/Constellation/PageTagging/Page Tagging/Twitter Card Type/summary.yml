@@ -1,30 +1,26 @@
 ﻿---
-ID: "aeea733f-9cdc-4024-8103-7f57846ae6d9"
-Parent: "620c3bf4-7754-4fc5-8f5d-ec4214490962"
-Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: "/sitecore/templates/Feature/Constellation/Page Tagging/Page Sitemap Behavior/Page Tagging - Sitemap Behavior/includeInSitemap"
+ID: "47a7e69d-d856-4070-864f-70d29856254c"
+Parent: "ec676aaa-8f66-4daa-ab3e-7a3c6754659d"
+Template: "1930bbeb-7805-471a-a3be-4858ac7cf696"
+Path: /sitecore/system/Modules/Constellation/Page Tagging/Twitter Card Type/summary
 SharedFields:
-- ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
-  Hint: Type
-  Value: Checkbox
+- ID: "06d5295c-ed2f-4a54-9bf2-26228d113318"
+  Hint: __Icon
+  Value: office/32x32/tag.png
+- ID: "9c6106ea-7a5a-48e2-8cad-f0f693b1e2d4"
+  Hint: __Read Only
+  Value: 1
 - ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
   Hint: __Sortorder
-  Value: 140
-- ID: "be351a73-fcb0-4213-93fa-c302d8ab4f51"
-  Hint: Shared
   Value: 1
 Languages:
 - Language: en
-  Fields:
-  - ID: "19a69332-a23e-4e70-8d16-b2640cb24cc8"
-    Hint: Title
-    Value: Include In Sitemap
   Versions:
   - Version: 1
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20171121T152317Z
+      Value: 20171121T174504Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -35,11 +31,11 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "781d4673-2a11-4a75-9b88-8bd5c3872d10"
+      Value: "1b2afd6a-c242-4a94-9b4a-bea2de6632b4"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\roberto.armas@verndale.com
+        sitecore\admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240206T030654Z
+      Value: 20180815T141503Z
