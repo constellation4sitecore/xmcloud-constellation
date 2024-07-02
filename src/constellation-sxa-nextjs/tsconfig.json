@@ -1,9 +1,9 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-      "target": "es6",
-      "module": "commonjs",
-      "jsx": "react",
+      "target": "es5",
+      "module": "esnext",
+      "jsx": "preserve",
       "skipLibCheck": true,
       "outDir": "dist/cjs",
       "typeRoots": ["node_modules/@types"],
