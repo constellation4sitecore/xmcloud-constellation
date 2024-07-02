@@ -1,5 +1,8 @@
 // Code: workaraound to inject project settings into 
-const importSync = require('import-sync');
-const config = importSync('../../../../../src/temp/config');
-
+import isServer from './utils/is-server';
+let config = {};
+if(isServer()) {
+    const importSync = require('import-sync');
+     config = importSync('../../../../../src/temp/config');
+};
 export default config;
