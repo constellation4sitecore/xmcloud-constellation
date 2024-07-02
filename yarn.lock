@@ -84,11 +84,6 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@httptoolkit/esm@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@httptoolkit/esm/-/esm-3.3.0.tgz#7eb6f2487c55c25c57b623c81ac64c3ec5097e09"
-  integrity sha512-gS+TH14750cveYP5p2q/oLyjVV5+qRFZMOpsPzK1KrgacqKc6RLDmt3ioGaMjsn1aianQbROkl4QXDJmO5swPA==
-
 "@humanwhocodes/config-array@^0.11.8":
   version "0.11.8"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.8.tgz"
@@ -3286,13 +3281,6 @@ import-local@^3.0.2:
   dependencies:
     pkg-dir "^4.2.0"
     resolve-cwd "^3.0.0"
-
-import-sync@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/import-sync/-/import-sync-2.2.2.tgz#c1bfc7b63b57ec12301426bc103a7846f93a7957"
-  integrity sha512-MQ+8aB1LZu0dHqTmpkOJ5DLCqQNVNqbMrH/S9nvHChUSMsAlX6R3ydQhX3R5/YfCU6+qU3cbASiX59hJisMKgg==
-  dependencies:
-    "@httptoolkit/esm" "^3.3.0"
 
 imurmurhash@^0.1.4:
   version "0.1.4"

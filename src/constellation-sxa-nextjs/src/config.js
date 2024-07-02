@@ -2,7 +2,6 @@
 import isServer from './utils/is-server';
 let config = {};
 if(isServer()) {
-    const importSync = require('import-sync');
-     config = importSync('../../../../../src/temp/config');
+     config = require('../../../../../src/temp/config');
 };
 export default config;

@@ -42,8 +42,7 @@
   },
   "dependencies": {
     "@sitecore-jss/sitecore-jss-nextjs": "~22.0.0",
-    "debug": "^4.3.1",
-    "import-sync": "^2.2.2"
+    "debug": "^4.3.1"
   },
   "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4"
 }
