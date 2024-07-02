@@ -1,4 +1,4 @@
 // Code: workaraound to inject project settings into 
-const config = import('../../../../../src/temp/config');
+const config = require('../../../../../src/temp/config');
 
 export default config;
