@@ -1,7 +1,4 @@
 // Code: workaraound to inject project settings into 
-import isServer from './utils/is-server';
-let config = {};
-if(isServer()) {
-     config = require('../../../../../src/temp/config');
-};
+import jssConfig from '../../../../../src/temp/config';
+const config = jssConfig;
 export default config;
