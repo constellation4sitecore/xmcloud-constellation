@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/media",
-  "version": "22.0.2-beta.16",
+  "version": "22.0.2-beta.17",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
