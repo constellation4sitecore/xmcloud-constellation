@@ -20,7 +20,9 @@
     "noImplicitAny": false,
     "traceResolution": false,
     "jsx": "react",
-    "types": ["node"]
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"],
+    "declarationDir": "./types",
   },
   "compileOnSave": false,
   "exclude": ["node_modules", "dist"],
