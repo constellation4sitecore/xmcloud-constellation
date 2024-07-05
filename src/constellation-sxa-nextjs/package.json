@@ -3,14 +3,20 @@
   "version": "22.0.2-beta.17",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/mjs/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
   "author": "Richard J. Cabral, Roberto Armas, Sebastian Aliaga",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
   },
   "scripts": {
-    "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json && npm run copy-dts",
+    "build": "rm -fr dist/* && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && npm run copy-dts && ./fixup",
     "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" types",
     "clean": "del-cli dist types",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -25,7 +31,6 @@
     "/*.d.ts"
   ],
   "devDependencies": {
-    "@types/debug": "^4.1.5",
     "@types/node": "^20.2.3",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
@@ -44,11 +49,5 @@
     "@sitecore-jss/sitecore-jss-nextjs": "~22.0.0",
     "debug": "^4.3.1"
   },
-  "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4",
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
-    }
-  }
+  "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4"
 }

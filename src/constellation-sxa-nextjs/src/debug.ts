@@ -3,7 +3,7 @@ import isServer from './utils/is-server';
 
 const rootNamespace = 'constellation-sxa-nextjs';
 
-export type Debugger = debug.Debugger;
+export type Debugger = typeof debug.Debugger;
 
 // On server/node side, allow switching from the built-in
 // `%o` (pretty-print single line) and `%O` (pretty-print multiple line)
