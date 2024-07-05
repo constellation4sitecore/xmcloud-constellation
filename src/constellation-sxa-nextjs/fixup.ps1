@@ -1,12 +1,12 @@
 $commonJsContent = @'
 {
-    "type": "commonjs"
+  "type": "commonjs"
 }
 '@
 
 $moduleContent = @'
 {
-    "type": "module"
+  "type": "module"
 }
 '@
 
