@@ -19,8 +19,8 @@
     "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
   },
   "devDependencies": {
-    "@types/node": "^20.2.3",
-    "@types/react": "^18.0.27",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.2.22",
     "@types/react-dom": "^18.0.10",
     "copyfiles": "^2.4.1",
     "del-cli": "^5.0.0",
@@ -42,7 +42,7 @@
     "@constellation4sitecore/constellation-sxa-nextjs": "22.0.2-beta.17",
     "@constellation4sitecore/enhancers": "22.0.2-beta.17",
     "@constellation4sitecore/mapper": "22.0.2-beta.17",
-    "@sitecore-jss/sitecore-jss-nextjs": "~22.0.0"
+    "@sitecore-jss/sitecore-jss-nextjs": "~22.1.0"
   },
   "types": "types/index.d.ts",
   "files": [

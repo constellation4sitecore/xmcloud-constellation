@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@constellation4sitecore/data": "22.0.2-beta.17",
-    "@sitecore-jss/sitecore-jss-nextjs": "~22.0.0"
+    "@sitecore-jss/sitecore-jss-nextjs": "~22.1.0"
   },
   "types": "types/index.d.ts",
   "files": [
