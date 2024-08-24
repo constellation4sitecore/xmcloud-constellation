@@ -1,11 +1,10 @@
 import { withDatasourceRendering } from '@constellation4sitecore/enhancers';
-import { mapToNew } from '@constellation4sitecore/mapper';
-import { ComponentRendering, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
+import { castItem } from '@constellation4sitecore/mapper';
+import { ComponentRendering, Item, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 import Head from 'next/head';
 import React from 'react';
 import { ComponentProps } from '../lib/component-props';
 import { PageSearchEngineDirectivesType } from '../models/PageSearchEngineDirectives';
-import { getPageTagging } from '../services';
 
 type PageSearchEngineDirectiveProps = ComponentProps & {
   pageSearchEngineDirectives: string;
@@ -65,10 +64,7 @@ const getContent = (directives: string[]) => {
 };
 
 export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutServiceData) => {
-  const pageId = layoutData.sitecore.route?.itemId as string;
-  const pageTagging = await getPageTagging(pageId);
-
-  const model = mapToNew<PageSearchEngineDirectivesType>(pageTagging);
+  const model = castItem<PageSearchEngineDirectivesType>(layoutData.sitecore.route as Item);
 
   if (model) {
     const directives = getDirectives(model);

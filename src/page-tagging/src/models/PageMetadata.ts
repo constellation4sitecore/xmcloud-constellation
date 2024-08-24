@@ -6,7 +6,7 @@ export type PageMetadataType = {
   metaAuthor: Field<string>;
   metaPublisher: Field<string>;
   inheritAuthorAndPublisher: Field<boolean>;
-  hasValidAuthorAndPublisher: boolean;
-  hasValidAuthor: boolean;
-  hasValidPublisher: boolean;
+  hasValidAuthorAndPublisher?: boolean;
+  hasValidAuthor?: boolean;
+  hasValidPublisher?: boolean;
 };

@@ -1,11 +1,11 @@
 import { withDatasourceRendering } from '@constellation4sitecore/enhancers';
-import { mapToNew } from '@constellation4sitecore/mapper';
-import { ComponentRendering, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
+import { castItem, mapToNew } from '@constellation4sitecore/mapper';
+import { ComponentRendering, Item, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 import Head from 'next/head';
 import React from 'react';
 import { ComponentProps } from '../lib/component-props';
 import { PageSocialMetadataType } from '../models/PageSocialMetadata';
-import { getPageTagging } from '../services';
+import { PageTaggingService } from '../services';
 
 type PageSocialMetadataProps = ComponentProps & {
   pageSocialMetadata: PageSocialMetadataType;
@@ -18,7 +18,10 @@ const PageSocialMetadata = ({ pageSocialMetadata }: PageSocialMetadataProps) => 
         {((pageSocialMetadata.twitterCreator && pageSocialMetadata.twitterCreator.value !== '') ||
           (pageSocialMetadata.twitterSite && pageSocialMetadata.twitterSite.value !== '')) && (
           <>
-            <meta name="twitter:card" content={pageSocialMetadata.twitterCardType.value} />
+            {pageSocialMetadata.twitterCardType &&
+              pageSocialMetadata.twitterCardType.value !== '' && (
+                <meta name="twitter:card" content={pageSocialMetadata.twitterCardType.value} />
+              )}
             {pageSocialMetadata.twitterCreator &&
               pageSocialMetadata.twitterCreator.value !== '' && (
                 <meta name="twitter:creator" content={pageSocialMetadata.twitterCreator.value} />
@@ -46,7 +49,7 @@ const PageSocialMetadata = ({ pageSocialMetadata }: PageSocialMetadataProps) => 
   );
 };
 
-const fillAuthorAndPublisher = async (
+const fillSocialMetadata = async (
   pageId: string,
   model: PageSocialMetadataType,
   layoutData: LayoutServiceData
@@ -58,9 +61,9 @@ const fillAuthorAndPublisher = async (
   model.siteUrl = `${process.env.PUBLIC_URL}/${path}`;
 
   while (true) {
-    const context = await getPageTagging(pageId);
+    const context = await new PageTaggingService(layoutData).getPageTagging(pageId);
 
-    if (!model.inheritTwitterValues) {
+    if (!model.twitterInheritValues) {
       return;
     }
 
@@ -74,8 +77,7 @@ const fillAuthorAndPublisher = async (
 
     if (
       !context.template.baseTemplates.some(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        (obj: any) => obj.id === '6997EBA66972408F803C9EC8A62612A4'
+        (obj: any) => obj.id === '9ED6640464C9412290E1869CB3CEA566'
       )
     ) {
       return;
@@ -100,17 +102,27 @@ const fillAuthorAndPublisher = async (
 };
 
 export const getStaticProps = async (_: ComponentRendering, layoutData: LayoutServiceData) => {
-  const pageId = layoutData.sitecore.route?.itemId as string;
-
-  const pageTagging = await getPageTagging(pageId);
-
-  const model = mapToNew<PageSocialMetadataType>(pageTagging);
-  if (model) {
-    await fillAuthorAndPublisher(pageId, model, layoutData);
+  const model = castItem<PageSocialMetadataType>(layoutData.sitecore.route as Item);
+  if (!model) return;
+  const pathItem = layoutData.sitecore.context.itemPath as string;
+  const path = pathItem.split('?')[0].split('/')[1];
+  model.siteUrl = `${process.env.PUBLIC_URL}/${path}`;
+  const viewModel: PageSocialMetadataType = {
+    twitterCardType: model.twitterCardType,
+    twitterCreator: model.twitterCreator,
+    twitterSite: model.twitterSite,
+    siteUrl: model.siteUrl,
+    socialThumbnail: model.socialThumbnail,
+    twitterInheritValues: model.twitterInheritValues,
+    browserTitle: model.browserTitle,
+    metaDescription: model.metaDescription,
+  };
+  if (model.twitterInheritValues?.value) {
+    await fillSocialMetadata(model.siteUrl, viewModel, layoutData);
   }
-  console.log(model?.socialThumbnail.value);
+
   return {
-    pageSocialMetadata: model,
+    pageSocialMetadata: viewModel,
   };
 };
 

@@ -1,1 +1,1 @@
-export { getPageTagging } from './get-page-tagging';
+export { PageTaggingService } from './page-tagging';

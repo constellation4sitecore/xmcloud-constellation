@@ -3,6 +3,13 @@ ID: "137ea0c5-59a6-49c3-8502-55b4aeb9bdd7"
 Parent: "6997eba6-6972-408f-803c-9ec8a62612a4"
 Template: "6997eba6-6972-408f-803c-9ec8a62612a4"
 Path: /sitecore/templates/Feature/Constellation/Page Tagging/Page Social Metadata/__Standard Values
+SharedFields:
+- ID: "4052e28b-2c06-4478-9ea1-a45a56334041"
+  Hint: twitterInheritValues
+  Value: 1
+- ID: "7d983468-b85e-41f7-8070-98a0c6f23d0b"
+  Hint: twitterCardType
+  Value: summary
 Languages:
 - Language: en
   Versions:
@@ -21,11 +28,11 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "ec04f3a4-6dc9-42b6-a9f2-88d83211cc38"
+      Value: "2487db47-e49f-4f56-aa15-1ea4f5136ecd"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
-        sitecore\rcabral
+        sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20171121T174744Z
+      Value: 20240626T233248Z
