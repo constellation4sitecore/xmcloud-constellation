@@ -12,6 +12,11 @@ type ItemResult = {
   item: unknown;
 };
 
+export type GetItemOptions = {
+  language?: string;
+  showStandardValues?: boolean;
+};
+
 export class DataService {
   private language: string;
 
@@ -31,11 +36,7 @@ export class DataService {
    * @param language? If not provided, the language will be resolved based on layout context.
    * @returns
    */
-  async getItem<TItem>(
-    itemId: string,
-    language?: string,
-    showStandardValues?: boolean
-  ): Promise<TItem | null> {
+  async getItem<TItem>(itemId: string, options?: GetItemOptions): Promise<TItem | null> {
     const graphqlFactory = createGraphQLClientFactory();
     const graphQLClient = graphqlFactory({
       debugger: debuggers.data,
@@ -56,8 +57,8 @@ export class DataService {
 
     const result = (await graphQLClient.request(query, {
       itemId: itemId,
-      language: language ? language : this.language,
-      ownFields: showStandardValues ? false : true,
+      language: options?.language ? options.language : this.language,
+      ownFields: options?.showStandardValues ? false : true,
     })) as ItemResult;
 
     return mapToNew<TItem>(result.item);
