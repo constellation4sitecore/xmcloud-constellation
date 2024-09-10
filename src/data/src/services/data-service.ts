@@ -22,6 +22,20 @@ export type Url = {
   path: string;
 };
 
+export type TemplateInfo = {
+  id: string;
+  name: string;
+};
+export type ItemInfo = {
+  id: string;
+  name: string;
+  template: {
+    id: string;
+    name: string;
+    baseTemplates: TemplateInfo[];
+  };
+};
+
 export class DataService {
   private language: string;
 
@@ -66,6 +80,42 @@ export class DataService {
     });
 
     return result.item.url;
+  }
+
+  /**
+   * Get Template Info
+   * @param itemId
+   * @returns ItemInfo
+   */
+  async getTemplateInfo(itemId: string): Promise<ItemInfo | null> {
+    const graphqlFactory = createGraphQLClientFactory();
+    const graphQLClient = graphqlFactory({
+      debugger: debuggers.data,
+    }) as GraphQLClient;
+
+    const query = gql`
+      query GetItemTemplateInfo($itemId: String!, $language: String!) {
+        item: item(path: $itemId, language: $language) {
+          id
+          name
+          template {
+            id
+            name
+            baseTemplates {
+              id
+              name
+            }
+          }
+        }
+      }
+    `;
+
+    const result = await graphQLClient.request<{ item: ItemInfo }>(query, {
+      itemId: itemId,
+      language: this.language,
+    });
+
+    return result.item;
   }
 
   /**
