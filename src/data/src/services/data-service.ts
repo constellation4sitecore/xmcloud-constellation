@@ -17,6 +17,11 @@ export type GetItemOptions = {
   showStandardValues?: boolean;
 };
 
+export type Url = {
+  url: string;
+  path: string;
+};
+
 export class DataService {
   private language: string;
 
@@ -28,6 +33,39 @@ export class DataService {
     this.language = layoutData?.sitecore.context.language
       ? layoutData?.sitecore.context.language
       : (config.defaultLanguage as string);
+  }
+
+  /**
+   * Get Item Url
+   * @param itemId
+   * @returns Url object
+   */
+  async getItemUrl(itemId: string): Promise<Url> {
+    const graphqlFactory = createGraphQLClientFactory();
+    const graphQLClient = graphqlFactory({
+      debugger: debuggers.data,
+    }) as GraphQLClient;
+
+    const query = gql`
+      query GetItemUrl($itemId: String!, $language: String!) {
+        item: item(path: $itemId, language: $language) {
+          id
+          name
+          path
+          url {
+            path
+            url
+          }
+        }
+      }
+    `;
+
+    const result = await graphQLClient.request<{ item: { url: Url } }>(query, {
+      language: this.language,
+      itemId: itemId,
+    });
+
+    return result.item.url;
   }
 
   /**
