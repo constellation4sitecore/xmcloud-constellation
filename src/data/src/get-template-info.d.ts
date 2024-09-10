@@ -1,3 +1,4 @@
+import { ItemInfo } from './services/data-service';
 /**
  * @deprecated Use DataService.getTemplateInfo(itemId: string) instead
  * @param itemId
