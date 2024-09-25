@@ -6,7 +6,7 @@ Path: "/sitecore/templates/Feature/Constellation/Page Tagging/Page Social Metada
 SharedFields:
 - ID: "1eb8ae32-e190-44a6-968d-ed904c794ebf"
   Hint: Source
-  Value: /sitecore/media library/Images/Social Thumbnail
+  Value: "query:/sitecore/media library/Images/Social Thumbnail"
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
   Value: Image
@@ -35,11 +35,11 @@ Languages:
         sitecore\rcabral
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "0eeb6800-9df3-4830-9e5e-47d3de19c9bc"
+      Value: "a4e6230b-462e-47c0-850e-9fe6d3812105"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20240206T030717Z
+      Value: 20240925T163512Z
