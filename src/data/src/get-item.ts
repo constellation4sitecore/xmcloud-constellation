@@ -12,6 +12,12 @@ type ItemResult = {
   item: unknown;
 };
 
+/**
+ * @deprecated Use DataService.getItem(itemId: string) instead
+ * @param itemId
+ * @param language
+ * @returns
+ */
 export async function getItem<T>(itemId: string, language?: string): Promise<T | null> {
   const projectConfig = config as JssConfig;
   const graphqlFactory = createGraphQLClientFactory();

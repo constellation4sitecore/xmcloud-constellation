@@ -16,10 +16,18 @@
         "path": "/sitecore/system/Modules/Constellation/Page Tagging"
       },
       {
+        "name": "medialibrary",
+        "path": "/sitecore/media library/Images/Social Thumbnail",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly"
+      },
+      {
         "name": "layout/renderings/Feature/Constellation/PageTagging",
         "path": "/sitecore/layout/Renderings/Feature/Constellation/Page Tagging"
       }
     ]
   },
-  "references": ["Constellation"]
+  "references": [
+    "Constellation"
+  ]
 }
