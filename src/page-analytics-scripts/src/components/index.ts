@@ -1,1 +1,1 @@
-export * from './PageAnalyticsScripts';
+export { default as PageAnalyticsScripts, AnalyticsScriptsProps } from './PageAnalyticsScripts';
