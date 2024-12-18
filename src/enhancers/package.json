@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/enhancers",
-  "version": "22.2.2",
+  "version": "22.3.1",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -39,7 +39,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@sitecore-jss/sitecore-jss-nextjs": "~22.2.1"
+    "@sitecore-jss/sitecore-jss-nextjs": "~22.3.1"
   },
   "types": "types/index.d.ts",
   "files": [
