@@ -1,0 +1,27 @@
+﻿---
+ID: "f189eb4a-da88-4c30-817e-13602fb9fe9d"
+Parent: "89b747df-e37a-4581-ade1-17464713f972"
+Template: "7276a0a6-bc7b-4d34-9622-2c6aac6035f8"
+Path: /sitecore/templates/Branches/Foundation/Constellation/Page Analytics Scripts/Analytics Scripts Folder/$name/Body Bottom Scripts
+SharedFields:
+- ID: "ba3f86a2-4a1c-4d78-b63d-91c2779c1b5e"
+  Hint: __Sortorder
+  Value: 200
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20241218T180145Z
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "c035a05b-ca9a-43f2-ad6d-f00102bbaaa7"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\roberto.armas@verndale.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20241218T180222Z

@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/mapper",
-  "version": "22.1.2-beta.4",
+  "version": "22.2.2-beta.6",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
