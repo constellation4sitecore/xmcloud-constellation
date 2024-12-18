@@ -53,7 +53,9 @@
     "/components/*.jsx",
     "/components/*.d.ts",
     "/*.js",
-    "/*.d.ts"
+    "/*.d.ts",
+    "serialization",
+    "sitecore.json"
   ],
   "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4"
 }
