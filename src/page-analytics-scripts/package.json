@@ -49,6 +49,8 @@
   "files": [
     "dist",
     "types",
+    "/components/*.js",
+    "/components/*.d.ts",
     "/*.js",
     "/*.d.ts"
   ],
