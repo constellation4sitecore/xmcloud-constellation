@@ -1,1 +1,1 @@
-export * from '../types/src/components/PageAnalyticsScripts';
+export * from '../types/components/PageAnalyticsScripts';
