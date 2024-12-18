@@ -50,6 +50,7 @@
     "dist",
     "types",
     "/components/*.js",
+    "/components/*.jsx",
     "/components/*.d.ts",
     "/*.js",
     "/*.d.ts"

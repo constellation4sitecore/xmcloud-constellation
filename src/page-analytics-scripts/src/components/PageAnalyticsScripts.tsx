@@ -3,7 +3,7 @@ import React from 'react';
 import { AnalyticScriptItem, ContentScript, UrlScript } from '../models';
 import { TEMPLATES_ID } from '../constants/analyticsScripts';
 
-type AnalyticsScriptsProps = {
+export type AnalyticsScriptsProps = {
   scripts: AnalyticScriptItem[];
 };
 
