@@ -1,34 +1,35 @@
 {
   "extends": "../../tsconfig.json",
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "jsx": "react",
-    "skipLibCheck": true,
-    "outDir": "dist/cjs",
-    "typeRoots": ["node_modules/@types"],
-    "declarationDir": "./types",
-    "lib": [
-      "dom", "dom.iterable", "esnext"
-    ],
-    "moduleResolution": "node",
-  },
-  "exclude": [
-    "node_modules",
-    "types",
-    "typings",
-    "dist",
-    "components/PageMetadata.d.ts",
-    "components/PageSearchEngineDirectives.d.ts",
-    "components/PageSocialMetadata.d.ts",
-    "middleware.d.ts",
-    "editing.d.ts",
-    "monitoring.d.ts",
-    "site.d.ts",
-    "utils.d.ts",
-    "src/tests/*",
-    "src/test-data/*",
-    "**/*.test.ts",
-    "**/*.test.tsx"
-  ]
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "jsx": "react",
+      "skipLibCheck": true,
+      "outDir": "dist/cjs",
+      "typeRoots": ["node_modules/@types"],
+      "declarationDir": "./types",
+      "allowJs": true,
+      "lib": [
+        "dom", "dom.iterable", "esnext"
+      ],
+      "moduleResolution": "node",
+    },
+    "exclude": [
+      "node_modules",
+      "types",
+      "typings",
+      "dist",
+      "components/PageMetadata.d.ts",
+      "components/PageSearchEngineDirectives.d.ts",
+      "components/PageSocialMetadata.d.ts",
+      "middleware.d.ts",
+      "editing.d.ts",
+      "monitoring.d.ts",
+      "site.d.ts",
+      "utils.d.ts",
+      "src/tests/*",
+      "src/test-data/*",
+      "**/*.test.ts",
+      "**/*.test.tsx"
+    ]
 }
