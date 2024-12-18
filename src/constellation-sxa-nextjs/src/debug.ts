@@ -32,4 +32,5 @@ export default {
   labels: debug(`${rootNamespace}:labels`),
   navigation: debug(`${rootNamespace}:navigation`),
   data: debug(`${rootNamespace}:data`),
+  analytics: debug(`${rootNamespace}:analytics`),
 };

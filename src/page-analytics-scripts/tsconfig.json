@@ -19,7 +19,7 @@
       "typings",
       "dist",
       "middleware.d.ts",
-      "components.d.ts",
+      "components/PageAnalyticsScripts.d.ts",
       "editing.d.ts",
       "monitoring.d.ts",
       "site.d.ts",

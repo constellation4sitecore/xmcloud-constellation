@@ -1,4 +1,1 @@
-export {
-  default as PageAnalyticsScripts,
-  getStaticProps as PageAnalyticsScriptGetStaticProps,
-} from './PageAnalyticsScripts';
+export { default as PageAnalyticsScripts, AnalyticsScriptsProps } from './PageAnalyticsScripts';

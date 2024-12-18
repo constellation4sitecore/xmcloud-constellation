@@ -39,6 +39,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@constellation4sitecore/constellation-sxa-nextjs": "^22.3.1",
     "@constellation4sitecore/data": "^22.3.1",
     "@constellation4sitecore/layout": "^22.3.1",
     "@constellation4sitecore/mapper": "^22.3.1",
@@ -48,6 +49,9 @@
   "files": [
     "dist",
     "types",
+    "/components/*.js",
+    "/components/*.jsx",
+    "/components/*.d.ts",
     "/*.js",
     "/*.d.ts"
   ],
