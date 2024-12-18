@@ -1,30 +1,35 @@
-import { BaseItem } from '@constellation4sitecore/data';
-import { ComponentProps } from '@constellation4sitecore/layout';
-import { TEMPLATES_ID } from '../constants/analyticsScripts';
 import { mapToNew } from '@constellation4sitecore/mapper';
-import { ContentScript } from '../models/content-script';
-import { UrlScript } from '../models/url-script';
-import { getAnalyticsScripts } from '../services/get-analytics-scripts';
-import { ComponentParams } from '@sitecore-jss/sitecore-jss-nextjs';
 import React from 'react';
+import { AnalyticScriptItem, ContentScript, UrlScript } from '../models';
+import { TEMPLATES_ID } from '../constants/analyticsScripts';
 
-type HeaderScriptsProps = ComponentProps & {
-  headerScripts: BaseItem[];
+type AnalyticsScriptsProps = {
+  scripts: AnalyticScriptItem[];
 };
 
-const PageAnalyticsScripts = (props: HeaderScriptsProps): JSX.Element => (
+const PageAnalyticsScripts = (props: AnalyticsScriptsProps): JSX.Element => (
   <>
-    {props.headerScripts.map((script: BaseItem) => {
+    {props.scripts.map((script: AnalyticScriptItem) => {
       if (script.template.id === TEMPLATES_ID.contentScript) {
         const contentScriptModel = mapToNew<ContentScript>(script);
         return (
           <>
             {contentScriptModel && (
-              <script
-                key={script.id}
-                type="text/javascript"
-                dangerouslySetInnerHTML={{ __html: contentScriptModel.contentScript.value }}
-              />
+              <>
+                {!contentScriptModel.noScript.value && (
+                  <script
+                    key={script.id}
+                    type="text/javascript"
+                    dangerouslySetInnerHTML={{ __html: contentScriptModel.contentScript.value }}
+                  />
+                )}
+                {contentScriptModel.noScript.value && (
+                  <noscript
+                    key={script.id}
+                    dangerouslySetInnerHTML={{ __html: contentScriptModel.contentScript.value }}
+                  />
+                )}
+              </>
             )}
           </>
         );
@@ -41,10 +46,5 @@ const PageAnalyticsScripts = (props: HeaderScriptsProps): JSX.Element => (
     })}
   </>
 );
-
-export const getStaticProps = async (params: ComponentParams) => {
-  const headScripts = await getAnalyticsScripts(params['datasourceID']);
-  return { headerScripts: headScripts };
-};
 
 export default PageAnalyticsScripts;

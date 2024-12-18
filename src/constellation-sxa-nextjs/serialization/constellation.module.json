@@ -10,6 +10,12 @@
         "scope": "singleItem"
       },
       {
+        "name": "templates/Branches/Foundation/Constellation",
+        "path": "/sitecore/templates/Branches/Foundation/Constellation",
+        "allowedPushOperations": "createOnly",
+        "scope": "singleItem"
+      },
+      {
         "name": "templates/Feature/Constellation",
         "path": "/sitecore/templates/Feature/Constellation",
         "allowedPushOperations": "createOnly",
