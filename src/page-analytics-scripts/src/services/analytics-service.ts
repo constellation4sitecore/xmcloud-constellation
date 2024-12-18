@@ -80,7 +80,7 @@ export class AnalyticsService {
       language: this.language,
     })) as AnalyticResult;
 
-    return result.item.children.results;
+    return result?.item?.children?.results || [];
   }
 }
 
