@@ -28,6 +28,9 @@ export class AnalyticsService {
     [key: string]: unknown;
   }> {
     try {
+      if (!componentProps) {
+        componentProps = {};
+      }
       const analyticsScripts = await this.getAnalyticsScripts();
       componentProps['analyticScripts'] = analyticsScripts;
     } catch (error) {
@@ -80,7 +83,7 @@ export class AnalyticsService {
       language: this.language,
     })) as AnalyticResult;
 
-    return result.item.children.results;
+    return result?.item?.children?.results || [];
   }
 }
 
