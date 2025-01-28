@@ -18,3 +18,8 @@ export const removeLanguageFromUrl = (url: string): string => {
   // Return original URL if no language segment found
   return url;
 };
+
+export const removeTrailingSlash = (url: string): string => {
+  if (!url) return '';
+  return url.endsWith('/') ? url.slice(0, -1) : url;
+};

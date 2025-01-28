@@ -1,6 +1,6 @@
 import { config } from '@constellation4sitecore/constellation-sxa-nextjs';
 import { GetStaticPropsContext } from 'next';
-import { removeLanguageFromUrl } from '../helpers/url';
+import { removeLanguageFromUrl, removeTrailingSlash } from '../helpers/url';
 
 export class CanonicalUrlService {
   context: GetStaticPropsContext;
@@ -13,7 +13,7 @@ export class CanonicalUrlService {
     const languageEmbedding = options?.languageEmbedding !== false;
     const languagePath = languageEmbedding ? `${this.context.locale}/` : '';
     const relativeUrl = this.getRelativeUrl();
-    return `${publicUrl}/${languagePath}${relativeUrl}`;
+    return removeTrailingSlash(`${publicUrl}/${languagePath}${relativeUrl}`);
   }
 
   getRelativeUrl(): string {
