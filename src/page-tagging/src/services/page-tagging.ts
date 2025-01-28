@@ -14,6 +14,19 @@ import { PageSocialMetadataType } from '../models/PageSocialMetadata';
 import { CanonicalUrlService } from './canonical-url';
 import { GetStaticPropsContext } from 'next';
 
+type PageTagging = {
+  parent: Item;
+  template: {
+    baseTemplates: {
+      id: string;
+    }[];
+  };
+  fields: {
+    name: string;
+    jsonValue: any;
+  }[];
+};
+
 export class PageTaggingService {
   private language: string;
   private layoutData: LayoutServiceData;
@@ -25,7 +38,7 @@ export class PageTaggingService {
     this.layoutData = layoutData;
   }
 
-  async getPageTagging(pageId: string) {
+  async getPageTagging(pageId: string): Promise<PageTagging | null> {
     const graphqlFactory = createGraphQLClientFactory();
     const graphQLClient = graphqlFactory({
       debugger: debuggers.data,
@@ -41,6 +54,11 @@ export class PageTaggingService {
               baseTemplates {
                 id
               }
+            }
+          }
+          template {
+            baseTemplates {
+              id
             }
           }
           fields {
@@ -123,7 +141,7 @@ export class PageTaggingService {
             model.metaAuthor.value = candidate.metaAuthor.value;
           }
 
-          pageId = context.parent.id;
+          pageId = context.parent.id ?? '';
         }
       };
       viewModel = {
@@ -269,7 +287,7 @@ export class PageTaggingService {
       }
 
       if (
-        !context.template.baseTemplates.some(
+        !context?.template?.baseTemplates.some(
           (obj: any) => obj.id === '9ED6640464C9412290E1869CB3CEA566'
         )
       ) {
@@ -290,7 +308,7 @@ export class PageTaggingService {
         }
       }
 
-      pageId = context.parent.id;
+      pageId = context.parent.id ?? '';
     }
   }
 }
