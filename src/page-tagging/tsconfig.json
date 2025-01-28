@@ -7,21 +7,13 @@
       "skipLibCheck": true,
       "outDir": "dist/cjs",
       "typeRoots": ["node_modules/@types"],
-      "declarationDir": "./types",
-      "allowJs": true,
-      "lib": [
-        "dom", "dom.iterable", "esnext"
-      ],
-      "moduleResolution": "node",
+      "declarationDir": "./types"
     },
     "exclude": [
       "node_modules",
       "types",
       "typings",
       "dist",
-      "components/PageMetadata.d.ts",
-      "components/PageSearchEngineDirectives.d.ts",
-      "components/PageSocialMetadata.d.ts",
       "middleware.d.ts",
       "editing.d.ts",
       "monitoring.d.ts",
