@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/layout",
-  "version": "22.3.6",
+  "version": "22.3.7-beta.0",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -39,8 +39,8 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@constellation4sitecore/data": "^22.3.6",
-    "@constellation4sitecore/mapper": "^22.3.6",
+    "@constellation4sitecore/data": "22.3.7-beta.0",
+    "@constellation4sitecore/mapper": "22.3.7-beta.0",
     "@sitecore-jss/sitecore-jss-nextjs": "~22.3.1"
   },
   "types": "types/index.d.ts",
