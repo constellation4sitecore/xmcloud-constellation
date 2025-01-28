@@ -1,6 +1,6 @@
 {
   "name": "@constellation4sitecore/constellation-sxa-nextjs",
-  "version": "22.3.7-beta.1",
+  "version": "22.3.7-beta.2",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
