@@ -80,7 +80,7 @@ export class PageTaggingService {
   async getMetaProps(): Promise<MetaProp[]> {
     var metaProps: MetaProp[] = [];
     const model = castItem<PageMetadataType>(this.layoutData.sitecore.route as Item);
-    if (!model) return metaProps;
+    if (!model || !model.inheritAuthorAndPublisher) return metaProps;
     let viewModel: PageMetadataType;
     if (model.inheritAuthorAndPublisher.value) {
       const fillAuthorAndPublisher = async (pageId: string, model: PageMetadataType) => {
@@ -181,6 +181,7 @@ export class PageTaggingService {
   async getSearchEngineDirectiveProp(): Promise<MetaProp | null> {
     const model = castItem<PageSearchEngineDirectivesType>(this.layoutData.sitecore.route as Item);
     if (model) {
+      if (!model.searchEngineIndexesPage) return null;
       const directives = getDirectives(model);
 
       const content = getContent(directives);
@@ -201,6 +202,7 @@ export class PageTaggingService {
     const model = castItem<PageSocialMetadataType>(
       this.layoutData.sitecore.route as Item
     ) as PageSocialMetadataType;
+    if (!model || !model.twitterInheritValues) return metaProps;
     const viewModel: PageSocialMetadataType = {
       twitterCardType: model.twitterCardType,
       twitterCreator: model.twitterCreator,
