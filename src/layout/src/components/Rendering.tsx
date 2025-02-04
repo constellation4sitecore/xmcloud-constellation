@@ -80,7 +80,7 @@ export function Rendering(props: RenderingProps) {
     <>
       {props.views?.map((view) => {
         const Comp = view.Component;
-        return <Comp {...view.props} key="first" />;
+        return React.createElement(Comp, { ...view.props, key: 'first' });
       })}
     </>
   );
