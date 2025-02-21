@@ -21,6 +21,7 @@ const PageAnalyticsScripts = (props: AnalyticsScriptsProps): JSX.Element => (
                     key={script.id}
                     type="text/javascript"
                     dangerouslySetInnerHTML={{ __html: contentScriptModel.contentScript.value }}
+                    async={contentScriptModel?.async?.value ? true : false}
                   />
                 )}
                 {contentScriptModel.noScript.value && (
@@ -38,7 +39,11 @@ const PageAnalyticsScripts = (props: AnalyticsScriptsProps): JSX.Element => (
         return (
           <>
             {mappedScriptModel && (
-              <script key={script.id} src={mappedScriptModel.urlScript.value.href} async />
+              <script
+                key={script.id}
+                src={mappedScriptModel.urlScript.value.href}
+                async={mappedScriptModel?.async?.value ? true : false}
+              />
             )}
           </>
         );
