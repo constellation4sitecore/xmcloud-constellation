@@ -19,8 +19,6 @@ export type AnalyticScriptItem = {
 export type ContentScript = {
   contentScript: Field<string>;
   noScript: Field<boolean>;
-  async: Field<boolean>;
-  defer: Field<boolean>;
   lazy: Field<boolean>;
 };
 

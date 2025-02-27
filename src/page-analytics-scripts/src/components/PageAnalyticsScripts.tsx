@@ -2,7 +2,7 @@ import { mapToNew } from '@constellation4sitecore/mapper';
 import React from 'react';
 import { AnalyticScriptItem, ContentScript, UrlScript } from '../models';
 import { TEMPLATES_ID } from '../constants/analyticsScripts';
-import isServer from '@constellation4sitecore/constellation-sxa-nextjs/src/utils/is-server';
+import { isServer } from '@constellation4sitecore/constellation-sxa-nextjs';
 
 export type AnalyticsScriptsProps = {
   scripts: AnalyticScriptItem[];
@@ -28,8 +28,6 @@ const PageAnalyticsScripts = (props: AnalyticsScriptsProps): JSX.Element => {
                       type="text/javascript"
                       data-nscript={computedStrategy}
                       dangerouslySetInnerHTML={{ __html: contentScriptModel.contentScript.value }}
-                      async={contentScriptModel?.async?.value ? true : undefined}
-                      defer={contentScriptModel?.defer?.value ? true : undefined}
                     />
                   )}
                   {contentScriptModel.noScript.value && (

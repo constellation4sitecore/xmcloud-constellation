@@ -25,8 +25,6 @@ const PageAnalyticsNextScripts = (props: AnalyticsScriptsProps): JSX.Element => 
                     id={`_next-script-${script.id}-init`}
                     strategy={computedStrategy}
                     dangerouslySetInnerHTML={{ __html: contentScriptModel.contentScript.value }}
-                    async={contentScriptModel?.async?.value ? true : undefined}
-                    defer={contentScriptModel?.defer?.value ? true : undefined}
                   />
                 )}
                 {contentScriptModel.noScript.value && (
