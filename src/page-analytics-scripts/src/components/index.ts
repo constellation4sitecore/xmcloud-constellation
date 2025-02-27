@@ -1,1 +1,2 @@
-export { default as PageAnalyticsScripts, AnalyticsScriptsProps } from './PageAnalyticsScripts';
+export { default as PageAnalyticsScripts } from './PageAnalyticsScripts';
+export { default as PageAnalyticsNextScripts } from './PageAnalyticsNextScripts';

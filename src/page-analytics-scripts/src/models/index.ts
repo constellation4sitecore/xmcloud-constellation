@@ -1,4 +1,9 @@
 import { Field, LinkField } from '@sitecore-jss/sitecore-jss-nextjs';
+
+export type AnalyticsScriptsProps = {
+  scripts: AnalyticScriptItem[];
+  strategy: 'beforeInteractive' | 'afterInteractive' | 'lazyOnload';
+};
 export type AnalyticScripts = {
   headScripts: AnalyticScriptItem[];
   topBodyScripts: AnalyticScriptItem[];

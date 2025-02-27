@@ -1,13 +1,8 @@
 import { mapToNew } from '@constellation4sitecore/mapper';
 import React from 'react';
-import { AnalyticScriptItem, ContentScript, UrlScript } from '../models';
+import { AnalyticScriptItem, AnalyticsScriptsProps, ContentScript, UrlScript } from '../models';
 import { TEMPLATES_ID } from '../constants/analyticsScripts';
 import { isServer } from '@constellation4sitecore/constellation-sxa-nextjs';
-
-export type AnalyticsScriptsProps = {
-  scripts: AnalyticScriptItem[];
-  strategy: 'beforeInteractive' | 'afterInteractive' | 'lazyOnload';
-};
 
 const PageAnalyticsScripts = (props: AnalyticsScriptsProps): JSX.Element => {
   return (
