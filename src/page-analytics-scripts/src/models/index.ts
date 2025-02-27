@@ -20,9 +20,13 @@ export type ContentScript = {
   contentScript: Field<string>;
   noScript: Field<boolean>;
   async: Field<boolean>;
+  defer: Field<boolean>;
+  lazy: Field<boolean>;
 };
 
 export type UrlScript = {
   urlScript: LinkField;
   async: Field<boolean>;
+  defer: Field<boolean>;
+  lazy: Field<boolean>;
 };
