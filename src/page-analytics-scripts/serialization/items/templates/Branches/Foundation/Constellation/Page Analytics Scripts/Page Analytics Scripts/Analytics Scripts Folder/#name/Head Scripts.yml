@@ -3,6 +3,10 @@ ID: "d85a2617-fa55-4e35-9efe-5df43a6b28f4"
 Parent: "89b747df-e37a-4581-ade1-17464713f972"
 Template: "7276a0a6-bc7b-4d34-9622-2c6aac6035f8"
 Path: /sitecore/templates/Branches/Foundation/Constellation/Page Analytics Scripts/Analytics Scripts Folder/$name/Head Scripts
+SharedFields:
+- ID: "9c6106ea-7a5a-48e2-8cad-f0f693b1e2d4"
+  Hint: __Read Only
+  Value: 1
 Languages:
 - Language: en
   Versions:
