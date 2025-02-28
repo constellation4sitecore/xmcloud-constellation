@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "Constellation.Feature.Security",
+  "items": {
+    "includes": [
+      {
+        "name": "templates",
+        "path": "/sitecore/templates/Feature/Constellation/Security",
+        "allowedPushOperations": "createUpdateAndDelete"
+      },
+      {
+        "name": "settings",
+        "path": "/sitecore/system/Settings/Feature/Constellation/Security",
+        "allowedPushOperations": "createUpdateAndDelete"
+      }
+    ]
+  },
+  "references": ["Constellation"]
+}
