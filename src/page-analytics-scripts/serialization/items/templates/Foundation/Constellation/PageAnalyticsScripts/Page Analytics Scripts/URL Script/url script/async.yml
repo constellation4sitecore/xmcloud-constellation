@@ -1,8 +1,8 @@
 ﻿---
-ID: "cc8bdcb8-b5fc-4dea-ac75-9195c23f2eea"
-Parent: "402922ca-2681-41fe-b247-9509c4f2d213"
+ID: "206a2f38-4ca8-4c6b-b39d-1deb65e11338"
+Parent: "5201d539-d838-4f65-b86c-fd615858ef59"
 Template: "455a3e98-a627-4b40-8035-e683a0331ac7"
-Path: /sitecore/templates/Foundation/Constellation/Page Analytics Scripts/Content Script/content script/noScript
+Path: /sitecore/templates/Foundation/Constellation/Page Analytics Scripts/URL Script/url script/async
 SharedFields:
 - ID: "ab162cc0-dc80-4abf-8871-998ee5d7ba32"
   Hint: Type
@@ -20,7 +20,7 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20241218T171734Z
+      Value: 20250220T235657Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
@@ -31,11 +31,11 @@ Languages:
         sitecore\roberto.armas@verndale.com
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "306de478-68c3-4c23-a325-74cf1f8fda9b"
+      Value: "9ccfd69d-8361-4ebf-9003-385ba4a11725"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20250227T010025Z
+      Value: 20250227T005305Z

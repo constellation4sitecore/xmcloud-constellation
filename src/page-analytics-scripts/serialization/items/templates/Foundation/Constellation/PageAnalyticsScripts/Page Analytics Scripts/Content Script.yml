@@ -10,6 +10,9 @@ SharedFields:
 - ID: "12c33f3f-86c5-43a5-aeb4-5598cec45116"
   Hint: __Base template
   Value: "{1930BBEB-7805-471A-A3BE-4858AC7CF696}"
+- ID: "f7d48a55-2158-4f02-9356-756654404f73"
+  Hint: __Standard values
+  Value: "{5D2B684F-E7C5-4926-A426-1069BF4A745E}"
 Languages:
 - Language: en
   Versions:
@@ -28,11 +31,11 @@ Languages:
         sitecore\F4BycLo8Tb
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "8d3c5b63-4605-4519-9463-f5934ba18cf7"
+      Value: "8c185fd3-2b91-4373-81fd-81cb19a12479"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\roberto.armas@verndale.com
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230616T215853Z
+      Value: 20250220T235709Z

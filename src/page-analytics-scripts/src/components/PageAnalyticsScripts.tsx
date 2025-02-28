@@ -1,11 +1,7 @@
 import { mapToNew } from '@constellation4sitecore/mapper';
 import React from 'react';
-import { AnalyticScriptItem, ContentScript, UrlScript } from '../models';
+import { AnalyticScriptItem, AnalyticsScriptsProps, ContentScript, UrlScript } from '../models';
 import { TEMPLATES_ID } from '../constants/analyticsScripts';
-
-export type AnalyticsScriptsProps = {
-  scripts: AnalyticScriptItem[];
-};
 
 const PageAnalyticsScripts = (props: AnalyticsScriptsProps): JSX.Element => (
   <>
@@ -19,7 +15,9 @@ const PageAnalyticsScripts = (props: AnalyticsScriptsProps): JSX.Element => (
                 {!contentScriptModel.noScript.value && (
                   <script
                     key={script.id}
+                    id={`_next-${script.id}-init`}
                     type="text/javascript"
+                    data-nscript={props.strategy}
                     dangerouslySetInnerHTML={{ __html: contentScriptModel.contentScript.value }}
                   />
                 )}
@@ -38,7 +36,14 @@ const PageAnalyticsScripts = (props: AnalyticsScriptsProps): JSX.Element => (
         return (
           <>
             {mappedScriptModel && (
-              <script key={script.id} src={mappedScriptModel.urlScript.value.href} async />
+              <script
+                key={script.id}
+                id={`_next-${script.id}-init`}
+                data-nscript={props.strategy}
+                src={mappedScriptModel.urlScript.value.href}
+                async={mappedScriptModel?.async?.value ? true : undefined}
+                defer={mappedScriptModel?.defer?.value ? true : undefined}
+              />
             )}
           </>
         );
