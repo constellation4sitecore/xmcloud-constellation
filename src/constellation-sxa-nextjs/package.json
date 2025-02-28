@@ -41,7 +41,7 @@
     "typescript": "~4.9.4"
   },
   "dependencies": {
-    "@sitecore-jss/sitecore-jss-nextjs": "~22.4.1",
+    "@sitecore-jss/sitecore-jss-nextjs": "~22.5.1",
     "debug": "^4.3.1"
   },
   "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4",
