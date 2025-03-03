@@ -2,15 +2,26 @@
   "name": "@constellation4sitecore/security",
   "version": "22.4.3-beta.3",
   "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "author": "Richard J. Cabral, Roberto Armas",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
   },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
+  },
   "scripts": {
     "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json",
     "clean": "del-cli dist types",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "next": "^14.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@constellation4sitecore/constellation-sxa-nextjs": "22.4.3-beta.3",
