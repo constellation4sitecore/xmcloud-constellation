@@ -33,4 +33,5 @@ export default {
   navigation: debug(`${rootNamespace}:navigation`),
   data: debug(`${rootNamespace}:data`),
   analytics: debug(`${rootNamespace}:analytics`),
+  security: debug(`${rootNamespace}:security`),
 };

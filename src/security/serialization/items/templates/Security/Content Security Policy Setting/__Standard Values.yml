@@ -1,0 +1,83 @@
+﻿---
+ID: "636977ea-8a20-46c4-bfa0-c9c2ac1153e1"
+Parent: "7238e76e-ec6f-4c0d-ad6f-7468ced95213"
+Template: "7238e76e-ec6f-4c0d-ad6f-7468ced95213"
+Path: /sitecore/templates/Feature/Constellation/Security/Content Security Policy Setting/__Standard Values
+SharedFields:
+- ID: "00584304-f7a3-4ad1-858a-478c80b91d4a"
+  Hint: fontSrc
+  Value: "'self' https://fonts.gstatic.com"
+- ID: "1ea7a703-1b77-4714-a3db-09d849c2bb7e"
+  Hint: frameAncestors
+  Value: 'none'
+- ID: "2b1bd9be-cfd5-4f85-8dc4-7e5b89008209"
+  Hint: additionalPolicy
+  Value: |
+    upgrade-insecure-requests;
+    block-all-mixed-content;
+    report-uri /cspreports.xml
+- ID: "35ec999a-6710-4433-8f85-c10852394b16"
+  Hint: defaultSrc
+  Value: 'self'
+- ID: "520b6617-1f26-471e-84ea-9dd61f90a43e"
+  Hint: formAction
+  Value: 'self'
+- ID: "62f34c80-b7db-4fd8-9060-ee2fb327b85b"
+  Hint: manifestSrc
+  Value: 'self'
+- ID: "63a072f8-161a-4764-9554-5bab9fb33bba"
+  Hint: baseUri
+  Value: 'self'
+- ID: "75cd57df-2a71-4587-885d-9ab1a9b0c81b"
+  Hint: connectSrc
+  Value: "'self' https://*.sitecorecloud.io"
+- ID: "8a93bf85-29de-43cf-8ecc-654179e74f82"
+  Hint: mediaSrc
+  Value: 'self'
+- ID: "b1e2e578-18b2-42fd-b980-2ac070f006a6"
+  Hint: objectSrc
+  Value: 'none'
+- ID: "ca1da828-4102-457d-bdd6-6f7c56731bbf"
+  Hint: scriptSrc
+  Value: "'unsafe-inline' 'self' 'strict-dynamic'"
+- ID: "cdd8897c-f4df-4289-971f-8918bdb0f50d"
+  Hint: frameSrc
+  Value: 'self'
+- ID: "e06d1e2e-1bdf-4fe6-8136-08462d7cc786"
+  Hint: workerSrc
+  Value: 'none'
+- ID: "e5c98581-391b-4ed6-9fae-c67d58de7b59"
+  Hint: cspEnabled
+  Value: 1
+- ID: "eb8bfb88-f036-4444-95b9-85a6fe963905"
+  Hint: styleSrc
+  Value: "'unsafe-inline' 'self' https://fonts.googleapis.com/"
+- ID: "f52e387d-9b6d-4f33-82d6-a2c0319fc0f2"
+  Hint: imgSrc
+  Value: "'self' blob: data:"
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20240510T163403Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\roberto.armas@verndale.com
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\roberto.armas@verndale.com
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "205d0805-949c-408f-a5e3-ff63f406df94"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\roberto.armas@verndale.com
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20250228T235206Z

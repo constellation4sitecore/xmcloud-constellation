@@ -1,0 +1,24 @@
+{
+  "name": "@constellation4sitecore/security",
+  "version": "22.4.2",
+  "description": "A collection of XM Cloud compatible libraries for SXA Sitecore Development.",
+  "author": "Richard J. Cabral, Roberto Armas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
+  },
+  "dependencies": {
+    "@constellation4sitecore/constellation-sxa-nextjs": "^22.4.2",
+    "@sitecore-jss/sitecore-jss-nextjs": "~22.4.1",
+    "memory-cache": "^0.2.0",
+    "graphql-tag": "^2.12.6"
+  },
+  "devDependencies": {
+    "@types/memory-cache": "^0.2.5"
+  },
+  "files": [
+    "serialization",
+    "sitecore.json"
+  ],
+  "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4"
+}
