@@ -2,8 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { GraphQLRequestClientFactory } from '@sitecore-jss/sitecore-jss-nextjs/graphql';
 import { CSPSettingService } from '../services/cspSettings';
 import { CacheOptions, SiteResolver } from '@sitecore-jss/sitecore-jss-nextjs';
-import { MiddlewareBase } from '@constellation4sitecore/constellation-sxa-nextjs/src/middleware';
-import { MiddlewareBaseConfig } from '@constellation4sitecore/constellation-sxa-nextjs/src/middleware';
+import {
+  MiddlewareBase,
+  MiddlewareBaseConfig,
+} from '@constellation4sitecore/constellation-sxa-nextjs/src/middleware';
 
 export declare type GraphQLRedirectsServiceConfig = {
   /**
