@@ -84,3 +84,10 @@ const cspReportsPlugin = (nextConfig = {}) => {
 
 module.exports = cspReportsPlugin;
 ```
+
+Experimental
+In order to use next/cache which is not stable yet. Set the following env variable
+
+```bash
+CONSTELLATION_NEXT_CACHE_ENABLED=true
+```
