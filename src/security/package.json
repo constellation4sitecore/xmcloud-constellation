@@ -7,6 +7,11 @@
   "bugs": {
     "url": "https://github.com/constellation4sitecore/xmcloud-constellation/issues"
   },
+  "scripts": {
+    "build": "npm run clean && tsc -p tsconfig.json && tsc -p tsconfig-esm.json",
+    "clean": "del-cli dist types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@constellation4sitecore/constellation-sxa-nextjs": "22.4.3-beta.0",
     "@sitecore-jss/sitecore-jss-nextjs": "~22.4.1",
@@ -16,9 +21,14 @@
   "devDependencies": {
     "@types/memory-cache": "^0.2.5"
   },
+  "types": "types/index.d.ts",
   "files": [
+    "dist",
+    "types",
     "serialization",
-    "sitecore.json"
+    "sitecore.json",
+    "/*.js",
+    "/*.d.ts"
   ],
   "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4"
 }
