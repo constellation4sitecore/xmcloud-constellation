@@ -87,7 +87,7 @@ export class CSPSettingService {
         }
       `,
       {
-        root: siteInfoData.site.siteInfo.rootPath,
+        root: `${siteInfoData.site.siteInfo.rootPath}/Settings`,
         settingTemplate: TEMPLATES.CSP_SETTINGS,
         language: language,
       }

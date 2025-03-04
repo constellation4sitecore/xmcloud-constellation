@@ -44,11 +44,5 @@
     "@sitecore-jss/sitecore-jss-nextjs": "~22.4.1",
     "debug": "^4.3.1"
   },
-  "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4",
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.js"
-    }
-  }
+  "gitHead": "4724f2214e80450076a12e36844e89d6b81229c4"
 }
