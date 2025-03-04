@@ -1,9 +1,9 @@
 import { GraphQLRequestClientFactory } from '@sitecore-jss/sitecore-jss-nextjs/graphql';
-import { debug as debugers } from '@constellation4sitecore/constellation-sxa-nextjs';
+import { debug as debugers } from '@constellation4sitecore/constellation-sxa-nextjs/debugger';
 import { Field, Item } from '@sitecore-jss/sitecore-jss-nextjs';
 import { mapToNew } from '@constellation4sitecore/mapper';
 import { CacheClient, CacheOptions, MemoryCacheClient } from './cache-client';
-import { GraphQLClient } from '@constellation4sitecore/constellation-sxa-nextjs';
+import { GraphQLClient } from '@constellation4sitecore/constellation-sxa-nextjs/graphql';
 import { unstable_cache as cache, revalidateTag } from 'next/cache';
 import { TEMPLATES } from '../constants/templates';
 import { gql } from 'graphql-tag';

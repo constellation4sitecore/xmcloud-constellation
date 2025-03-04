@@ -5,7 +5,7 @@ import { CacheOptions, SiteResolver } from '@sitecore-jss/sitecore-jss-nextjs';
 import {
   MiddlewareBase,
   MiddlewareBaseConfig,
-} from '@constellation4sitecore/constellation-sxa-nextjs';
+} from '@constellation4sitecore/constellation-sxa-nextjs/middleware';
 
 export declare type GraphQLRedirectsServiceConfig = {
   /**
