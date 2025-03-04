@@ -85,6 +85,8 @@ const cspReportsPlugin = (nextConfig = {}) => {
 module.exports = cspReportsPlugin;
 ```
 
+Remove cspreports.xml from Edge middleware. add cspreports.xml to the matcher array in middleware.ts
+
 ### Experimental
 
 In order to use next/cache which is not stable yet. Set the following env variable
