@@ -43,6 +43,46 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
+"@constellation4sitecore/constellation-sxa-nextjs@22.4.2-beta.4":
+  version "22.4.2-beta.4"
+  resolved "https://registry.yarnpkg.com/@constellation4sitecore/constellation-sxa-nextjs/-/constellation-sxa-nextjs-22.4.2-beta.4.tgz#fac3da229f6c9ab0b4130ee261f5dc20f274cd34"
+  integrity sha512-W+eHQiKB6QL34ipP5i5eYUPBEGFSUHmnWj/7TFa2cta4mVSjBnTF2kf19gIEb7V2A/QUWIpF1XQc3i5l6wD1Lg==
+  dependencies:
+    "@sitecore-jss/sitecore-jss-nextjs" "~22.4.1"
+    debug "^4.3.1"
+
+"@constellation4sitecore/data@22.4.2-beta.4":
+  version "22.4.2-beta.4"
+  resolved "https://registry.yarnpkg.com/@constellation4sitecore/data/-/data-22.4.2-beta.4.tgz#062ff9ceea4853d84fb1803d55e4e5d2f60a7496"
+  integrity sha512-rgvPG1Qt3YtdtjB/PRm+84Ukc5WDq06yrs24O5uldicKlgn1oVzGVUS+lNMXOTjH7xJJ4H2MORUbsIPIfNku+g==
+  dependencies:
+    "@constellation4sitecore/constellation-sxa-nextjs" "22.4.2-beta.4"
+    "@constellation4sitecore/mapper" "22.4.2-beta.4"
+    "@sitecore-jss/sitecore-jss-nextjs" "~22.4.1"
+
+"@constellation4sitecore/enhancers@22.4.2-beta.4":
+  version "22.4.2-beta.4"
+  resolved "https://registry.yarnpkg.com/@constellation4sitecore/enhancers/-/enhancers-22.4.2-beta.4.tgz#1e78937c29bb5077d0018af9c06d8d81e6cb9564"
+  integrity sha512-csy7VNoQVPK1S3MqUVLERWZ+XdpD2qgtKZSz6cO+uUxB4Lh1+OgOeh6/rhHLas7TvSCW70edQGnJb6r2OStY6g==
+  dependencies:
+    "@sitecore-jss/sitecore-jss-nextjs" "~22.4.1"
+
+"@constellation4sitecore/layout@22.4.2-beta.4":
+  version "22.4.2-beta.4"
+  resolved "https://registry.yarnpkg.com/@constellation4sitecore/layout/-/layout-22.4.2-beta.4.tgz#d111ad34efe0d1423064f7a904485c32d9b50b79"
+  integrity sha512-xz0w9aqc6YPm7grahpuNQXgVGD9JOru6V0rAf2dWUbNr1GhuX8sbF7mfS+1L8JiP4pTCDjh+s8PS4cBh84FqZA==
+  dependencies:
+    "@constellation4sitecore/data" "22.4.2-beta.4"
+    "@constellation4sitecore/mapper" "22.4.2-beta.4"
+    "@sitecore-jss/sitecore-jss-nextjs" "~22.4.1"
+
+"@constellation4sitecore/mapper@22.4.2-beta.4":
+  version "22.4.2-beta.4"
+  resolved "https://registry.yarnpkg.com/@constellation4sitecore/mapper/-/mapper-22.4.2-beta.4.tgz#47c9884a3d3e2e0c8e4bc9fcddce3c9b46132a2d"
+  integrity sha512-IgwS5jTFtXzoKoKhSWk+bXy2W+Vv364YbvbjnIJbwTMBVukpzk8/rNzuI8lM1Gg/T6B4I13BREckfO4bwgQFpA==
+  dependencies:
+    "@sitecore-jss/sitecore-jss-nextjs" "~22.4.1"
+
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
   resolved "https://registry.npmjs.org/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz"
@@ -744,6 +784,33 @@
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.25.24.tgz"
   integrity sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==
 
+"@sitecore-jss/sitecore-jss-dev-tools@22.4.1":
+  version "22.4.1"
+  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-dev-tools/-/sitecore-jss-dev-tools-22.4.1.tgz#b6c0c6c853ff27b3b64bb6878e31adf42895ccf3"
+  integrity sha512-PGsCrKK8UlU9sWN1ch2KKxN8oPhsn8FYrt9PZEJGEZjoiqG7MAPp8NnNn2trINfaj0GvOwL/C4bcnpONlRUpnA==
+  dependencies:
+    "@babel/parser" "^7.24.0"
+    "@sitecore-jss/sitecore-jss" "22.4.1"
+    chalk "^4.1.2"
+    chokidar "^3.6.0"
+    del "^6.0.0"
+    express "^4.18.2"
+    form-data "^4.0.0"
+    fs-extra "^11.1.0"
+    glob "^8.1.0"
+    import-fresh "^3.3.0"
+    joi "^17.8.4"
+    js-yaml "^4.1.0"
+    jszip "^3.10.1"
+    module-alias "^2.2.2"
+    readline-sync "^1.4.10"
+    recast "^0.23.5"
+    resolve "^1.22.1"
+    ts-node "^10.9.1"
+    url-join "^4.0.1"
+    uuid "^9.0.0"
+    yargs "^17.6.2"
+
 "@sitecore-jss/sitecore-jss-dev-tools@22.5.1":
   version "22.5.1"
   resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-dev-tools/-/sitecore-jss-dev-tools-22.5.1.tgz#aa8434fab7a949c207b181d993bbfec515362c2f"
@@ -771,6 +838,19 @@
     uuid "^9.0.0"
     yargs "^17.6.2"
 
+"@sitecore-jss/sitecore-jss-nextjs@~22.4.1":
+  version "22.4.1"
+  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-nextjs/-/sitecore-jss-nextjs-22.4.1.tgz#36f531316f53207cbc39ecd4066de80f4c3da9f8"
+  integrity sha512-4YIqU1BjO9jbyE0di9mcG0Ot0jwCKDDgHREl3OViRXm5FUVrtapXtHqSURHoggIdFa65Q5ff0FNKJlENFNln0Q==
+  dependencies:
+    "@sitecore-jss/sitecore-jss" "22.4.1"
+    "@sitecore-jss/sitecore-jss-dev-tools" "22.4.1"
+    "@sitecore-jss/sitecore-jss-react" "22.4.1"
+    "@vercel/kv" "^0.2.1"
+    prop-types "^15.8.1"
+    regex-parser "^2.2.11"
+    sync-disk-cache "^2.1.0"
+
 "@sitecore-jss/sitecore-jss-nextjs@~22.5.1":
   version "22.5.1"
   resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-nextjs/-/sitecore-jss-nextjs-22.5.1.tgz#82ee7892e3f1d4606c032ac8176aa7838e65f6df"
@@ -784,6 +864,16 @@
     regex-parser "^2.2.11"
     sync-disk-cache "^2.1.0"
 
+"@sitecore-jss/sitecore-jss-react@22.4.1":
+  version "22.4.1"
+  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-react/-/sitecore-jss-react-22.4.1.tgz#39edc7419771870e3b5ed1c4449c6fe00083899b"
+  integrity sha512-BIxuuQuljogPkZp0lHbJZUpBzBDmHhrEZGHiij0dmxZHlwrSf5kOd9CC0bExPzNBD1p18anFJA9one+SbY/u0g==
+  dependencies:
+    "@sitecore-jss/sitecore-jss" "22.4.1"
+    fast-deep-equal "^3.1.3"
+    prop-types "^15.8.1"
+    style-attr "^1.3.0"
+
 "@sitecore-jss/sitecore-jss-react@22.5.1":
   version "22.5.1"
   resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-react/-/sitecore-jss-react-22.5.1.tgz#77a7caa353f7ef7c1cefe097e212c836785f8b21"
@@ -793,6 +883,19 @@
     fast-deep-equal "^3.1.3"
     prop-types "^15.8.1"
     style-attr "^1.3.0"
+
+"@sitecore-jss/sitecore-jss@22.4.1":
+  version "22.4.1"
+  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss/-/sitecore-jss-22.4.1.tgz#0faae2a69ad59268ca70a7cfd867f17eeaf35f15"
+  integrity sha512-T7M0c5valg5CC6z1OJrFFK8PttekHsDJfuCPJRQsiXhGBRc29xZ0JJmGf6H3HMsFuCnRUeUBAprl5D6hq5aJzQ==
+  dependencies:
+    chalk "^4.1.0"
+    debug "^4.3.1"
+    graphql "^16.5.0"
+    graphql-request "^4.2.0"
+    lodash.unescape "^4.0.1"
+    memory-cache "^0.2.0"
+    url-parse "^1.5.9"
 
 "@sitecore-jss/sitecore-jss@22.5.1":
   version "22.5.1"
