@@ -24,7 +24,7 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@constellation4sitecore/constellation-sxa-nextjs": "22.4.2-beta.4",
+    "@constellation4sitecore/constellation-sxa-nextjs": "22.5.1-beta.0",
     "@sitecore-jss/sitecore-jss-nextjs": "~22.5.1",
     "graphql-tag": "^2.12.6",
     "memory-cache": "^0.2.0"
