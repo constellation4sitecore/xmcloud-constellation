@@ -39,7 +39,7 @@ SharedFields:
   Value: 'none'
 - ID: "ca1da828-4102-457d-bdd6-6f7c56731bbf"
   Hint: scriptSrc
-  Value: "'unsafe-inline' 'self' 'strict-dynamic'"
+  Value: "'unsafe-inline' 'self'"
 - ID: "cdd8897c-f4df-4289-971f-8918bdb0f50d"
   Hint: frameSrc
   Value: 'self'
