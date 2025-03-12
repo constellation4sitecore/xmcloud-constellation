@@ -54,8 +54,6 @@ export class CSPMiddleware extends MiddlewareBase {
   }
 
   private handler = async (req: NextRequest, res?: NextResponse): Promise<NextResponse> => {
-    const requestHeaders = new Headers(req.headers);
-    // Response will be provided if other middleware is run before us (e.g. redirects)
     const response = res || NextResponse.next();
 
     if (this.config.disabled?.()) return response;
@@ -70,7 +68,7 @@ export class CSPMiddleware extends MiddlewareBase {
       site.name,
       forceCacheClear
     );
-    if (!cspSettings || !cspSettings.cspEnabled.value) return NextResponse.next();
+    if (!cspSettings || !cspSettings.cspEnabled.value) return response;
     const nonce = Buffer.from(crypto.randomUUID()).toString('base64');
     const cspHeader = `
       default-src ${cspSettings.defaultSrc.value};
@@ -89,6 +87,8 @@ export class CSPMiddleware extends MiddlewareBase {
     // Replace newline characters and spaces
     const contentSecurityPolicyHeaderValue = cspHeader.replace(/\s{2,}/g, ' ').trim();
 
+    const requestHeaders = new Headers(req.headers);
+    // Response will be provided if other middleware is run before us (e.g. redirects)
     requestHeaders.set('x-nonce', nonce);
 
     requestHeaders.set('Content-Security-Policy', contentSecurityPolicyHeaderValue);
