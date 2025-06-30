@@ -17,6 +17,12 @@ npm@constellation4sitecore/security
 Add CSP Middleware Plugin under `lib/middleware/plugins/csp.ts`
 
 ```ts
+import { NextRequest, NextResponse } from 'next/server';
+import { MiddlewarePlugin } from '..';
+import { CSPMiddleware } from '@constellation4sitecore/security/middleware';
+import { siteResolver } from 'lib/site-resolver';
+import clientFactory from 'lib/graphql-client-factory';
+
 class ContentSecurityPolicyPlugin implements MiddlewarePlugin {
   private cspMiddleware: CSPMiddleware;
   order = 2;

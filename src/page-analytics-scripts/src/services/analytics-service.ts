@@ -54,7 +54,7 @@ export class AnalyticsService {
   }
 
   async getAnalyticsScriptPart(folderId: string): Promise<AnalyticScriptItem[]> {
-    const graphqlFactory = createGraphQLClientFactory() as GraphQLRequestClientFactory;
+    const graphqlFactory = createGraphQLClientFactory() as unknown as GraphQLRequestClientFactory;
     const graphQLClient = graphqlFactory({
       debugger: debuggers.analytics,
     }) as GraphQLClient;

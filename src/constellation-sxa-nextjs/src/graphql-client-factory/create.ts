@@ -2,6 +2,7 @@ import {
   GraphQLRequestClientFactoryConfig,
   GraphQLRequestClient,
   getEdgeProxyContentUrl,
+  GraphQLRequestClientFactory,
 } from '@sitecore-jss/sitecore-jss-nextjs/graphql';
 import config, { JssConfig } from '../config';
 
@@ -30,5 +31,5 @@ export const createGraphQLClientFactory = () => {
       'Please configure either your sitecoreEdgeContextId, or your graphQLEndpoint and sitecoreApiKey.'
     );
   }
-  return GraphQLRequestClient.createClientFactory(clientConfig);
+  return GraphQLRequestClient.createClientFactory(clientConfig) as GraphQLRequestClientFactory;
 };

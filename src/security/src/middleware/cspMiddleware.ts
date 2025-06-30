@@ -79,6 +79,9 @@ export class CSPMiddleware extends MiddlewareBase {
       frame-src ${cspSettings.frameSrc.value};
       connect-src ${cspSettings.connectSrc.value};
       object-src ${cspSettings.objectSrc.value};
+      media-src ${cspSettings.mediaSrc.value};
+      manifest-src ${cspSettings.manifestSrc.value};
+      worker-src ${cspSettings.workerSrc.value};
       base-uri ${cspSettings.baseUri.value};
       form-action ${cspSettings.formAction.value};
       frame-ancestors ${cspSettings.frameAncestors.value};

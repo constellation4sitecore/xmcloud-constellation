@@ -13,6 +13,13 @@ import { LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 // .d.ts workaraound
 type Obj = { [key: string]: unknown };
 
+type HomeItem = {
+  name: string;
+  parent: {
+    path: string;
+  };
+};
+
 type LabelResult = {
   labels: {
     results: {
@@ -25,6 +32,10 @@ type LabelResult = {
     }[];
   };
   siteRoot?: {
+    name: string;
+    parent: {
+      path: string;
+    };
     ancestors: {
       name: string;
       parent: {
@@ -82,6 +93,10 @@ export class LabelService {
           }
         }
         siteRoot: item(path: $contextItem, language: $language) {
+          name
+          parent {
+            path
+          }
           ancestors(hasLayout: true) {
             name
             parent {
@@ -106,11 +121,16 @@ export class LabelService {
         return null;
       }
 
-      const home = result.siteRoot?.ancestors.find(
+      let home = result.siteRoot?.ancestors.find(
         (ancestor: any) => ancestor.name.toLowerCase() === 'home'
-      );
-      const labelItem = home
-        ? result.labels.results.filter((label) => label.path.startsWith(home.parent.path))[0]
+      ) as HomeItem | undefined;
+      if (!home) {
+        home = result.siteRoot?.name.toLowerCase() === 'home' ? result.siteRoot : undefined;
+      }
+
+      const parentPath = home?.parent.path ?? null;
+      const labelItem = parentPath
+        ? result.labels.results.filter((label) => label.path.startsWith(parentPath))[0]
         : result.labels.results[0];
       const label = mapToNew<TLabel>(labelItem);
       return label;
