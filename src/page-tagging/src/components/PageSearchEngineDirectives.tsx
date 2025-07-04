@@ -1,6 +1,6 @@
 import { withDatasourceRendering } from '@constellation4sitecore/enhancers';
 import { useSitecoreContext } from '@sitecore-jss/sitecore-jss-nextjs';
-import React from 'react';
+import React, { JSX } from 'react';
 import { ComponentProps } from '../lib/component-props';
 
 export type PageSearchEngineDirectiveProps = ComponentProps;

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import React from 'react';
+import React, { JSX } from 'react';
 import { MetaProp } from './models';
 
 export const PageMetadata = ({ metaProps }: { metaProps: MetaProp[] }): JSX.Element => {

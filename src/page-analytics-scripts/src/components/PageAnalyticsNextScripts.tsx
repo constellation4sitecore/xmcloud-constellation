@@ -1,5 +1,5 @@
 import { mapToNew } from '@constellation4sitecore/mapper';
-import React from 'react';
+import React, { JSX } from 'react';
 import { AnalyticScriptItem, AnalyticsScriptsProps, ContentScript, UrlScript } from '../models';
 import { TEMPLATES_ID } from '../constants/analyticsScripts';
 import Script from 'next/script';

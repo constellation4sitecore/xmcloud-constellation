@@ -5,7 +5,7 @@ import {
   isContentHubImage,
   mediaTransformation,
 } from '../helpers/imageHelper';
-import React from 'react';
+import React, { JSX } from 'react';
 
 export type TransformationOptions = {
   mobile: string;
