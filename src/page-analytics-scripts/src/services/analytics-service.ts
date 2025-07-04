@@ -1,22 +1,13 @@
-import {
-  config,
-  createGraphQLClientFactory,
-  GraphQLClient,
-} from '@constellation4sitecore/constellation-sxa-nextjs';
-import { GraphQLRequestClientFactory } from '@sitecore-jss/sitecore-jss-nextjs/graphql';
+import { GraphqlService } from '@constellation4sitecore/constellation-sxa-nextjs';
 import { gql } from 'graphql-request';
 import { LayoutServiceData, SiteInfo } from '@sitecore-jss/sitecore-jss-nextjs';
 import { AnalyticScriptItem, AnalyticScripts } from '../models';
-import { debug as debuggers } from '@constellation4sitecore/constellation-sxa-nextjs';
 
-export class AnalyticsService {
-  private language: string;
+export class AnalyticsService extends GraphqlService {
   private sitecoreRootPath: string;
 
   constructor(appName: string, siteInfo: SiteInfo, layoutData: LayoutServiceData) {
-    this.language = layoutData?.sitecore.context.language
-      ? layoutData?.sitecore.context.language
-      : (config.defaultLanguage as string);
+    super(layoutData);
     this.sitecoreRootPath = this.buildSitecoreRootPath(appName, siteInfo);
   }
 
@@ -54,10 +45,7 @@ export class AnalyticsService {
   }
 
   async getAnalyticsScriptPart(folderId: string): Promise<AnalyticScriptItem[]> {
-    const graphqlFactory = createGraphQLClientFactory() as unknown as GraphQLRequestClientFactory;
-    const graphQLClient = graphqlFactory({
-      debugger: debuggers.analytics,
-    }) as GraphQLClient;
+    const client = this.getClient();
 
     const query = gql`
       query GetAnalyticsScripts($datasourceId: String!, $language: String!) {
@@ -78,7 +66,7 @@ export class AnalyticsService {
       }
     `;
 
-    const result = (await graphQLClient.request(query, {
+    const result = (await client.request(query, {
       datasourceId: folderId,
       language: this.language,
     })) as AnalyticResult;

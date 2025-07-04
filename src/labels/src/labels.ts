@@ -1,10 +1,8 @@
 import { gql } from 'graphql-request';
 
 import {
-  GraphQLClient,
-  createGraphQLClientFactory,
   debug as debuggers,
-  config,
+  GraphqlService,
 } from '@constellation4sitecore/constellation-sxa-nextjs';
 import { mapToNew } from '@constellation4sitecore/mapper';
 import { LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
@@ -45,18 +43,15 @@ type LabelResult = {
   };
 };
 
-export class LabelService {
-  private language: string;
+export class LabelService extends GraphqlService {
   private contextItem: string | null;
 
   /**
    * Initialize the label service
    * @param layoutData : Layout service data
    */
-  constructor(layoutData?: LayoutServiceData) {
-    this.language = layoutData?.sitecore.context.language
-      ? layoutData?.sitecore.context.language
-      : (config.defaultLanguage as string);
+  constructor(layoutData: LayoutServiceData) {
+    super(layoutData);
 
     this.contextItem = layoutData?.sitecore.route?.itemId ? layoutData.sitecore.route.itemId : null;
   }
@@ -67,10 +62,7 @@ export class LabelService {
    * @returns Labels
    */
   async getLabelsForView<TLabel extends Obj>(templateId: string): Promise<TLabel | null> {
-    const graphqlFactory = createGraphQLClientFactory();
-    const graphQLClient = graphqlFactory({
-      debugger: debuggers.labels,
-    }) as GraphQLClient;
+    const client = this.getClient();
 
     const query = gql`
       query getLabelsForView($contextItem: String, $labelsTemplate: String!, $language: String!) {
@@ -108,7 +100,7 @@ export class LabelService {
     `;
 
     try {
-      const result = await graphQLClient.request<LabelResult>(query, {
+      const result = await client.request<LabelResult>(query, {
         contextItem: this.contextItem,
         labelsTemplate: templateId,
         language: this.language,

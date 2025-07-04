@@ -34,4 +34,5 @@ export default {
   data: debug(`${rootNamespace}:data`),
   analytics: debug(`${rootNamespace}:analytics`),
   security: debug(`${rootNamespace}:security`),
+  http: debug(`${rootNamespace}:http`),
 };

@@ -1,9 +1,4 @@
-import {
-  GraphQLClient,
-  config,
-  createGraphQLClientFactory,
-  debug as debuggers,
-} from '@constellation4sitecore/constellation-sxa-nextjs';
+import { GraphqlService } from '@constellation4sitecore/constellation-sxa-nextjs';
 import { Item, LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
 import { gql } from 'graphql-request';
 import { MetaProp } from '../models/MetaProps';
@@ -27,22 +22,16 @@ type PageTagging = {
   }[];
 };
 
-export class PageTaggingService {
-  private language: string;
+export class PageTaggingService extends GraphqlService {
   private layoutData: LayoutServiceData;
 
   constructor(layoutData: LayoutServiceData) {
-    this.language = layoutData?.sitecore.context.language
-      ? layoutData?.sitecore.context.language
-      : (config.defaultLanguage as string);
+    super(layoutData);
     this.layoutData = layoutData;
   }
 
   async getPageTagging(pageId: string): Promise<PageTagging | null> {
-    const graphqlFactory = createGraphQLClientFactory();
-    const graphQLClient = graphqlFactory({
-      debugger: debuggers.data,
-    }) as GraphQLClient;
+    const client = this.getClient();
 
     const query = gql`
       query GetPageTagging($datasourceId: String!, $language: String!) {
@@ -69,7 +58,7 @@ export class PageTaggingService {
       }
     `;
 
-    const result = (await graphQLClient.request(query, {
+    const result = (await client.request(query, {
       datasourceId: pageId,
       language: this.language,
     })) as any;

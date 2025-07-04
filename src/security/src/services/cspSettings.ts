@@ -1,9 +1,12 @@
-import { GraphQLRequestClientFactory } from '@sitecore-jss/sitecore-jss-nextjs/graphql';
+import {
+  DefaultRetryStrategy,
+  GraphQLRequestClient,
+  GraphQLRequestClientFactory,
+} from '@sitecore-jss/sitecore-jss-nextjs/graphql';
 import { debug as debugers } from '@constellation4sitecore/constellation-sxa-nextjs/debugger';
 import { Field, Item } from '@sitecore-jss/sitecore-jss-nextjs';
 import { mapToNew } from '@constellation4sitecore/mapper';
 import { CacheClient, CacheOptions, MemoryCacheClient } from './cache-client';
-import { GraphQLClient } from '@constellation4sitecore/constellation-sxa-nextjs/graphql';
 import { unstable_cache as cache, revalidateTag } from 'next/cache';
 import { TEMPLATES } from '../constants/templates';
 import { gql } from 'graphql-tag';
@@ -37,7 +40,7 @@ type Response = {
 };
 
 export class CSPSettingService {
-  private graphQLClient: GraphQLClient;
+  private graphQLClient: GraphQLRequestClient;
   private cache: CacheClient<CSPSetting>;
 
   constructor(private options: CSPSettingServiceConfig) {
@@ -156,14 +159,20 @@ export class CSPSettingService {
    * want to use something else.
    * @returns {GraphQLClient} implementation
    */
-  protected getGraphQLClient(): GraphQLClient {
+  protected getGraphQLClient(): GraphQLRequestClient {
     if (!this.options.clientFactory) {
       throw new Error('clientFactory needs to be provided when initializing GraphQL client.');
     }
     return this.options.clientFactory({
       debugger: debugers.security,
       fetch: this.options.fetch,
-    }) as GraphQLClient;
+      retries: (process.env.GRAPH_QL_SERVICE_RETRIES &&
+        parseInt(process.env.GRAPH_QL_SERVICE_RETRIES, 10)) as number,
+      retryStrategy: new DefaultRetryStrategy({
+        statusCodes: [429, 502, 503, 504, 520, 521, 522, 523, 524],
+        factor: 3,
+      }),
+    }) as GraphQLRequestClient;
   }
 
   /**

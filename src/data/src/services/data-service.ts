@@ -1,10 +1,4 @@
-import {
-  config,
-  createGraphQLClientFactory,
-  GraphQLClient,
-} from '@constellation4sitecore/constellation-sxa-nextjs';
-import { LayoutServiceData } from '@sitecore-jss/sitecore-jss-nextjs';
-import { debug as debuggers } from '@constellation4sitecore/constellation-sxa-nextjs';
+import { GraphqlService } from '@constellation4sitecore/constellation-sxa-nextjs';
 import { gql } from 'graphql-request';
 import { mapToNew } from '@constellation4sitecore/mapper';
 
@@ -36,29 +30,14 @@ export type ItemInfo = {
   };
 };
 
-export class DataService {
-  private language: string;
-
-  /**
-   * Initialize the label service
-   * @param layoutData : Layout service data
-   */
-  constructor(layoutData?: LayoutServiceData) {
-    this.language = layoutData?.sitecore.context.language
-      ? layoutData?.sitecore.context.language
-      : (config.defaultLanguage as string);
-  }
-
+export class DataService extends GraphqlService {
   /**
    * Get Item Url
    * @param itemId
    * @returns Url object
    */
   async getItemUrl(itemId: string): Promise<Url> {
-    const graphqlFactory = createGraphQLClientFactory();
-    const graphQLClient = graphqlFactory({
-      debugger: debuggers.data,
-    }) as GraphQLClient;
+    const client = this.getClient();
 
     const query = gql`
       query GetItemUrl($itemId: String!, $language: String!) {
@@ -74,7 +53,7 @@ export class DataService {
       }
     `;
 
-    const result = await graphQLClient.request<{ item: { url: Url } }>(query, {
+    const result = await client.request<{ item: { url: Url } }>(query, {
       language: this.language,
       itemId: itemId,
     });
@@ -88,10 +67,7 @@ export class DataService {
    * @returns ItemInfo
    */
   async getTemplateInfo(itemId: string): Promise<ItemInfo | null> {
-    const graphqlFactory = createGraphQLClientFactory();
-    const graphQLClient = graphqlFactory({
-      debugger: debuggers.data,
-    }) as GraphQLClient;
+    const client = this.getClient();
 
     const query = gql`
       query GetItemTemplateInfo($itemId: String!, $language: String!) {
@@ -110,7 +86,7 @@ export class DataService {
       }
     `;
 
-    const result = await graphQLClient.request<{ item: ItemInfo }>(query, {
+    const result = await client.request<{ item: ItemInfo }>(query, {
       itemId: itemId,
       language: this.language,
     });
@@ -125,10 +101,7 @@ export class DataService {
    * @returns
    */
   async getItem<TItem>(itemId: string, options?: GetItemOptions): Promise<TItem | null> {
-    const graphqlFactory = createGraphQLClientFactory();
-    const graphQLClient = graphqlFactory({
-      debugger: debuggers.data,
-    }) as GraphQLClient;
+    const client = this.getClient();
 
     const query = gql`
       query GetItem($itemId: String!, $language: String!, $ownFields: Boolean!) {
@@ -143,12 +116,25 @@ export class DataService {
       }
     `;
 
-    const result = (await graphQLClient.request(query, {
+    const result = (await client.request(query, {
       itemId: itemId,
       language: options?.language ? options.language : this.language,
       ownFields: options?.showStandardValues ? false : true,
     })) as ItemResult;
 
     return mapToNew<TItem>(result.item);
+  }
+  /**
+   * Determines if an item is derived from a given template.
+   * @param itemId The ID of the item to check.
+   * @param templateId The ID of the template to check against.
+   * @returns A boolean indicating whether the item is derived from the template.
+   */
+  async derivedFrom(itemId: string, templateId: string): Promise<boolean> {
+    const convertedTemplateId = templateId.replace(/[{}]/g, '').replaceAll('-', '').toUpperCase();
+    const item = await this.getTemplateInfo(itemId);
+    if (item?.template.id === convertedTemplateId) return true;
+    const assetCondition = item?.template.baseTemplates.some((t) => t.id === convertedTemplateId);
+    return assetCondition == undefined ? false : assetCondition;
   }
 }
