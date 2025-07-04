@@ -42,7 +42,7 @@
   "dependencies": {
     "@constellation4sitecore/constellation-sxa-nextjs": "^22.6.2",
     "@constellation4sitecore/mapper": "^22.6.2",
-    "@sitecore-jss/sitecore-jss-nextjs": "~22.6.0"
+    "@sitecore-jss/sitecore-jss-nextjs": "~22.7.0"
   },
   "types": "types/index.d.ts",
   "files": [
