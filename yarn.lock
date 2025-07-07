@@ -886,13 +886,13 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.27.8.tgz#6667fac16c436b5434a387a34dedb013198f6e6e"
   integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
-"@sitecore-jss/sitecore-jss-dev-tools@22.6.0":
-  version "22.6.0"
-  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-dev-tools/-/sitecore-jss-dev-tools-22.6.0.tgz#d32c25d049448815d9a922d2c66de4f6189d2134"
-  integrity sha512-h7C3bAbnavhJ/9KOinj72wSicGQ/X1dz9WOQ+pLwJULN9dZRy4p3XChOd/UBD2jBBtYjVn0CAJA/33f9YxAgzw==
+"@sitecore-jss/sitecore-jss-dev-tools@22.8.0":
+  version "22.8.0"
+  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-dev-tools/-/sitecore-jss-dev-tools-22.8.0.tgz#e3b243df3e0822a42184caf289fa2db751beb73e"
+  integrity sha512-wes/6+eC0o5QQQFzZ8vPNcpO8nV/0FeKJ28GwUz6LYk3aJZ2f5IDLumThuuQhE/Ym1ZVaH8BlevUwML1AstHvw==
   dependencies:
     "@babel/parser" "^7.24.0"
-    "@sitecore-jss/sitecore-jss" "22.6.0"
+    "@sitecore-jss/sitecore-jss" "22.8.0"
     chalk "^4.1.2"
     chokidar "^3.6.0"
     del "^6.0.0"
@@ -913,94 +913,31 @@
     uuid "^9.0.0"
     yargs "^17.6.2"
 
-"@sitecore-jss/sitecore-jss-dev-tools@22.7.0":
-  version "22.7.0"
-  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-dev-tools/-/sitecore-jss-dev-tools-22.7.0.tgz#de8b3aec67e771e110c6d1f77b95d86611de3d1c"
-  integrity sha512-cqKwuNo3npzEzkcM6V5YmqnKb8h7DYhv/5WdTDmz6v+eECfzS66mWC8exYSP1z7V1r/EVAdDvwq2NEc7H33P3Q==
+"@sitecore-jss/sitecore-jss-nextjs@~22.8.0":
+  version "22.8.0"
+  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-nextjs/-/sitecore-jss-nextjs-22.8.0.tgz#31c8f97ef8bfb6f59d89055cae95f313205eb459"
+  integrity sha512-2MYT4uczRrOdsjzfcY9dC48EyeYcGStI2AwTiEdXUr38dysekygPy0BmElmhMOPtSMtAXNj0RJFpjcV4jztJ7Q==
   dependencies:
-    "@babel/parser" "^7.24.0"
-    "@sitecore-jss/sitecore-jss" "22.7.0"
-    chalk "^4.1.2"
-    chokidar "^3.6.0"
-    del "^6.0.0"
-    express "^4.18.2"
-    form-data "^4.0.0"
-    fs-extra "^11.1.0"
-    glob "^8.1.0"
-    import-fresh "^3.3.0"
-    joi "^17.8.4"
-    js-yaml "^4.1.0"
-    jszip "^3.10.1"
-    module-alias "^2.2.2"
-    readline-sync "^1.4.10"
-    recast "^0.23.5"
-    resolve "^1.22.1"
-    ts-node "^10.9.1"
-    url-join "^4.0.1"
-    uuid "^9.0.0"
-    yargs "^17.6.2"
-
-"@sitecore-jss/sitecore-jss-nextjs@~22.6.0":
-  version "22.6.0"
-  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-nextjs/-/sitecore-jss-nextjs-22.6.0.tgz#df05dfccc85b19397d2bd35872f9ffb8273b8198"
-  integrity sha512-Cci3NyDi07+sLpo/dPNRsqAybjXW5hPen3Pp4qbi5swjR9MOdQKPkQoAoAYuBE31WVu1xq3yEtFzZWCFfmyEhQ==
-  dependencies:
-    "@sitecore-jss/sitecore-jss" "22.6.0"
-    "@sitecore-jss/sitecore-jss-dev-tools" "22.6.0"
-    "@sitecore-jss/sitecore-jss-react" "22.6.0"
-    "@vercel/kv" "^0.2.1"
-    prop-types "^15.8.1"
-    regex-parser "^2.2.11"
-    sync-disk-cache "^2.1.0"
-
-"@sitecore-jss/sitecore-jss-nextjs@~22.7.0":
-  version "22.7.0"
-  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-nextjs/-/sitecore-jss-nextjs-22.7.0.tgz#2d6fbdb841ea3b3a1a84527fcdb73ec03bca0df3"
-  integrity sha512-Qi+G+WxPKPUseMQ4sB1sedl14Ac+E+CYQjHm6Qr01S64CgX2aVQRWWrGN5qEfq/srubE1ot54PH+CJ9C7DYj2g==
-  dependencies:
-    "@sitecore-jss/sitecore-jss" "22.7.0"
-    "@sitecore-jss/sitecore-jss-dev-tools" "22.7.0"
-    "@sitecore-jss/sitecore-jss-react" "22.7.0"
+    "@sitecore-jss/sitecore-jss" "22.8.0"
+    "@sitecore-jss/sitecore-jss-dev-tools" "22.8.0"
+    "@sitecore-jss/sitecore-jss-react" "22.8.0"
     "@vercel/kv" "^0.2.1"
     regex-parser "^2.2.11"
     sync-disk-cache "^2.1.0"
 
-"@sitecore-jss/sitecore-jss-react@22.6.0":
-  version "22.6.0"
-  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-react/-/sitecore-jss-react-22.6.0.tgz#4d2f0e47cc9c030205f3a6130b78bc528c494602"
-  integrity sha512-AjioAdkx8WtCnrQANw7hg22T8mMq/VjS8Ke0HmiM+LrSsdSuRVsXHALkk/vZ85uk0lHiELP3nLI+yCorVWC8AQ==
+"@sitecore-jss/sitecore-jss-react@22.8.0":
+  version "22.8.0"
+  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-react/-/sitecore-jss-react-22.8.0.tgz#565a852f9d1ae9bfec4cf6eb5b2771b8726c011f"
+  integrity sha512-KfJ356bmFsMGujSOx/1OKHQoJnEeyrIEt1zbnRhREu/G/hu+7UQ5mezRVduJH857+QpKQPmJlwhExEWJ/Elvtw==
   dependencies:
-    "@sitecore-jss/sitecore-jss" "22.6.0"
-    fast-deep-equal "^3.1.3"
-    prop-types "^15.8.1"
-    style-attr "^1.3.0"
-
-"@sitecore-jss/sitecore-jss-react@22.7.0":
-  version "22.7.0"
-  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss-react/-/sitecore-jss-react-22.7.0.tgz#8119cd1b2d1f4437c4d3151febe85c8944beb3cf"
-  integrity sha512-q5b/ybHP9IdY4pOza4HF3MDadQeSePf0IeIgRuofUU8mAyVV1JWQSD3P0g+ja2p7XRgY5pE5bE2CvpfuPCsEnw==
-  dependencies:
-    "@sitecore-jss/sitecore-jss" "22.7.0"
+    "@sitecore-jss/sitecore-jss" "22.8.0"
     fast-deep-equal "^3.1.3"
     style-attr "^1.3.0"
 
-"@sitecore-jss/sitecore-jss@22.6.0":
-  version "22.6.0"
-  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss/-/sitecore-jss-22.6.0.tgz#f3b816f9c652733c4e200b933ea5afe6c2ea9f62"
-  integrity sha512-fkHqBcmO7yCcGx26b1gqwNip9RFU2qLmpsl6b1Zqe2MKV7bL4OTQBhF5lWWzwQtcBr+7Eohyef8V4r3L+IKguw==
-  dependencies:
-    chalk "^4.1.0"
-    debug "^4.3.1"
-    graphql "^16.5.0"
-    graphql-request "^4.2.0"
-    lodash.unescape "^4.0.1"
-    memory-cache "^0.2.0"
-    url-parse "^1.5.9"
-
-"@sitecore-jss/sitecore-jss@22.7.0":
-  version "22.7.0"
-  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss/-/sitecore-jss-22.7.0.tgz#d437fcb07754235f533d5401bf7c053b48ba6a76"
-  integrity sha512-wXAFyklt5Vcd5rC+Ju/MTZPmHIeiLd7PjXvbGT0zCsVMUnx3wH3k7ivqlaPrr3ESLRHw9NfynoDcx5EOWYAt+w==
+"@sitecore-jss/sitecore-jss@22.8.0":
+  version "22.8.0"
+  resolved "https://registry.yarnpkg.com/@sitecore-jss/sitecore-jss/-/sitecore-jss-22.8.0.tgz#3995f57c85a0025c33f1d085e241d63785c18f13"
+  integrity sha512-PY7zHzUACgBTQS6x71kZ4kHrmIfSl7Hq5Dh+sn5+tRoPfC01LjQUa83n3Lh61YAonCX1E/wzreDSkC1HCIbAqQ==
   dependencies:
     chalk "^4.1.0"
     debug "^4.3.1"

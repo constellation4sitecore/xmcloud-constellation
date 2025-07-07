@@ -39,7 +39,7 @@
     "react-dom": "^19.1.0"
   },
   "dependencies": {
-    "@sitecore-jss/sitecore-jss-nextjs": "~22.6.0"
+    "@sitecore-jss/sitecore-jss-nextjs": "~22.8.0"
   },
   "types": "types/index.d.ts",
   "files": [
