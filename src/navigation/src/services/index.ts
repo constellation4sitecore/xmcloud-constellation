@@ -1,1 +1,1 @@
-export { getNavLinks } from './get-nav-link';
+export { getNavLinks, NavigationService } from './get-nav-link';
