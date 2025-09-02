@@ -307,32 +307,32 @@ export class PageTaggingService extends GraphqlService {
 const getDirectives = (model: PageSearchEngineDirectivesType) => {
   const directives = [];
 
-  if (model.searchEngineIndexesPage) {
+  if (model.searchEngineIndexesPage.value) {
     directives.push('index');
   } else {
     directives.push('noindex');
   }
 
-  if (model.searchEngineFollowsLinks) {
+  if (model.searchEngineFollowsLinks.value) {
     directives.push('follow');
   } else {
     directives.push('nofollow');
   }
 
-  if (!model.searchEngineIndexesImages) {
+  if (!model.searchEngineIndexesImages.value) {
     directives.push('noimageindex');
   }
 
-  if (!model.searchEngineCanCachePage) {
+  if (!model.searchEngineCanCachePage.value) {
     directives.push('noarchive');
     directives.push('nocache');
   }
 
-  if (!model.searchEngineCanSnippetPage) {
+  if (!model.searchEngineCanSnippetPage.value) {
     directives.push('nosnippet');
   }
 
-  if (!model.allowODPSnippet) {
+  if (!model.allowODPSnippet.value) {
     directives.push('noodp');
   }
 
