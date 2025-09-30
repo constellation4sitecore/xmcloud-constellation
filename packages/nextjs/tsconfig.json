@@ -1,0 +1,30 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "jsx": "react",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "outDir": "dist/cjs",
+      "typeRoots": ["node_modules/@types"],
+      "declarationDir": "./types",
+      "allowJs": true
+    },
+    "exclude": [
+      "node_modules",
+      "types",
+      "typings",
+      "dist",
+      "debugger.d.ts",
+      "debugger.js",
+      "graphql.d.ts",
+      "graphql.js",
+      "middleware.d.ts",
+      "middleware.js",
+      "src/tests/*",
+      "src/test-data/*",
+      "**/*.test.ts",
+      "**/*.test.tsx"
+    ]
+  }

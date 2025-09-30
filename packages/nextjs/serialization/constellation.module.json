@@ -1,0 +1,50 @@
+{
+  "$schema": "../../../.sitecore/schemas/ModuleFile.schema.json",
+  "namespace": "Constellation",
+  "items": {
+    "includes": [
+      {
+        "name": "templates/Foundation/Constellation",
+        "path": "/sitecore/templates/Foundation/Constellation",
+        "allowedPushOperations": "createOnly",
+        "scope": "singleItem"
+      },
+      {
+        "name": "templates/Branches/Foundation/Constellation",
+        "path": "/sitecore/templates/Branches/Foundation/Constellation",
+        "allowedPushOperations": "createOnly",
+        "scope": "singleItem"
+      },
+      {
+        "name": "templates/Feature/Constellation",
+        "path": "/sitecore/templates/Feature/Constellation",
+        "allowedPushOperations": "createOnly",
+        "scope": "singleItem"
+      },
+      {
+        "name": "settingsFoundation",
+        "path": "/sitecore/system/Settings/Foundation/Constellation",
+        "allowedPushOperations": "createOnly",
+        "scope": "singleItem"
+      },
+      {
+        "name": "settingsFeature",
+        "path": "/sitecore/system/Settings/Feature/Constellation",
+        "allowedPushOperations": "createOnly",
+        "scope": "singleItem"
+      },
+      {
+        "name": "settingsModuleItems",
+        "path": "/sitecore/system/Modules/Constellation",
+        "allowedPushOperations": "createOnly",
+        "scope": "singleItem"
+      },
+      {
+        "name": "renderings",
+        "path": "/sitecore/layout/Renderings/Feature/Constellation",
+        "allowedPushOperations": "createOnly",
+        "scope": "singleItem"
+      }
+    ]
+  }
+}
