@@ -10,7 +10,6 @@
     "version": "yarn install && git stage yarn.lock"
   },
   "workspaces": [
-    "src/*",
     "packages/*"
   ],
   "devDependencies": {
