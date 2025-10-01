@@ -4,7 +4,7 @@ import {
   GraphQLRequestClientFactory,
   GraphQLRequestClientFactoryConfig,
 } from '@sitecore-content-sdk/nextjs/client';
-import { getNextFallbackConfig } from '@sitecore-content-sdk/nextjs/types/config/define-config';
+import { defineConfig } from '@sitecore-content-sdk/nextjs/config';
 
 /**
  * Creates a new GraphQLRequestClientFactory instance
@@ -13,7 +13,7 @@ import { getNextFallbackConfig } from '@sitecore-content-sdk/nextjs/types/config
  */
 export const createGraphQLClientFactory = () => {
   let clientConfig: GraphQLRequestClientFactoryConfig;
-  const projectConfig = getNextFallbackConfig();
+  const projectConfig = defineConfig({});
   if (projectConfig.api?.edge?.contextId) {
     clientConfig = {
       endpoint: getEdgeProxyContentUrl(

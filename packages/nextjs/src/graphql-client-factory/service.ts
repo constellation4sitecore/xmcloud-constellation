@@ -2,14 +2,14 @@ import { LayoutServiceData } from '@sitecore-content-sdk/nextjs';
 import { createGraphQLClientFactory } from './create';
 import * as debuggers from '../debug';
 import { DefaultRetryStrategy, GraphQLRequestClient } from '@sitecore-content-sdk/nextjs/client';
-import { getNextFallbackConfig } from '@sitecore-content-sdk/nextjs/types/config/define-config';
+import { defineConfig } from '@sitecore-content-sdk/nextjs/config';
 export class GraphqlService {
   protected language: string;
   /**
    *
    */
   constructor(layoutData: LayoutServiceData) {
-    const config = getNextFallbackConfig();
+    const config = defineConfig({});
     this.language = layoutData.sitecore.context.language ?? config.defaultLanguage ?? 'en';
   }
 
