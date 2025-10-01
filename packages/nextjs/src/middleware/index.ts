@@ -1,4 +1,4 @@
-import { SiteInfo, SiteResolver } from '@sitecore-jss/sitecore-jss-nextjs/site';
+import { SiteInfo, SiteResolver } from '@sitecore-content-sdk/nextjs/site';
 import { NextRequest, NextResponse } from 'next/server';
 
 export type MiddlewareBaseConfig = {
@@ -92,7 +92,7 @@ export abstract class MiddlewareBase {
    * @param {NextResponse} [res] response
    * @returns {SiteInfo} site information
    */
-  protected getSite(req: NextRequest, res?: NextResponse): SiteInfo {
+  protected getSite(req: NextRequest, res?: NextResponse): SiteInfo | undefined {
     const siteNameCookie = res?.cookies.get(this.SITE_SYMBOL)?.value;
 
     if (siteNameCookie) return this.config.siteResolver.getByName(siteNameCookie);
